@@ -2,9 +2,11 @@ package com.example.projetaifcc2014;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -62,5 +64,17 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.accueil);
 	}
 
-
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event)
+	{
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			Toast.makeText(this,"retour à lactivité précendente",Toast.LENGTH_LONG).show();
+		}
+		return false ;
+	
+	}
 }
+
+
+	
+
