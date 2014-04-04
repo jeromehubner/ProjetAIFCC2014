@@ -1,6 +1,8 @@
 package com.example.projetaifcc2014;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -11,17 +13,17 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 
 	private int profil = 0;
-
+	public String url = "";
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.profil);
 		
-
+		
+	
 	}
 
 	public void onClick(View v) {
-		
 		switch(v.getId()) {
 		case R.id.profil_1 :
 			profil = 1;
@@ -40,6 +42,16 @@ public class MainActivity extends Activity {
 		case R.id.profil_5 : profil = 5; break;
 		
 		case R.id.profil_6 : profil = 6; break;
+		
+		// Bouton de bannière qui ouvre le site //
+		case R.id.profil_7 :
+			Intent intent = new Intent(Intent.ACTION_VIEW);
+			url = "http://www.aifcc.com/";
+			Uri uri = Uri.parse(url);
+			Toast.makeText(this, "Redirection vers" + url, Toast.LENGTH_LONG).show();
+			intent.setData(uri);
+			startActivity(intent);
+			break;
 		}
 		
 		placePermissions();

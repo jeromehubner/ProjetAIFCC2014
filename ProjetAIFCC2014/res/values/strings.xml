@@ -13,13 +13,15 @@
     <string name="profil_3">Salarié</string>
     <string name="profil_4">Entrepreneur</string>
     <string name="profil_5">Formateur</string>
-    <string name="profil_6">Personnel administratif</string>
+    <string name="profil_6">Personnel administratif</string><string name="profil_7">Site</string>
     <string name="profil_1_desc">Naviguer avec le profil Etudiant</string>
     <string name="profil_2_desc">Naviguer avec le profil Demandeur d\'emploi</string>
     <string name="profil_3_desc">Naviguer avec le profil Salarié</string>
     <string name="profil_4_desc">Naviguer avec le profil Entrepreneur</string>
     <string name="profil_5_desc">Naviguer avec le profil Formateur</string>
     <string name="profil_6_desc">Naviguer avec le profil Personnel administratif</string>
+    
+    <string name="profil_7_desc">Naviguer vers le site</string>
     
 
 </resources>
