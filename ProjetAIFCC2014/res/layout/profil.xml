@@ -18,29 +18,30 @@
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/app_name"
         android:src="@drawable/aifcc_logo" />
-    
-    <ImageButton
-        android:id="@+id/profil_1"
-        android:layout_width="180dp"
-        android:layout_height="100dp"
-        android:layout_alignLeft="@id/aifcc_logo"
-        android:layout_below="@+id/aifcc_logo"
-        android:contentDescription="@string/profil_1_desc"
-        android:onClick="onClick"
-        android:src="@drawable/btn_profil_1"
-        android:text="@string/profil_1" />
 
     <ImageButton
-        android:id="@+id/profil_2"
+        android:id="@+id/profil_4"
         android:layout_width="120dp"
         android:layout_height="70dp"
-        android:layout_alignTop="@+id/profil_1"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/profil_1"
-        android:src="@drawable/btn_profil_2"
-        android:text="@string/profil_2"
-        android:contentDescription="@string/profil_2_desc"
-        android:onClick="onClick" />
+        android:layout_alignLeft="@+id/profil_2"
+        android:layout_alignTop="@+id/profil_3"
+        android:background="@color/blanc"
+        android:contentDescription="@string/profil_4_desc"
+        android:onClick="onClick"
+        android:src="@drawable/btn_profil_4"
+        android:text="@string/profil_4" />
+
+    <ImageButton
+        android:id="@+id/profil_6"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_alignLeft="@+id/profil_4"
+        android:layout_alignTop="@+id/profil_5"
+        android:background="@color/blanc"
+        android:contentDescription="@string/profil_6_desc"
+        android:onClick="onClick"
+        android:src="@drawable/btn_profil_6"
+        android:text="@string/profil_6" />
 
     <ImageButton
         android:id="@+id/profil_3"
@@ -48,44 +49,49 @@
         android:layout_height="70dp"
         android:layout_alignLeft="@+id/profil_1"
         android:layout_below="@+id/profil_1"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/btn_profil_3"
-        android:text="@string/profil_3"
+        android:layout_marginTop="36dp"
+        android:background="@color/blanc"
         android:contentDescription="@string/profil_3_desc"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:src="@drawable/btn_profil_3"
+        android:text="@string/profil_3" />
 
     <ImageButton
-        android:id="@+id/profil_4"
+        android:id="@+id/profil_2"
         android:layout_width="120dp"
         android:layout_height="70dp"
-        android:layout_alignTop="@+id/profil_3"
-        android:layout_alignLeft="@+id/profil_2"
-        android:src="@drawable/btn_profil_4"
-        android:text="@string/profil_4"
-        android:contentDescription="@string/profil_4_desc"
-        android:onClick="onClick" />
-        
+        android:layout_above="@+id/profil_3"
+        android:layout_alignRight="@+id/aifcc_logo"
+        android:background="@color/blanc"
+        android:contentDescription="@string/profil_2_desc"
+        android:onClick="onClick"
+        android:src="@drawable/btn_profil_2"
+        android:text="@string/profil_2" />
+
     <ImageButton
         android:id="@+id/profil_5"
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_alignLeft="@+id/profil_3"
         android:layout_below="@+id/profil_3"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/btn_profil_5"
-        android:text="@string/profil_5"
+        android:layout_marginTop="36dp"
+        android:background="@color/blanc"
         android:contentDescription="@string/profil_5_desc"
-        android:onClick="onClick" />
+        android:onClick="onClick"
+        android:src="@drawable/btn_profil_5"
+        android:text="@string/profil_5" />
 
     <ImageButton
-        android:id="@+id/profil_6"
+        android:id="@+id/profil_1"
         android:layout_width="120dp"
         android:layout_height="70dp"
-        android:layout_alignTop="@+id/profil_5"
-        android:layout_alignLeft="@+id/profil_4"
-        android:src="@drawable/btn_profil_6"
-        android:text="@string/profil_6"
-        android:contentDescription="@string/profil_6_desc"
-        android:onClick="onClick" />
+        android:layout_alignLeft="@+id/aifcc_logo"
+        android:layout_below="@+id/aifcc_logo"
+        android:layout_marginTop="30dp"
+        android:background="@dimen/activity_horizontal_margin"
+        android:contentDescription="@string/profil_1_desc"
+        android:onClick="onClick"
+        android:src="@drawable/btn_profil_1"
+        android:text="@string/profil_1" />
 
 </RelativeLayout>
