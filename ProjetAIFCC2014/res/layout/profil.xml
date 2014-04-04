@@ -88,7 +88,7 @@
         android:layout_alignLeft="@+id/aifcc_logo"
         android:layout_below="@+id/aifcc_logo"
         android:layout_marginTop="30dp"
-        android:background="@dimen/activity_horizontal_margin"
+        android:background="@color/blanc"
         android:contentDescription="@string/profil_1_desc"
         android:onClick="onClick"
         android:src="@drawable/btn_profil_1"
