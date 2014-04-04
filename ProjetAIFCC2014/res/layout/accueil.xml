@@ -9,14 +9,15 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:contentDescription="@string/BanniereDescription"
         android:src="@drawable/banniere_1" />
 
     <TextView
-        android:id="@+id/TitreAccueil"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView1"
+        android:layout_alignBottom="@+id/imageView1"
         android:layout_centerHorizontal="true"
-        android:text="Etudiants / Lycéens" />
+        android:text="TextView" />
 
 </RelativeLayout>

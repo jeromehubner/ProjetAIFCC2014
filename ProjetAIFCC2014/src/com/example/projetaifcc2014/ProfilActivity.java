@@ -2,6 +2,7 @@ package com.example.projetaifcc2014;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -18,28 +19,47 @@ public class ProfilActivity extends Activity {
 	}
 
 	public void onClick(View v) {
-		switch(v.getId()) {
-		case R.id.profil_1 :
+		switch (v.getId()) {
+		case R.id.profil_1:
 			profil = 1;
 			Toast.makeText(this, "test", 3000).show();
-			Intent intentAccueil = new Intent(getActivity(), AccueilActivity.class);
+			Intent intentAccueil = new Intent(getActivity(),AccueilActivity.class);
 			startActivity(intentAccueil);
-			
+
 			break;
-		
-		case R.id.profil_2 : profil = 2; break;
-		
-		case R.id.profil_3 : profil = 3; break;
-		
-		case R.id.profil_4 : profil = 4; break;
-		
-		case R.id.profil_5 : profil = 5; break;
-		
-		case R.id.profil_6 : profil = 6; break;
+
+		case R.id.profil_2:
+			profil = 2;
+			break;
+
+		case R.id.profil_3:
+			profil = 3;
+			break;
+
+		case R.id.profil_4:
+			profil = 4;
+			break;
+
+		case R.id.profil_5:
+			profil = 5;
+			break;
+
+		case R.id.profil_6:
+			profil = 6;
+			break;
+
+		// Bouton de bannière qui ouvre le site //
+		case R.id.profil_7:
+			Intent intent = new Intent(Intent.ACTION_VIEW);
+			String url = "http://www.aifcc.com/";
+			Uri uri = Uri.parse(url);
+			Toast.makeText(this, "Redirection vers" + url, Toast.LENGTH_LONG)
+					.show();
+			intent.setData(uri);
+			startActivity(intent);
+			break;
 		}
 	}
-
-
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -47,9 +67,9 @@ public class ProfilActivity extends Activity {
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	
-	public Activity getActivity(){
+
+	public Activity getActivity() {
 		return this;
 	}
-	
+
 }

@@ -10,7 +10,4 @@ public class AccueilActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.accueil);
 	}
-
-	
-	
 }
