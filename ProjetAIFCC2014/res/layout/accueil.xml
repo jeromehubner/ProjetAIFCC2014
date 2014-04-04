@@ -12,11 +12,11 @@
         android:src="@drawable/banniere_1" />
 
     <TextView
-        android:id="@+id/Titre"
+        android:id="@+id/TitreAccueil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="TextView" />
+        android:text="Etudiants / Lycéens" />
 
 </RelativeLayout>
