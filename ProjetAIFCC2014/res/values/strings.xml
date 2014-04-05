@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">AIFCC Formation</string>
+    <string name="app_name">AIFCC</string>
     <string name="action_settings">Settings</string>
 
     <!-- Activités -->
-    <string name="profilActivite">Activité Profil</string>
+    <string name="profilActivite">Choix du profil</string>
     <string name="AccueilActivite">Activité Accueil</string>
 
     <!-- Couleurs -->
