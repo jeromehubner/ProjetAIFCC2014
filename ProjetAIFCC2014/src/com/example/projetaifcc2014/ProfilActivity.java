@@ -18,8 +18,8 @@ public class ProfilActivity extends Activity {
 	private final String argContFin = "Financement";
 	
 	private String 	titrePageAccueil,
-					contenuDescription = "Description du profil" ,
-					contenuFinancement = "Description de la partie financement du profil";
+					contenuDescription,
+					contenuFinancement;
 	
 	private String urlAIFCC = "http://www.aifcc.com/";
 
@@ -28,6 +28,8 @@ public class ProfilActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.profil);
 	}
+	
+	
 
 	public void onClick(View v) {
 		switch (v.getId()) {
@@ -102,6 +104,17 @@ public class ProfilActivity extends Activity {
 		intentAccueil.putExtra(argContFin, contenuFinancement);
 		
 		startActivity(intentAccueil);
+	}
+
+
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		
+		contenuDescription = "Description du profil ";
+		contenuFinancement = "Description du \nfinancement du profil \n";
+		
 	}
 
 	// TODO : supprimer le fait de pouvoir revenir sur le splash screen

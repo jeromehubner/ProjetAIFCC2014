@@ -37,7 +37,7 @@
     <string name="nousRejoindreTitre">Nous rejoindre</string>
     <string name="financementDescription">Description du financement</string>
     <string name="contactTitre">Contact</string>
-    <string name="contactDesciption">Description de la partie Contact a placer ici...</string>
-    <string name="descriptionImage‪ViewMap">Plan de l\'AIFCC vue satellite</string>
+    <string name="contactDesciption">Description de la partie Contact a placer ici</string>
+    <string name="mapDescription">Plan de l\'AIFCC vue satellite</string>
 
 </resources>
