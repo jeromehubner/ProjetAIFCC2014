@@ -22,7 +22,7 @@ public class ProfilActivity extends Activity {
 		switch (v.getId()) {
 		case R.id.profil_1:
 			profil = 1;
-			Toast.makeText(this, "test", 3000).show();
+			Toast.makeText(this, "Bienvenue sur la page Etudiant", 3000).show();
 			Intent intentAccueil = new Intent(getActivity(),AccueilActivity.class);
 			startActivity(intentAccueil);
 
