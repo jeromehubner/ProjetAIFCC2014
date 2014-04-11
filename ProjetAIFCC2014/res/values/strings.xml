@@ -5,8 +5,10 @@
     <string name="action_settings">Settings</string>
 
     <!-- Activités -->
+    <string name="mainActivity">AIFCC</string>
     <string name="profilActivite">Choix du profil</string>
-    <string name="AccueilActivite">Activité Accueil</string>
+    <string name="accueilActivite">Accueil</string>
+    
 
     <!-- Couleurs -->
     <color name="blanc">#FFFFFF</color>
@@ -28,6 +30,14 @@
     <string name="profil_7_desc">Naviguer vers le site</string>
     
     <!-- Content Description  -->
-    <string name="BanniereDescription">Bannière du site de lAIFCC fréquemment mise à jour</string>
+    <string name="banniereDescription">Bannière du site de lAIFCC fréquemment mise à jour</string>
+    <string name="titreAccueil">Bonjour</string>
+    <string name="decriptionProfilAccueil">Description concernant le profil sélectionné à placer ici</string>
+    <string name="financementTitre">Financement</string>
+    <string name="nousRejoindreTitre">Nous rejoindre</string>
+    <string name="financementDescription">Description du financement</string>
+    <string name="contactTitre">Contact</string>
+    <string name="contactDesciption">Description de la partie Contact a placer ici...</string>
+    <string name="descriptionImage‪ViewMap">Plan de l\'AIFCC vue satellite</string>
 
 </resources>
