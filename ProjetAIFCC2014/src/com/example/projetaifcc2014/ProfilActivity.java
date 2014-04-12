@@ -45,7 +45,7 @@ public class ProfilActivity extends Activity {
 			break;
 
 		case R.id.profil_2:
-			// Demandeur d'emploi
+			// Demandeur
 			profil = getString(R.string.profil_2);
 
 			Toast.makeText(this, R.string.profil_2_desc, Toast.LENGTH_SHORT).show();
@@ -74,11 +74,6 @@ public class ProfilActivity extends Activity {
 			contenuFinancement += profil;
 			break;
 
-		case R.id.profil_5:
-			
-			// Formateur
-
-			break;
 
 		case R.id.profil_6:
 			
@@ -86,7 +81,7 @@ public class ProfilActivity extends Activity {
 
 			break;
 
-			// Bouton de banniÃ¨re qui ouvre le site //
+			// Bouton de bannière qui ouvre le site //
 		case R.id.profil_7:
 			Intent intent = new Intent(Intent.ACTION_VIEW);
 

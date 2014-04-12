@@ -9,17 +9,43 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.mainactivity);
 		
 		Intent intentProfil = new Intent(this,ProfilActivity.class);
 		startActivity(intentProfil);
-	}
+		}
+		}
+			
 
-//	@Override
-//	public boolean onCreateOptionsMenu(Menu menu) {
-//		// TODO Auto-generated method stub
-//		return super.onCreateOptionsMenu(null);
-//	}
-}
+			
+//	Thread logoTimer = new Thread() {
+//        public void run(){
+//            try{
+//                int logoTimer = 0;
+//                while(logoTimer < 5000){
+//                    sleep(100);
+//                    logoTimer = logoTimer +100;
+//                };
+//                Intent intentProfil = new Intent();
+//                startActivity(new Intent(".ProfilActivity.class"));
+//            } 
+//             
+//            catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//             
+//            finally{
+//                finish();
+//            }
+//        }
+//    };
+//     
+//    logoTimer.start();
+  
+
+
+
+
+
+

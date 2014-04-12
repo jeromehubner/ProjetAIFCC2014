@@ -15,11 +15,11 @@
 
     <!-- Profils -->
     <string name="profil_1">Etudiant</string>
-    <string name="profil_2">Demandeur d\'emploi</string>
+    <string name="profil_2">Demandeur</string>
     <string name="profil_3">Salarié</string>
     <string name="profil_4">Entrepreneur</string>
     <string name="profil_5">Formateur</string>
-    <string name="profil_6">Personnel administratif</string>
+    <string name="profil_6">Admin</string>
     <string name="profil_7">Site</string>
     <string name="profil_1_desc">Naviguer avec le profil Etudiant</string>
     <string name="profil_2_desc">Naviguer avec le profil Demandeur d\'emploi</string>
