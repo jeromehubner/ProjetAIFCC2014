@@ -4,92 +4,88 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content" >
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin" >
+
+        <TextView
+            android:id="@+id/titrePageAccueil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin" >
+            android:gravity="center_horizontal"
+            android:text="@string/titreAccueil"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <ImageView
+            android:id="@+id/idBanniere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/banniereDescription"
+            android:gravity="center_horizontal"
+            android:src="@drawable/banniere_1" />
+
+        <TextView
+            android:id="@+id/descriptionPageAccueil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/decriptionProfilAccueil" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:rowCount="9" >
 
             <TextView
-                android:id="@+id/titrePageAccueil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="@string/titreAccueil"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
-
-            <ImageView
-                android:id="@+id/idBanniere"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:contentDescription="@string/banniereDescription"
-                android:src="@drawable/banniere_1" />
-
-            <TextView
-                android:id="@+id/descriptionPageAccueil"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/decriptionProfilAccueil" />
-
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:columnCount="3"
-                android:paddingBottom="@dimen/activity_vertical_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:rowCount="9" >
-
-                <TextView
-                    android:id="@+id/financementTitre"
-                    android:layout_width="wrap_content"
-                    android:layout_column="1"
-                    android:layout_gravity="left|top"
-                    android:layout_row="1"
-                    android:text="@string/financementTitre"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:id="@+id/nousRejoindreTitre"
-                    android:layout_column="2"
-                    android:layout_gravity="center_horizontal|top"
-                    android:layout_row="1"
-                    android:text="@string/nousRejoindreTitre"
-                    android:textAppearance="?android:attr/textAppearanceMedium" />
-
-                <TextView
-                    android:id="@+id/financementContenu"
-                    android:layout_column="1"
-                    android:layout_gravity="left|top"
-                    android:layout_row="3"
-                    android:text="@string/financementDescription" />
-
-                
-            </GridLayout>
-
-            <TextView
-                android:id="@+id/contactTitre"
+                android:id="@+id/financementTitre"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/contactTitre"
+                android:layout_column="1"
+                android:layout_gravity="left|top"
+                android:layout_row="1"
+                android:text="@string/financementTitre"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
-			
+
             <TextView
-                android:id="@+id/contactContenu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/contactDesciption" />
+                android:id="@+id/nousRejoindreTitre"
+                android:layout_column="2"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_row="1"
+                android:text="@string/nousRejoindreTitre"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-             <ImageButton
-			    android:id="@+id/plan_aifcc"
-			    android:layout_width="150dp"
-			    android:layout_height="125dp"
-			    android:onClick="onClick"
-			    android:src="@drawable/plan_aifcc"
-			    android:contentDescription="@string/plan_desc"/>
+            <TextView
+                android:id="@+id/financementContenu"
+                android:layout_column="1"
+                android:layout_gravity="left|top"
+                android:layout_row="3"
+                android:text="@string/financementDescription" />
+        </GridLayout>
 
-        </LinearLayout>
+        <TextView
+            android:id="@+id/contactTitre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contactTitre"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
+        <TextView
+            android:id="@+id/contactContenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contactDesciption" />
 
-    </ScrollView>
+        <ImageButton
+            android:id="@+id/plan_aifcc"
+            android:layout_width="150dp"
+            android:layout_height="125dp"
+            android:contentDescription="@string/plan_desc"
+            android:onClick="onClick"
+            android:src="@drawable/plan_aifcc" />
+    </LinearLayout>
+
+</ScrollView>

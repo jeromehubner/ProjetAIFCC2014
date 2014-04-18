@@ -8,18 +8,17 @@
     <string name="mainActivity">AIFCC</string>
     <string name="profilActivite">Choix du profil</string>
     <string name="accueilActivite">Accueil</string>
-    
 
     <!-- Couleurs -->
     <color name="blanc">#FFFFFF</color>
 
     <!-- Profils -->
-    <string name="profil_1"> </string>
-    <string name="profil_2"> </string>
-    <string name="profil_3"> </string>
-    <string name="profil_4"> </string>
+    <string name="profil_1"></string>
+    <string name="profil_2"></string>
+    <string name="profil_3"></string>
+    <string name="profil_4"></string>
     <string name="profil_5">Formateur</string>
-    <string name="profil_6"> </string>
+    <string name="profil_6"></string>
     <string name="profil_7">Site</string>
     <string name="profil_1_desc">Naviguer avec le profil Etudiant</string>
     <string name="profil_2_desc">Naviguer avec le profil Demandeur d\'emploi</string>
@@ -30,8 +29,8 @@
     <string name="profil_7_desc">Naviguer vers le site</string>
     <string name="plan_desc">Redirection Google Map</string>
     <string name="notification">Notification AIFCC</string>
-    
-    <!-- Content Description  -->
+
+    <!-- Content Description -->
     <string name="banniereDescription">Bannière du site de lAIFCC fréquemment mise à jour</string>
     <string name="titreAccueil">Bonjour</string>
     <string name="decriptionProfilAccueil">Description concernant le profil sélectionné à placer ici</string>
@@ -41,5 +40,29 @@
     <string name="contactTitre">Contact</string>
     <string name="contactDesciption">Description de la partie Contact a placer ici</string>
     <string name="mapDescription">Plan de l\'AIFCC vue satellite</string>
-    
- </resources>
+    <string name="desc_list_item_icon">Item Icon</string>
+
+    <!-- Texte items drawer -->
+    <string-array name="items">
+        <item>AIFCC</item>
+        <item>Nos financements</item>
+        <item>Catalogues 2014</item>
+        <item>Les taxes</item>
+        <item>Nous rejoindre</item>
+        <item>Portes ouvertes</item>
+        <item>Contact</item>
+    </string-array>
+
+    <!-- Listes de icones du drawer -->
+    <!-- Garder dans le meme sens que les texte des items -->
+    <array name="icones_drawer">
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/financement</item>
+        <item>@drawable/catalogue</item>
+        <item>@drawable/taxes</item>
+        <item>@drawable/nous_rejoindre</item>
+        <item>@drawable/portes_ouvertes</item>
+        <item>@drawable/contacts</item>
+    </array>
+
+</resources>

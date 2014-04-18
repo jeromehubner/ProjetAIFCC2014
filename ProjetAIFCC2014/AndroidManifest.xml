@@ -18,35 +18,22 @@
             android:label="@string/mainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity 
-           android:name=".ProfilActivity"
-           android:label="@string/profilActivite" >
+        <activity
+            android:name=".ProfilActivity"
+            android:label="@string/profilActivite" >
         </activity>
-        
         <activity
             android:name=".AccueilActivity"
             android:label="@string/accueilActivite" >
         </activity>
-    </application>
-
-	<application
-        android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:theme="@android:style/Theme.Light">
         <activity
-            android:name=".SplashActivity"
-            android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:name=".DrawerActivity"
+            android:label="@string/app_name" >
         </activity>
-        <activity android:name=".ScoreSheetActivity" android:label="@string/app_name"
-            android:screenOrientation="portrait">
-        </activity>
-        
-	</application>
+    </application>
 
 </manifest>

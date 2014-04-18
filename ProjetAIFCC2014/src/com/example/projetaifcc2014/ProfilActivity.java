@@ -1,16 +1,10 @@
 package com.example.projetaifcc2014;
 
 import android.app.Activity;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class ProfilActivity extends Activity {
@@ -36,11 +30,11 @@ public class ProfilActivity extends Activity {
 //		// cette ligne indique que lorsque l'on clique sur la notification, nous revenons vers notre application
 //		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, ProfilActivity.class), 0);
 //				
-//		// on crée une notification
+//		// on crï¿½e une notification
 //		Notification notification = new Notification.Builder(this)
 //				    .setSmallIcon(R.drawable.ic_launcher)
 //				    .setContentTitle("Notification AIFCC")
-//				    .setContentText("Vous avez reçu une notification AIFCC")
+//				    .setContentText("Vous avez reï¿½u une notification AIFCC")
 //				    .setAutoCancel(true)
 //				    .setContentIntent(pendingIntent)
 //				    .build();
@@ -102,7 +96,7 @@ public class ProfilActivity extends Activity {
 
 			break;
 
-			// Bouton de bannière qui ouvre le site //
+			// Bouton de banniï¿½re qui ouvre le site //
 		case R.id.profil_7:
 			Intent intent = new Intent(Intent.ACTION_VIEW);
 
@@ -113,11 +107,11 @@ public class ProfilActivity extends Activity {
 			break;
 		}
 
-		Intent intentAccueil = new Intent(this, AccueilActivity.class);
+		Intent intentAccueil = new Intent(this, DrawerActivity.class);
 		
-		intentAccueil.putExtra(argTitrePageAccueil, titrePageAccueil);
-		intentAccueil.putExtra(argContDescr, contenuDescription);
-		intentAccueil.putExtra(argContFin, contenuFinancement);
+//		intentAccueil.putExtra(argTitrePageAccueil, titrePageAccueil);
+//		intentAccueil.putExtra(argContDescr, contenuDescription);
+//		intentAccueil.putExtra(argContFin, contenuFinancement);
 		
 		startActivity(intentAccueil);
 	}
