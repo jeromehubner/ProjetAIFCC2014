@@ -26,37 +26,17 @@
         android:text="@string/profil_7"
         android:weightSum="2" />
 
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:text="Mémoriser mon choix ..."
-        android:textSize="9sp" />
-
-    <Button
-        android:id="@+id/profil_6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/checkBox1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/btn_profil_6"
-        android:contentDescription="@string/profil_6_desc"
-        android:onClick="onClick"
-        android:text="@string/profil_6" />
-
     <Button
         android:id="@+id/profil_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/profil_7"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="38dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
         android:background="@drawable/btn_profil_1"
         android:contentDescription="@string/profil_1_desc"
+        android:minHeight="90dip"
+        android:minWidth="140dip"
         android:onClick="onClick"
         android:text="@string/profil_1" />
 
@@ -64,37 +44,58 @@
         android:id="@+id/profil_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/profil_1"
-        android:layout_alignBottom="@+id/profil_1"
+        android:layout_alignBaseline="@+id/profil_4"
+        android:layout_alignBottom="@+id/profil_4"
         android:layout_alignParentRight="true"
-        android:layout_marginRight="14dp"
+        android:layout_marginRight="20dp"
         android:background="@drawable/btn_profil_2"
         android:contentDescription="@string/profil_2_desc"
+        android:minHeight="90dip"
+        android:minWidth="140dip"
         android:onClick="onClick"
         android:text="@string/profil_2" />
-
-    <Button
-        android:id="@+id/profil_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/profil_1"
-        android:layout_below="@+id/profil_1"
-        android:layout_marginTop="42dp"
-        android:background="@drawable/btn_profil_4"
-        android:contentDescription="@string/profil_3_desc"
-        android:onClick="onClick"
-        android:text="@string/profil_3" />
 
     <Button
         android:id="@+id/profil_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/profil_3"
-        android:layout_alignBottom="@+id/profil_3"
-        android:layout_alignLeft="@+id/profil_2"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/profil_1"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/btn_profil_5"
         android:contentDescription="@string/profil_5_desc"
+        android:minHeight="90dip"
+        android:minWidth="140dip"
         android:onClick="onClick"
         android:text="@string/profil_4" />
+
+    <Button
+        android:id="@+id/profil_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/profil_4"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="43dp"
+        android:background="@drawable/btn_profil_4"
+        android:contentDescription="@string/profil_3_desc"
+        android:minHeight="90dip"
+        android:minWidth="140dip"
+        android:onClick="onClick"
+        android:text="@string/profil_3" />
+
+    <Button
+        android:id="@+id/profil_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/profil_2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="43dp"
+        android:background="@drawable/btn_profil_5"
+        android:contentDescription="@string/profil_6_desc"
+        android:minHeight="90dip"
+        android:minWidth="140dip"
+        android:onClick="onClick"
+        android:text="@string/profil_6" />
 
 </RelativeLayout>

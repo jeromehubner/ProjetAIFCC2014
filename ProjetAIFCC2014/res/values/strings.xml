@@ -14,12 +14,12 @@
     <color name="blanc">#FFFFFF</color>
 
     <!-- Profils -->
-    <string name="profil_1">Etudiant</string>
-    <string name="profil_2">Demandeur</string>
-    <string name="profil_3">Salarié</string>
-    <string name="profil_4">Entrepreneur</string>
+    <string name="profil_1"> </string>
+    <string name="profil_2"> </string>
+    <string name="profil_3"> </string>
+    <string name="profil_4"> </string>
     <string name="profil_5">Formateur</string>
-    <string name="profil_6">Admin</string>
+    <string name="profil_6"> </string>
     <string name="profil_7">Site</string>
     <string name="profil_1_desc">Naviguer avec le profil Etudiant</string>
     <string name="profil_2_desc">Naviguer avec le profil Demandeur d\'emploi</string>
@@ -28,6 +28,7 @@
     <string name="profil_5_desc">Naviguer avec le profil Formateur</string>
     <string name="profil_6_desc">Naviguer avec le profil Personnel administratif</string>
     <string name="profil_7_desc">Naviguer vers le site</string>
+    <string name="plan_desc">Redirection Google Map</string>
     <string name="notification">Notification AIFCC</string>
     
     <!-- Content Description  -->

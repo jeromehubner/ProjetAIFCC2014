@@ -33,21 +33,21 @@ public class ProfilActivity extends Activity {
 		setContentView(R.layout.profil);
 		
 		
-		// cette ligne indique que lorsque l'on clique sur la notification, nous revenons vers notre application
-		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, ProfilActivity.class), 0);
-				
-		// on crée une notification
-		Notification notification = new Notification.Builder(this)
-				    .setSmallIcon(R.drawable.ic_launcher)
-				    .setContentTitle("Notification AIFCC")
-				    .setContentText("Vous avez reçu une notification AIFCC")
-				    .setAutoCancel(true)
-				    .setContentIntent(pendingIntent)
-				    .build();
-		//notification.vibrate = new long[] {0,200,100,200,100,200};
-				
-		NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-	    notificationManager.notify(R.string.notification, notification);
+//		// cette ligne indique que lorsque l'on clique sur la notification, nous revenons vers notre application
+//		PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, ProfilActivity.class), 0);
+//				
+//		// on crée une notification
+//		Notification notification = new Notification.Builder(this)
+//				    .setSmallIcon(R.drawable.ic_launcher)
+//				    .setContentTitle("Notification AIFCC")
+//				    .setContentText("Vous avez reçu une notification AIFCC")
+//				    .setAutoCancel(true)
+//				    .setContentIntent(pendingIntent)
+//				    .build();
+//		//notification.vibrate = new long[] {0,200,100,200,100,200};
+//				
+//		NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+//	    notificationManager.notify(R.string.notification, notification);
 	}
 	
 	
