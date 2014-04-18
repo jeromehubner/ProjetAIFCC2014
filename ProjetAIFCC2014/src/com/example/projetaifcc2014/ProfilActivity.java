@@ -44,7 +44,7 @@ public class ProfilActivity extends Activity {
 				    .setAutoCancel(true)
 				    .setContentIntent(pendingIntent)
 				    .build();
-		notification.vibrate = new long[] {0,200,100,200,100,200};
+		//notification.vibrate = new long[] {0,200,100,200,100,200};
 				
 		NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
 	    notificationManager.notify(R.string.notification, notification);
@@ -133,6 +133,6 @@ public class ProfilActivity extends Activity {
 		
 	}
 
-	// TODO : supprimer le fait de pouvoir revenir sur le splash screen
+	// TODO : supprimer le fait de pouvoir revenir sur le splashscreen
 
 }
