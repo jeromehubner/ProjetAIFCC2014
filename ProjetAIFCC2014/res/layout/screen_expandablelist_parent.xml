@@ -9,8 +9,8 @@
         android:gravity="center_vertical"
         android:text="@string/formationAIFCC"
         android:textSize="18dp"
-        android:textColor="#FFFFFF"
+        android:textColor="#C9252C"
         android:padding="10dp"
         android:textSelectHandleLeft="@string/formationAIFCC"
-        android:background="#009999"
+        android:background="#FFFFFF"
         android:textStyle="bold" />
