@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanc" >
+
+    <ImageButton
+        android:id="@+id/banniere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/aifcc_logo"
+        android:contentDescription="@string/aifcc_logo"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/aifcc_alt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/banniere"
+        android:layout_marginTop="25dp"
+        android:minHeight="90dip"
+        android:minWidth="140dip"
+        android:background="@drawable/btn_aifcc_alt"
+        android:contentDescription="@string/aifcc_alt"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/aifcc_cnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aifcc_alt"
+        android:layout_alignLeft="@+id/aifcc_alt"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="-80dp"
+        android:minHeight="90dip"
+        android:minWidth="140dip"
+        android:background="@drawable/btn_aifcc_cnt"
+        android:contentDescription="@string/aifcc_cnt"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/cel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aifcc_alt"
+        android:layout_alignRight="@+id/aifcc_alt"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="-80dp"
+        android:minHeight="90dip"
+        android:minWidth="140dip"
+        android:background="@drawable/btn_cel"
+        android:contentDescription="@string/cel"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/imss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aifcc_cnt"
+        android:layout_alignLeft="@+id/aifcc_cnt"
+        android:layout_marginTop="25dp"
+        android:minHeight="90dip"
+        android:minWidth="140dip"
+        android:background="@drawable/btn_imss"
+        android:contentDescription="@string/imss"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/imad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cel"
+        android:layout_alignLeft="@+id/cel"
+        android:layout_marginTop="25dp"
+        android:minHeight="90dip"
+        android:minWidth="140dip"
+        android:background="@drawable/btn_imad"
+        android:contentDescription="@string/imad"
+        android:onClick="onClick" />
+
+</RelativeLayout>

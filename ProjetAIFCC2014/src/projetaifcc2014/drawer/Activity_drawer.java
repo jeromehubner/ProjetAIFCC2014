@@ -1,7 +1,8 @@
-package com.example.projetaifcc2014;
+package projetaifcc2014.drawer;
 
 import java.util.ArrayList;
 
+import projetaifcc2014.PagesFragment;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -16,13 +17,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import drawer.DrawerAdapter;
-import drawer.NavDrawerItem;
+
+import com.example.projetaifcc2014.R;
 
 /**
  * Created by Sebastien on 16/04/14.
  */
-public class DrawerActivity extends Activity {
+public class Activity_drawer extends Activity {
     private DrawerLayout monDrawerLayout;
     private ListView maListeDrawer;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -46,7 +47,7 @@ public class DrawerActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_drawer);
+        setContentView(R.layout.drawer);
 
         mTitle = mDrawerTitle = getTitle();
 

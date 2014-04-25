@@ -1,10 +1,12 @@
-package com.example.projetaifcc2014;
+package projetaifcc2014;
 
+import projetaifcc2014.departement.Activity_department;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MotionEvent;
+
+import com.example.projetaifcc2014.R;
 
 public class MainActivity extends Activity {
 
@@ -41,7 +43,7 @@ public class MainActivity extends Activity {
 //     
 //    //logoTimer.start();
 //	}
-	 /** Durée d'affichage du SplashScreen */
+	 /** Durï¿½e d'affichage du SplashScreen */
 	   protected int _splashTime = 5000; 
 
 	   private Thread splashTread;
@@ -51,7 +53,7 @@ public class MainActivity extends Activity {
 	   public void onCreate(Bundle savedInstanceState) 
 	   {
 	      super.onCreate(savedInstanceState);
-	      setContentView(R.layout.splash);
+	      setContentView(R.layout.screen_splash);
 
 	      final MainActivity sPlashScreen = this; 
 
@@ -72,7 +74,7 @@ public class MainActivity extends Activity {
 	             {
 	                finish();
 	                Intent i = new Intent();
-	                i.setClass(sPlashScreen, ProfilActivity.class);
+	                i.setClass(sPlashScreen, Activity_department.class);
 	                startActivity(i);
 	             }
 	          }
@@ -83,7 +85,7 @@ public class MainActivity extends Activity {
 	    @Override
 	    public boolean onTouchEvent(MotionEvent event) 
 	    {
-	       /** Si l'utilisateur fait un mouvement de haut en bas on passe à l'Activity principale */
+	       /** Si l'utilisateur fait un mouvement de haut en bas on passe ï¿½ l'Activity principale */
 	       if (event.getAction() == MotionEvent.ACTION_DOWN) 
 	       {
 		   synchronized(splashTread)

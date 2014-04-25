@@ -1,4 +1,4 @@
-package drawer;
+package projetaifcc2014.drawer;
 
 
 import java.util.ArrayList;
@@ -13,8 +13,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.projetaifcc2014.R;
-
-import drawer.NavDrawerItem;
 /**
  * Created by Sebastien on 16/04/14.
  */

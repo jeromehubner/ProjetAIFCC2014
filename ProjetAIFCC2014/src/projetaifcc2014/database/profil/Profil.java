@@ -1,4 +1,4 @@
-package com.example.projetaifcc2014;
+package projetaifcc2014.database.profil;
 
 
 public class Profil {

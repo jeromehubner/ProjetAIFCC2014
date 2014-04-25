@@ -1,3 +1,4 @@
+package projetaifcc2014;
 //package com.example.projetaifcc2014;
 //
 //import android.app.Activity;
@@ -7,7 +8,7 @@
 //
 //public class Splashscreen extends Activity 
 //{
-//   /** Durée d'affichage du SplashScreen */
+//   /** Durï¿½e d'affichage du SplashScreen */
 //   protected int _splashTime = 5000; 
 //
 //   private Thread splashTread;
@@ -49,7 +50,7 @@
 //    @Override
 //    public boolean onTouchEvent(MotionEvent event) 
 //    {
-//       /** Si l'utilisateur fait un mouvement de haut en bas on passe à l'Activity principale */
+//       /** Si l'utilisateur fait un mouvement de haut en bas on passe ï¿½ l'Activity principale */
 //       if (event.getAction() == MotionEvent.ACTION_DOWN) 
 //       {
 //	   synchronized(splashTread)

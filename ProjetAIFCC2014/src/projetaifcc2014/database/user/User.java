@@ -1,4 +1,6 @@
-package com.example.projetaifcc2014;
+package projetaifcc2014.database.user;
+
+import projetaifcc2014.database.profil.Profil;
 
 public class User {
 	private int id;
@@ -49,7 +51,7 @@ public class User {
 		return prenom;
 	}
 	/**
-	 * @param le nouveau prénom de l'utilisateur
+	 * @param le nouveau prï¿½nom de l'utilisateur
 	 */
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
@@ -92,7 +94,7 @@ public class User {
 	}
 
 	/**
-	 * @return une chaîne de caractères représentative de l'utilisateur
+	 * @return une chaï¿½ne de caractï¿½res reprï¿½sentative de l'utilisateur
 	 */
 	public String toString(){
 		if (profil == null){

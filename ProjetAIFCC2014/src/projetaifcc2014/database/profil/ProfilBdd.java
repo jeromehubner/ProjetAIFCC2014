@@ -1,11 +1,10 @@
-package database;
+package projetaifcc2014.database.profil;
  
+import projetaifcc2014.database.Database;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-
-import com.example.projetaifcc2014.Profil;
  
 public class ProfilBdd {
 
@@ -26,29 +25,29 @@ public class ProfilBdd {
 	}
 
 	/**
-	 * @brief ouvre la base de données en mode écriture
+	 * @brief ouvre la base de donnï¿½es en mode ï¿½criture
 	 */
 	public void open(){
 		bdd = maBdd.getWritableDatabase();
 	}
 
 	/**
-	 * @brief ferme la base de données
+	 * @brief ferme la base de donnï¿½es
 	 */
 	public void close(){
 		bdd.close();
 	}
 	
 	/**
-	 * @return la base de données SQLite
+	 * @return la base de donnï¿½es SQLite
 	 */
 	public SQLiteDatabase getBDD(){
 		return bdd;
 	}
 	
 	/**
-	 * @brief insère un profil dans la base de données
-	 * @param le profil à insérer
+	 * @brief insï¿½re un profil dans la base de donnï¿½es
+	 * @param le profil ï¿½ insï¿½rer
 	 */
 	public long insertProfil(Profil profil){
 		ContentValues values = new ContentValues();
@@ -58,8 +57,8 @@ public class ProfilBdd {
 	}
 
 	/**
-	 * @brief met à jour un profil dans la base de données
-	 * @param le profil à mettre à jour
+	 * @brief met ï¿½ jour un profil dans la base de donnï¿½es
+	 * @param le profil ï¿½ mettre ï¿½ jour
 	 */
 	public int updateProfil(Profil profil){
 		ContentValues values = new ContentValues();
@@ -68,8 +67,8 @@ public class ProfilBdd {
 	}
 
 	/**
-	 * @brief supprime un profil dans la base de données
-	 * @param le profil à supprimer
+	 * @brief supprime un profil dans la base de donnï¿½es
+	 * @param le profil ï¿½ supprimer
 	 */
 	public int removeProfil(Profil profil){
 		return bdd.delete(TABLE_PROFIL, PRO_ID + " = " + profil.getId(), null);
@@ -77,7 +76,7 @@ public class ProfilBdd {
 
 	/**
 	 * @param l'identifiant du profil
-	 * @return le profil contenu en base de données correspondant à l'identifiant passé en paramètre
+	 * @return le profil contenu en base de donnï¿½es correspondant ï¿½ l'identifiant passï¿½ en paramï¿½tre
 	 */
 	public Profil getProfilById(int id){
 		Cursor c = bdd.query( TABLE_PROFIL, new String[] {PRO_ID, PRO_NOM}, PRO_ID + " = " + id, null, null, null, null);

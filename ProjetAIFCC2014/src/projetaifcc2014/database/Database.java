@@ -1,5 +1,7 @@
-package database;
+package projetaifcc2014.database;
 
+import projetaifcc2014.database.profil.ProfilBdd;
+import projetaifcc2014.database.user.UserBdd;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
@@ -7,10 +9,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class Database extends SQLiteOpenHelper {
 	
-	// Version base de données
+	// Version base de donnï¿½es
 	public static final int DATABASE_VERSION = 1;
 	
-	// Nom base de données
+	// Nom base de donnï¿½es
 	public static final String DATABASE = "aifcc";
 	
 	// Requetes creation base

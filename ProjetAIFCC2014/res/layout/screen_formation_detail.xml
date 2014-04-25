@@ -31,7 +31,7 @@
             android:id="@+id/descriptionPageAccueil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/decriptionProfilAccueil" />
+            android:text="@string/aifcc_logo" />
 
         <GridLayout
             android:layout_width="match_parent"

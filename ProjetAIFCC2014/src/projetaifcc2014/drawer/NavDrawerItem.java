@@ -1,4 +1,4 @@
-package drawer;
+package projetaifcc2014.drawer;
 
 /**
  * Created by Sebastien on 16/04/14.

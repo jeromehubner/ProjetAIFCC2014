@@ -6,34 +6,24 @@
 
     <!-- Activités -->
     <string name="mainActivity">AIFCC</string>
-    <string name="profilActivite">Choix du profil</string>
+    <string name="departementActivite">Choix du departement</string>
     <string name="accueilActivite">Accueil</string>
-
-    <!-- Couleurs -->
-    <color name="blanc">#FFFFFF</color>
-
-    <!-- Profils -->
-    <string name="profil_1"></string>
-    <string name="profil_2"></string>
-    <string name="profil_3"></string>
-    <string name="profil_4"></string>
-    <string name="profil_5">Formateur</string>
-    <string name="profil_6"></string>
-    <string name="profil_7">Site</string>
-    <string name="profil_1_desc">Naviguer avec le profil Etudiant</string>
-    <string name="profil_2_desc">Naviguer avec le profil Demandeur d\'emploi</string>
-    <string name="profil_3_desc">Naviguer avec le profil Salarié</string>
-    <string name="profil_4_desc">Naviguer avec le profil Entrepreneur</string>
-    <string name="profil_5_desc">Naviguer avec le profil Formateur</string>
-    <string name="profil_6_desc">Naviguer avec le profil Personnel administratif</string>
-    <string name="profil_7_desc">Naviguer vers le site</string>
+    
+    <!-- departements -->
+    <string name="aifcc_alt">AIFCC institut de l\'alternance</string>
+    <string name="aifcc_cnt">AIFCC formation continue</string>
+    <string name="imss">IMSS institut des métiers sanitaires et social</string>
+    <string name="cel">CEL centre d\'étude des langues</string>
+    <string name="imad">imad institut des métiers de l\'architecture et du design</string>
+    
     <string name="plan_desc">Redirection Google Map</string>
     <string name="notification">Notification AIFCC</string>
-
+    
     <!-- Content Description -->
+    <string name="aifcc_logo">Site AIFCC</string>
     <string name="banniereDescription">Bannière du site de lAIFCC fréquemment mise à jour</string>
     <string name="titreAccueil">Bonjour</string>
-    <string name="decriptionProfilAccueil">Description concernant le profil sélectionné à placer ici</string>
+    <string name="decriptionorgAccueil">Description concernant l\'organisation sélectionnée à placer ici</string>
     <string name="financementTitre">Financement</string>
     <string name="nousRejoindreTitre">Nous rejoindre</string>
     <string name="financementDescription">Description du financement</string>
@@ -64,5 +54,6 @@
         <item>@drawable/portes_ouvertes</item>
         <item>@drawable/contacts</item>
     </array>
+    <string name="formationAIFCC">Formation CEL</string>
 
 </resources>

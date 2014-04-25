@@ -1,4 +1,4 @@
-package com.example.projetaifcc2014;
+package projetaifcc2014.formation_detail;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
@@ -9,7 +9,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class AccueilActivity extends Activity {
+import com.example.projetaifcc2014.R;
+
+public class Activity_formation_detail extends Activity {
 
 	final String argTitrePageAccueil = "Titre";
 	final String argContDescr = "Description";
@@ -19,7 +21,7 @@ public class AccueilActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.accueil);
+		setContentView(R.layout.screen_formation_detail);
 		
 		Intent intent = getIntent();
 		
@@ -41,7 +43,7 @@ public class AccueilActivity extends Activity {
 				Intent mapIntent = new Intent(Intent.ACTION_VIEW,urimap);
 				startActivity(mapIntent); 
 			} catch(ActivityNotFoundException e) {
-				(Toast.makeText(this.getApplicationContext(), "GoogleMap non trouvé", Toast.LENGTH_LONG)).show();
+				(Toast.makeText(this.getApplicationContext(), "GoogleMap non trouvï¿½", Toast.LENGTH_LONG)).show();
 			}
 		
 		break;

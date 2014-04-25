@@ -1,7 +1,7 @@
-package database;
+package projetaifcc2014.database.user;
  
-import com.example.projetaifcc2014.User;
-
+import projetaifcc2014.database.Database;
+import projetaifcc2014.database.profil.ProfilBdd;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -36,29 +36,29 @@ public class UserBdd {
 	}
 	
 	/**
-	 * @brief ouvre la base de données en mode écriture
+	 * @brief ouvre la base de donnï¿½es en mode ï¿½criture
 	 */
 	public void open(){
 		bdd = maBdd.getWritableDatabase();
 	}
 
 	/**
-	 * @brief ferme la base de données
+	 * @brief ferme la base de donnï¿½es
 	 */
 	public void close(){
 		bdd.close();
 	}
 
 	/**
-	 * @return la base de données SQLite
+	 * @return la base de donnï¿½es SQLite
 	 */
 	public SQLiteDatabase getBDD(){
 		return bdd;
 	}
 	
 	/**
-	 * @brief insère un utilisateur dans la base de données
-	 * @param l'utilisateur à insérer
+	 * @brief insï¿½re un utilisateur dans la base de donnï¿½es
+	 * @param l'utilisateur ï¿½ insï¿½rer
 	 */
 	public long insertUser(User user){
 		ContentValues values = new ContentValues();
@@ -71,8 +71,8 @@ public class UserBdd {
 	}
 	
 	/**
-	 * @brief met à jour un utilisateur dans la base de données
-	 * @param l'utilisateur à mettre à jour
+	 * @brief met ï¿½ jour un utilisateur dans la base de donnï¿½es
+	 * @param l'utilisateur ï¿½ mettre ï¿½ jour
 	 */
 	public int updateUser(User user){
 		ContentValues values = new ContentValues();
@@ -84,8 +84,8 @@ public class UserBdd {
 	}
 	
 	/**
-	 * @brief supprime un utilisateur dans la base de données
-	 * @param l'utilisateur à supprimer
+	 * @brief supprime un utilisateur dans la base de donnï¿½es
+	 * @param l'utilisateur ï¿½ supprimer
 	 */
 	public int removeUser(User user){
 		return bdd.delete(TABLE_USER, USE_ID + " = " + user.getId(), null);
@@ -93,7 +93,7 @@ public class UserBdd {
 
 	/**
 	 * @param l'identifiant de l'utilisateur
-	 * @return l'utilisateur contenu en base de données correspondant à l'identifiant passé en paramètre
+	 * @return l'utilisateur contenu en base de donnï¿½es correspondant ï¿½ l'identifiant passï¿½ en paramï¿½tre
 	 */
 	public User getUserById(int id){
 		Cursor c = bdd.query( TABLE_USER, new String[] {USE_ID, USE_NOM, USE_PRENOM, USE_LOGIN, USE_MDP, USE_PROFIL}, USE_ID + " = " + id, null, null, null, null);
