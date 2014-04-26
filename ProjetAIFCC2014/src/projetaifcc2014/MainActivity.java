@@ -11,7 +11,6 @@ import com.example.projetaifcc2014.R;
 public class MainActivity extends Activity {
 
 //	@Override
-	// test
 //	protected void onCreate(Bundle savedInstanceState) {
 //		super.onCreate(savedInstanceState);
 //		setContentView(R.layout.splash);
