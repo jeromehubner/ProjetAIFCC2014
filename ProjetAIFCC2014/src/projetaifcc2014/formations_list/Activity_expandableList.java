@@ -63,25 +63,25 @@ public class Activity_expandableList extends ExpandableListActivity
 		// Add Child Items for Commerce - Vente
 		ArrayList<String> child = new ArrayList<String>();
 		child.add("Responsable Manager de la Distribution");
-		child.add("Responsable de développement commercial");
-		child.add("BTS Management des Unités Commerciales (MUC)");
-		child.add("Gestionnaire des Unités Commerciales");
-		child.add("BTS Négociation et Relation Client (NRC)");
+		child.add("Responsable de dÃ©veloppement commercial");
+		child.add("BTS Management des UnitÃ©s Commerciales (MUC)");
+		child.add("Gestionnaire des UnitÃ©s Commerciales");
+		child.add("BTS NÃ©gociation et Relation Client (NRC)");
 		child.add("Vendeur conseiller commercial");
-		child.add("Conseiller relation client à distance");
-		child.add("CAP Employé de commerce");
+		child.add("Conseiller relation client Ã  distance");
+		child.add("CAP EmployÃ© de commerce");
 
 		childItems.add(child);
 
-		// Add Child Items for Compatibilité - Gestion
+		// Add Child Items for Compatibilitï¿½ - Gestion
 		child = new ArrayList<String>();
 		child.add("Licence Gestion d'Entreprise");
-		child.add("BTS Comptabilité et Gestion des Organisations (CGO)");
+		child.add("BTS ComptabilitÃ© et Gestion des Organisations (CGO)");
 		child.add("BTS Assistant de Gestion PME-PMI (BTS AG)");
 		child.add("Gestionnaire de Paie, option RH");
 		child.add("Comptable assistant");
-		child.add("Secrétaire comptable");
-		child.add("Formation individualisée comptabilité - paie");
+		child.add("SecrÃ©taire comptable");
+		child.add("Formation individualisÃ©e comptabilitÃ© - paie");
 
 		childItems.add(child);
 
@@ -93,8 +93,8 @@ public class Activity_expandableList extends ExpandableListActivity
 
 		// Add Child Items for Informatique
 		child = new ArrayList<String>();
-		child.add("Conception et développement de systèmes d'information - Option mobile");
-		child.add("BTS Services Informatiques aux Organisations, options Solutions d’infrastructures, systèmes et réseaux & Solutions logicielles et applications métiers");
+		child.add("Conception et dÃ©veloppement de systÃ¨mes d'information - Option mobile");
+		child.add("BTS Services Informatiques aux Organisations, options Solutions d'infrastructures, systÃ¨mes et rÃ©seaux & Solutions logicielles et applications mÃ©tiers");
 
 		childItems.add(child);
 
@@ -109,13 +109,13 @@ public class Activity_expandableList extends ExpandableListActivity
 		child.add("BTS Assistant de Manager (AM)");
 		child.add("BTS Assistant de Gestion PME-PMI");
 		child.add("Assistante de Direction Titre professionnel");
-		child.add("Secrétaire assistant");
+		child.add("SecrÃ©taire assistant");
 
 		childItems.add(child);
 
 		// Add Child Items for Ressources Humaines
 		child = new ArrayList<String>();
-		child.add("Chargé des Ressources Humaines Titre Professionnel");
+		child.add("ChargÃ© des Ressources Humaines Titre Professionnel");
 		child.add("Gestionnaire de Paie, option RH");
 
 		childItems.add(child);
