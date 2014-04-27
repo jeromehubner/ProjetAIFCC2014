@@ -1,6 +1,6 @@
 package projetaifcc2014.departement;
 
-import projetaifcc2014.drawer.Activity_drawer;
+import projetaifcc2014.expandable_list_formation.ExpandableListActivity;
 import projetaifcc2014.formations_list.Activity_expandableList;
 import android.app.Activity;
 import android.content.Intent;
@@ -63,6 +63,8 @@ public class Activity_department extends Activity {
 			titrePageAccueil = departement;
 			contenuDescription += departement;
 			contenuFinancement += departement;
+			Intent intentAifcc_alt = new Intent(this, ExpandableListActivity.class);
+			startActivity(intentAifcc_alt);
 			break;
 
 		case R.id.aifcc_cnt:
@@ -72,6 +74,8 @@ public class Activity_department extends Activity {
 			titrePageAccueil = departement;
 			contenuDescription += departement;
 			contenuFinancement += departement;
+			Intent intentAifcc_cnt = new Intent(this, Activity_expandableList.class);
+			startActivity(intentAifcc_cnt);
 			break;
 
 		case R.id.imss:
@@ -96,6 +100,8 @@ public class Activity_department extends Activity {
 			titrePageAccueil = departement;
 			contenuDescription += departement;
 			contenuFinancement += departement;
+			Intent intentCel = new Intent(this, Activity_expandableList.class);
+			startActivity(intentCel);
 			break;
 
 		case R.id.imad:
@@ -123,13 +129,12 @@ public class Activity_department extends Activity {
 			break;
 		}
 
-		Intent intentAccueil = new Intent(this, Activity_expandableList.class);
 		
 //		intentAccueil.putExtra(argTitrePageAccueil, titrePageAccueil);
 //		intentAccueil.putExtra(argContDescr, contenuDescription);
 //		intentAccueil.putExtra(argContFin, contenuFinancement);
 		
-		startActivity(intentAccueil);
+		
 	}
 
 

@@ -8,4 +8,12 @@
     <color name="counter_text_color">#c5c4c4</color>
     
     <color name="blanc">#FFFFFF</color>
+    <color name="rouge_fonce">#B9121B</color>
+    <color name="rouge_pale">#B1221C</color>
+    <color name="rouge_rose">#E70739</color>
+    <color name="bleu_ciel">#5EB6DD</color>
+    <color name="bleu_marine">#183152</color>
+    <color name="orange">#FC7F3C</color>
+    <color name="noir">#262029</color>
+    
 </resources>

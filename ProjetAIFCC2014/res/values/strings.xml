@@ -31,6 +31,23 @@
     <string name="contactDesciption">Description de la partie Contact a placer ici</string>
     <string name="mapDescription">Plan de l\'AIFCC vue satellite</string>
     <string name="desc_list_item_icon">Item Icon</string>
+    
+       <!-- description des formations -->
+    <string name="ong_metier">Metiers visés</string>
+    <string name="ong_modalite">Modalités</string>
+    <string name="ong_programme">Programme</string>
+    <string name="ong_profil">Profil requis</string>
+    <string name="sep"> : </string>
+    <string name="nom_metier_1">Responsable commercial</string>
+    <string name="desc_metier_1">directeur commercial, chef des ventes, chef de Secteur, chef d’agence… il assume la responsabilité d’une équipe composée de vendeurs (commerciaux, technico-commerciaux, merchandiseurs, attachés commerciaux…) et de d’assistants (communication, gestion…). Il rend compte à la direction générale et participe à l\’élaboration de la stratégie commerciale de l’entreprise.</string>
+
+    <!-- entetes -->
+    <string-array name="entetes">
+		<item>Contenu du fragment metier</item>
+		<item>Contenu du fragment modalites</item>
+		<item>Contenu du fragment programme</item>
+		<item>Contenu du fragment profil</item>
+	</string-array>
 
     <!-- Texte items drawer -->
     <string-array name="items">
@@ -56,4 +73,72 @@
     </array>
     <string name="formationAIFCC">Formation CEL</string>
 
+    
+    
+    
+    <!-- Domaines de formation -->
+    <string-array name="liste_domaines">
+        <item>Commerce - Vente</item>
+        <item>Comptabilité - Gestion</item>
+        <item>Communication</item>
+        <item>Informatique</item>
+        <item>Tourisme</item>
+        <item>Secretariat - Organisation</item>
+        <item>Ressources humaines </item>
+    </string-array>
+    
+    <!-- Formation Commerce - Vente -->
+    <string-array name="commerce_vente">
+        <item>Responsable Manager de la Distribution</item>
+        <item>Responsable de développement commercial</item>
+		<item>BTS Management des Unités Commerciales (MUC)</item>
+		<item>Gestionnaire des Unités Commerciales</item>
+		<item>BTS Négociation et Relation Client (NRC)</item>
+		<item>Vendeur conseiller commercial</item>
+		<item>Conseiller relation client à distance</item>
+		<item>CAP Employé de commerce</item>
+    </string-array>
+    
+    <!-- Formation Compatibilité - Gestion -->
+    <string-array name="compta_gestion">
+        <item>Licence Gestion d\'Entreprise</item>
+        <item>BTS Comptabilité et Gestion des Organisations (CGO)</item>
+		<item>BTS Assistant de Gestion PME-PMI (BTS AG)</item>
+		<item>Gestionnaire de Paie, option RH</item>
+		<item>Comptable assistant</item>
+		<item>Secrétaire comptable</item>
+		<item>Conseiller relation client à distance</item>
+		<item>Formation individualisée comptabilité - paie</item>
+    </string-array>
+    
+    <!-- Formation Communication -->
+    <string-array name="communication">
+        <item>BTS Communication</item>
+    </string-array>
+    
+    <!-- Formation Informatique -->
+    <string-array name="informatique">
+        <item>Conception et développement de systèmes d\'information - Option mobile</item>
+        <item>BTS Services Informatiques aux Organisations, options Solutions d\'infrastructures, systèmes et réseaux et Solutions logicielles et applications métiers</item>
+    </string-array>
+    
+    <!-- Formation Tourisme -->
+    <string-array name="tourisme">
+        <item>BTS Tourisme</item>
+    </string-array>
+    
+    <!-- Formation Secretariat - organisation -->
+    <string-array name="secretariat_organisation">
+        <item>BTS Assistant de Manager (AM)</item>
+        <item>BTS Assistant de Gestion PME-PMI</item>
+        <item>Assistante de Direction Titre professionnel</item>
+        <item>Secrétaire assistant</item>
+    </string-array>
+    
+     <!-- Formation Ressources Humaines -->
+    <string-array name="ressources_humaines">
+        <item>Chargé des Ressources Humaines Titre Professionnel</item>
+        <item>Gestionnaire de Paie, option RH</item>
+    </string-array>
+    
 </resources>

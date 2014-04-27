@@ -2,10 +2,8 @@ package projetaifcc2014.formations_list;
 
 import java.util.ArrayList;
 
-import projetaifcc2014.drawer.Activity_drawer;
 import android.app.ExpandableListActivity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.widget.ExpandableListView;

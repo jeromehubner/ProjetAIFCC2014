@@ -38,6 +38,10 @@
             android:name="projetaifcc2014.formations_list.Activity_expandableList"
             android:label="@string/app_name">
         </activity>
+        <activity
+            android:name="projetaifcc2014.expandable_list_formation.ExpandableListActivity"
+            android:label="@string/app_name">
+        </activity>
     </application>
 
 </manifest>

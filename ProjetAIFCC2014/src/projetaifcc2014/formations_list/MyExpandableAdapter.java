@@ -2,10 +2,7 @@ package projetaifcc2014.formations_list;
 
 import java.util.ArrayList;
 
-import projetaifcc2014.drawer.Activity_drawer;
 import android.app.Activity;
-import android.content.Intent;
-import android.sax.StartElementListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
