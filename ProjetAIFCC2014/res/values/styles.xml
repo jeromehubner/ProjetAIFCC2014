@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -14,7 +14,20 @@
 
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+<!--         <item name="android:actionBarTabStyle">@style/actionBarTabStyle</item> -->
+        <item name="android:actionBarTabTextStyle">@style/actionBarTabTextStyle</item>
+    </style>
+
+    <style name="actionBarTabStyle" parent="AppBaseTheme">
+        <item name="android:background">@color/rouge</item>
+<!--         <item name="android:backgroundStacked">@drawable/ab_stacked_solid_style</item> -->
+<!--         <item name="android:backgroundSplit">@drawable/ab_bottom_solid_style</item> -->
+    </style>
+
+    <style name="actionBarTabTextStyle" parent="AppBaseTheme">
+        <item name="android:textColor">@color/blanc</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 </resources>

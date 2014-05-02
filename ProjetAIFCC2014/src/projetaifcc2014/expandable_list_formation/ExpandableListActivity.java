@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import projetaifcc2014.drawer.Activity_drawer;
+import projetaifcc2014.formation_detail.Activity_formation_detail;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -47,14 +48,11 @@ public class ExpandableListActivity  extends Activity{
  
         expListViewFormations.setOnChildClickListener(new OnChildClickListener() {
  
-            public boolean onChildClick(ExpandableListView parent, View v,
-                    int groupPosition, int childPosition, long id) {
-                final String selected = (String) expListAdapter.getChild(
-                        groupPosition, childPosition);
-                Toast.makeText(getBaseContext(), selected, Toast.LENGTH_LONG)
-                        .show();
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+                final String selected = (String) expListAdapter.getChild(groupPosition, childPosition);
+                Toast.makeText(getBaseContext(), selected, Toast.LENGTH_LONG).show();
 
-    			Intent description = new Intent(ExpandableListActivity.this,Activity_drawer.class);
+    			Intent description = new Intent(ExpandableListActivity.this,Activity_formation_detail.class);
     			startActivity(description);
  
                 return true;

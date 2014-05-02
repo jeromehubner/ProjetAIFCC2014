@@ -1,52 +1,91 @@
 package projetaifcc2014.formation_detail;
 
-import android.app.Activity;
-import android.content.ActivityNotFoundException;
-import android.content.Intent;
-import android.net.Uri;
+import projetaifcc2014.FragmentLayout;
+import projetaifcc2014.drawer.Activity_drawer;
+import android.annotation.SuppressLint;
+import android.app.ActionBar;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
+import android.view.Menu;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.projetaifcc2014.R;
 
-public class Activity_formation_detail extends Activity {
-
-	final String argTitrePageAccueil = "Titre";
-	final String argContDescr = "Description";
-	final String argContFin = "Financement";
-	
+@SuppressLint("NewApi")
+public class Activity_formation_detail extends Activity_drawer implements ActionBar.TabListener {
+	SectionsPagerAdapter mSectionsPagerAdapter;
+	ViewPager mViewPager;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.screen_formation_detail);
 		
-		Intent intent = getIntent();
+		final ActionBar actionBar = getActionBar();
+		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		
-		if(intent != null){
-			((TextView)findViewById(R.id.titrePageAccueil)).setText(intent.getStringExtra(argTitrePageAccueil));
-			((TextView)findViewById(R.id.descriptionPageAccueil)).setText(intent.getStringExtra(argContDescr));
-			((TextView)findViewById(R.id.financementContenu)).setText(intent.getStringExtra(argContFin));
+		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+		
+		mViewPager = (ViewPager) findViewById(R.id.pager);
+		mViewPager.setAdapter(mSectionsPagerAdapter);
+		
+		mViewPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
+			@Override
+			public void onPageSelected(int position) {
+				actionBar.setSelectedNavigationItem(position);
+			}
+		});
+		
+		for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
+			actionBar.addTab(actionBar.newTab().setText(mSectionsPagerAdapter.getPageTitle(i)).setTabListener(this));
 		}
 	}
 	
-	public void onClick(View v) {
-		switch (v.getId()) {
-		case R.id.plan_aifcc:
-			try {
-				Toast.makeText(this, "Redirection vers google maps", Toast.LENGTH_LONG);
-				
-				// Ici, dans le ?q, mettez ce que vous voulez trouver sur google map
-				Uri urimap = Uri.parse("geo:0,0?q=AIFCC Caen");
-				Intent mapIntent = new Intent(Intent.ACTION_VIEW,urimap);
-				startActivity(mapIntent); 
-			} catch(ActivityNotFoundException e) {
-				(Toast.makeText(this.getApplicationContext(), "GoogleMap non trouv�", Toast.LENGTH_LONG)).show();
-			}
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+		mViewPager.setCurrentItem(tab.getPosition());
+	}
+	public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {}
+	public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {}
+	
+	public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		
-		break;
+		public SectionsPagerAdapter(FragmentManager fm) {
+			super(fm);
+		}
+		
+		@Override
+		public Fragment getItem(int position) {
+			int idLayout = getResources().getIdentifier("fragment_formation_detail_".concat(String.valueOf(position+1)), "layout", getPackageName());
+			if(idLayout != 0){
+				return new FragmentLayout(idLayout);
+			}
+			return new Fragment();
+		}
+		
+		@Override
+		public int getCount() {
+			return 4;
+		}
+		
+		@Override
+		public CharSequence getPageTitle(int position) {
+			switch (position) {
+				case 0: return "Métiers visés";
+				case 1: return "Modalités";
+				case 2: return "Programme";
+				case 3: return "Profil requis";
+			}
+			return null;
 		}
 	}
 }

@@ -1,6 +1,7 @@
 package projetaifcc2014;
 
 import projetaifcc2014.departement.Activity_department;
+import projetaifcc2014.formation_detail.Activity_formation_detail;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

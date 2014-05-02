@@ -3,13 +3,13 @@ package projetaifcc2014.drawer;
 import java.util.ArrayList;
 
 import projetaifcc2014.PagesFragment;
-import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.util.Log;
 import android.view.Menu;
@@ -23,7 +23,7 @@ import com.example.projetaifcc2014.R;
 /**
  * Created by Sebastien on 16/04/14.
  */
-public class Activity_drawer extends Activity {
+public class Activity_drawer extends FragmentActivity {
     private DrawerLayout monDrawerLayout;
     private ListView maListeDrawer;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -46,8 +46,7 @@ public class Activity_drawer extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.drawer);
+		setContentView(R.layout.drawer);
 
         mTitle = mDrawerTitle = getTitle();
 
@@ -55,8 +54,7 @@ public class Activity_drawer extends Activity {
         navMenuTitles = getResources().getStringArray(R.array.items);
 
         // Recupere les icones  des menus du drawer
-        navMenuIcons = getResources()
-                .obtainTypedArray(R.array.icones_drawer);
+        navMenuIcons = getResources().obtainTypedArray(R.array.icones_drawer);
 
         monDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         maListeDrawer = (ListView) findViewById(R.id.list_menu);
@@ -122,12 +120,9 @@ public class Activity_drawer extends Activity {
     /**
      * Slide menu item click listener
      * */
-    private class SlideMenuClickListener implements
-            ListView.OnItemClickListener {
+    private class SlideMenuClickListener implements ListView.OnItemClickListener {
         @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position,
-                                long id) {
-
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             // affiche la vue selectionnée lors du clicque sur un item
             displayView(position);
         }
@@ -168,9 +163,10 @@ public class Activity_drawer extends Activity {
     private void displayView(int position) {
         // mise à jour de la vue
         Fragment fragment = null;
+//        Intent intent;
         switch (position) {
             case 0:
-                fragment = new PagesFragment();
+//                fragment = new PagesFragment();
                 break;
             case 1:
                 fragment = new PagesFragment();
@@ -197,8 +193,7 @@ public class Activity_drawer extends Activity {
 
         if (fragment != null) {
             FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.frame, fragment).commit();
+            fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
 
 
             // mise à jour de l'item selectionné et du titre lors de la fermeture du drawer
@@ -222,7 +217,6 @@ public class Activity_drawer extends Activity {
      * When using the ActionBarDrawerToggle, you must call it during
      * onPostCreate() and onConfigurationChanged()...
      */
-
     @Override
     protected void onPostCreate(Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
