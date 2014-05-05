@@ -194,4 +194,14 @@
     <string name="profil_requis_7">Vous aimez la dynamique de groupe, travailler en équipe.</string>
     <string name="profil_requis_8">Vous êtes intéressé par un emploi à responsabilités et vous êtes attiré par le management.</string>
     
+     <!-- Valeur pour les éléments du ViewFlipper banniere-->
+    <string name="banniere_element1">Elément 1</string>
+    <string name="banniere_element2">Elément 2</string>
+    <string name="banniere_element3">Elément 3</string>
+    <string name="desc_banelement1">Elément 1 non affiché</string>
+    <string name="desc_banelement2">Elément 1 non affiché</string>
+    <string name="desc_banelement3">Elément 1 non affiché</string>
+    
+    <!-- Valeur pour l'éléments par défaut du ViewFlipper actus-->
+    <string name="actu_vide">Pas d\'actualité pour le moment</string>
 </resources>
