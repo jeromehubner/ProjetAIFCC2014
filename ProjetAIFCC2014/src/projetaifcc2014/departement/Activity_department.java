@@ -1,11 +1,11 @@
 package projetaifcc2014.departement;
 
 import projetaifcc2014.expandable_list_formation.ExpandableListActivity;
-import projetaifcc2014.formations_list.Activity_expandableList;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
@@ -43,6 +43,7 @@ public class Activity_department extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		setContentView(R.layout.screen_department);
 		
 		// Le contenu suivant concerne le ViewFlipper
@@ -106,8 +107,7 @@ public class Activity_department extends Activity {
 //		NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
 //	    notificationManager.notify(R.string.notification, notification);
 	}
-	
-	
+
 
 	public void onClick(View v) {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -131,7 +131,7 @@ public class Activity_department extends Activity {
 			titrePageAccueil = departement;
 			contenuDescription += departement;
 			contenuFinancement += departement;
-			Intent intentAifcc_cnt = new Intent(this, Activity_expandableList.class);
+			Intent intentAifcc_cnt = new Intent(this, ExpandableListActivity.class);
 			startActivity(intentAifcc_cnt);
 			break;
 
@@ -157,7 +157,7 @@ public class Activity_department extends Activity {
 			titrePageAccueil = departement;
 			contenuDescription += departement;
 			contenuFinancement += departement;
-			Intent intentCel = new Intent(this, Activity_expandableList.class);
+			Intent intentCel = new Intent(this, ExpandableListActivity.class);
 			startActivity(intentCel);
 			break;
 

@@ -5,7 +5,6 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import projetaifcc2014.drawer.Activity_drawer;
 import projetaifcc2014.formation_detail.Activity_formation_detail;
 import android.app.Activity;
 import android.content.Intent;

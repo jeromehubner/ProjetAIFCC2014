@@ -1,18 +1,15 @@
 package projetaifcc2014.formation_detail;
 
-import projetaifcc2014.FragmentLayout;
 import projetaifcc2014.drawer.Activity_drawer;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
-import android.view.View;
 
 import com.example.projetaifcc2014.R;
 
@@ -50,12 +47,18 @@ public class Activity_formation_detail extends Activity_drawer implements Action
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
+	
+	
 	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
 		mViewPager.setCurrentItem(tab.getPosition());
 	}
+	
 	public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {}
+	
 	public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {}
+	
+	
+	
 	
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		

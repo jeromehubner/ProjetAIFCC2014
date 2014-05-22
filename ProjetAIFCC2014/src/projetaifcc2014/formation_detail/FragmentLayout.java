@@ -1,4 +1,4 @@
-package projetaifcc2014;
+package projetaifcc2014.formation_detail;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
