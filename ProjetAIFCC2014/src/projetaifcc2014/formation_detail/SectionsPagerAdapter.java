@@ -1,41 +1,56 @@
 package projetaifcc2014.formation_detail;
 
-import android.content.ContextWrapper;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 
 // SectionsPagerAdapter
-//public class SectionsPagerAdapter extends FragmentPagerAdapter {
-//
-//
-//	public SectionsPagerAdapter(FragmentManager fm) {
-//		super(fm);
-//	}
-//
-//	@Override
-//	public Fragment getItem(int position) {
-//		int idLayout = getResources().getIdentifier("fragment_formation_detail_".concat(String.valueOf(position+1)), "layout", getPackageName());
-//		if(idLayout != 0){
-//			return new FragmentLayout(idLayout);
-//		}
-//		return new Fragment();
-//	}
-//
-//	@Override
-//	public int getCount() {
-//		return 4;
-//	}
-//
-//	@Override
-//	public CharSequence getPageTitle(int position) {
-//		switch (position) {
-//		case 0: return "Métiers visés";
-//		case 1: return "Modalités";
-//		case 2: return "Programme";
-//		case 3: return "Profil requis";
-//		}
-//		return null;
-//	}
-//}
+public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+	// Declare the number of ViewPager pages
+	
+	private String titles[] = new String[] { "Métiers visées", "Modalités","Programme", "Profil requis"};
+	private int nombreTab = titles.length;
+
+	public SectionsPagerAdapter(FragmentManager fm) {
+		super(fm);
+	}
+
+	@Override
+	public Fragment getItem(int position) {
+		switch (position) {
+
+			// Open FragmentTab1.java
+		case 0:
+			FragmentDetail1 fragmenttab1 = new FragmentDetail1();
+			return fragmenttab1;
+
+			// Open FragmentTab2.java
+		case 1:
+			FragmentDetail2 fragmenttab2 = new FragmentDetail2();
+			return fragmenttab2;
+			
+			// Open FragmentTab2.java
+		case 2:
+			FragmentDetail3 fragmenttab3 = new FragmentDetail3();
+			return fragmenttab3;
+
+			// Open FragmentTab2.java
+		case 3:
+			FragmentDetail4 fragmenttab4 = new FragmentDetail4();
+			return fragmenttab4;
+		}
+		return null;
+	}
+
+	public CharSequence getPageTitle(int position) {
+		return titles[position];
+	}
+
+	@Override
+	public int getCount() {
+		return nombreTab;
+	}
+
+}

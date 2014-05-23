@@ -1,13 +1,15 @@
 package projetaifcc2014.formation_detail;
 
+
 import projetaifcc2014.drawer.Activity_drawer;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
-import android.app.FragmentTransaction;
+import android.app.ActionBar.Tab;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
 
@@ -47,18 +49,12 @@ public class Activity_formation_detail extends Activity_drawer implements Action
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-	
-	
+
 	public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
 		mViewPager.setCurrentItem(tab.getPosition());
 	}
-	
 	public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {}
-	
 	public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {}
-	
-	
-	
 	
 	public class SectionsPagerAdapter extends FragmentPagerAdapter {
 		
@@ -90,5 +86,23 @@ public class Activity_formation_detail extends Activity_drawer implements Action
 			}
 			return null;
 		}
+	}
+
+	@Override
+	public void onTabSelected(Tab tab, android.app.FragmentTransaction ft) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onTabUnselected(Tab tab, android.app.FragmentTransaction ft) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void onTabReselected(Tab tab, android.app.FragmentTransaction ft) {
+		// TODO Auto-generated method stub
+		
 	}
 }

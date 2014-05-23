@@ -21,7 +21,7 @@ public class PagesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
     	// Le drawer n'est utilisable que pour le screen_formation_detail
-        View rootView = inflater.inflate(R.layout.screen_formation_detail, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_dummy, container, false);
 
         return rootView;
     }

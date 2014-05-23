@@ -2,15 +2,16 @@ package projetaifcc2014.drawer;
 
 import java.util.ArrayList;
 
+
+import projetaifcc2014.formation_detail.DummySectionFragment;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -161,49 +162,87 @@ public class Activity_drawer extends FragmentActivity {
      * */
     private void displayView(int position) {
         // mise à jour de la vue
-        Fragment fragment = null;
-//        Intent intent;
         switch (position) {
             case 0:
-//                fragment = new PagesFragment();
+                showFragmentDescription();
                 break;
             case 1:
-                fragment = new PagesFragment();
+                showFragmentAutre();
                 break;
             case 2:
-                fragment = new PagesFragment();
+            	showFragmentAutre();
                 break;
             case 3:
-                fragment = new PagesFragment();
+            	showFragmentAutre();
                 break;
             case 4:
-                fragment = new PagesFragment();
+            	showFragmentAutre();
                 break;
             case 5:
-                fragment = new PagesFragment();
+            	showFragmentAutre();
                 break;
             case 6:
-                fragment = new PagesFragment();
+            	showFragmentAutre();
                 break;
 
             default:
                 break;
         }
 
-        if (fragment != null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.frame, fragment).commit();
-
-
             // mise à jour de l'item selectionné et du titre lors de la fermeture du drawer
             maListeDrawer.setItemChecked(position, true);
             maListeDrawer.setSelection(position);
             setTitle(navMenuTitles[position]);
             monDrawerLayout.closeDrawer(maListeDrawer);
-        } else {
-            // erreur a la création du fragment
-            Log.e("DrawerActivity", "Erreur lors de l'ouverture du fragment");
-        }
+    }
+    
+    public void showFragmentDescription() {
+    	
+    	DummySectionFragment fragment ;
+    	// Débutez la transaction des fragments
+    	FragmentManager fManager = getSupportFragmentManager();
+    	FragmentTransaction fTransaction = fManager.beginTransaction();
+    	
+//    	fragment = (DummySectionFragment) fManager.findFragmentByTag(fragmentTag);
+    	
+    	fragment = new DummySectionFragment();
+    	
+    	
+    	
+    	
+    	// Définissez les animations entrantes et sortantes
+    	fTransaction.setCustomAnimations(R.anim.left_in,
+    	R.anim.left_out,
+    	R.anim.right_in,
+    	R.anim.right_out);
+    	
+    	fTransaction.replace(R.id.frame, fragment);
+    	
+    	// Faîtes le commit
+    	fTransaction.commit();
+    }
+    
+    public void showFragmentAutre() {
+    	PagesFragment fragment = new PagesFragment();
+    	
+    	
+    	// Débutez la transaction des fragments
+    	FragmentTransaction fTransaction = getSupportFragmentManager().beginTransaction();
+    	
+    	
+    	
+    	// Définissez les animations entrantes et sortantes
+    	fTransaction.setCustomAnimations(R.anim.left_in,
+    	R.anim.left_out,
+    	R.anim.right_in,
+    	R.anim.right_out);
+    	
+    	
+    	
+       	fTransaction.replace(R.id.frame, fragment);
+    	
+    	// Faîtes le commit
+    	fTransaction.commit();
     }
 
     @Override

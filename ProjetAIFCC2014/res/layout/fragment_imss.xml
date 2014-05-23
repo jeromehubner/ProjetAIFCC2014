@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/Title_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOS ATOUTS"
+        android:textColor="#177111" 
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/Content_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notre taux de réussite aux différents concours et titres professionnels, jusqu'à 95 %
+Notre enseignement dispensé par des enseignants confirmés, des professionnels de santé et/ou de service social.
+Notre situation géographique, sur le Campus Nord à 200 mètres du CHU, facilement accessible en tramway et bus.
+Notre panel de formations : 25 préparations différentes\n"/>
+
+    <TextView
+        android:id="@+id/Title_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOTRE PEDAGOGIE"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#177111" />
+
+    <TextView
+        android:id="@+id/Content_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cours exclusivement en face à face avec 1 formateur
+Contrôle continu avec exercices d'application corrigés, notés et commentés dans toutes les matières
+Des concours blancs sur annales des sujets des années précédentes avec mise en situation devant un jury pour préparer l'examen final.
+BTS blancs
+Accompagnement individuel dans les difficultés rencontrées.
+Bilans pédagogiques semestriels avec relevés de notes adressés à chaque stagiaire.\n" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OnClickIMSS"
+        android:clickable="true"
+        android:text="Accéder au site web" 
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

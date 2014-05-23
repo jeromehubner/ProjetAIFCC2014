@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/Title_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="L ECOLE"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFC00" />
+
+    <TextView
+        android:id="@+id/Content_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="L'IMAD est un Institut de formation spécialisé dans les métiers de l'Architecture, de l'Aménagement de l'Espace et du Design. 
+ Ses formations s'adressent à tous ceux qui souhaitent se préparer aux concours d'entrée des Écoles Nationales Supérieures d'Architecture, de Design et d'Art. L'IMAD prépare également à 3 BTS BTS (en statut étudiant ou en alternance) et propose des formations courtes pour salariés.\n" />
+
+    <TextView
+        android:id="@+id/Content_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="En prépa, les élèves mûrissent leur choix d’orientation et confirment leur projet d’études. Ils développent leur potentiel créatif et leur capacité d’analyse, et acquièrent les fondamentaux indispensables à la poursuite de leurs études. Ils sont suivis individuellement par les formateurs qui les aident à constituer leur dossier personnel de candidature (lettre de motivation, book, préparation aux entretiens...) pour être admis aux épreuves de recrutement des écoles.\n" />
+
+    <TextView
+        android:id="@+id/Content_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="En BTS, outre la préparation à l’examen, les élèves acquièrent les compétences requises pour s’insérer sur le marché du travail et faire carrière dans les métiers de leur choix. Ils peuvent également poursuivre leur cursus et s’enrichissent par ailleurs d’une une réelle expérience professionnelle, soit en tant que salarié dans le cadre d’un contrat de professionnalisation, soit en tant que stagiaire dans le cadre de la formation initiale. Ils sont orientés dans leurs recherches et bénéficient du réseau d’entreprises partenaires de l’Institut." />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:clickable="true"
+        android:onClick="onClickIMAD"
+        android:text="Accéder au site web" />
+
+</LinearLayout>

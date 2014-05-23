@@ -5,6 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import projetaifcc2014.drawer.Activity_drawer;
 import projetaifcc2014.formation_detail.Activity_formation_detail;
 import android.app.Activity;
 import android.content.Intent;
@@ -51,7 +52,7 @@ public class ExpandableListActivity  extends Activity{
                 final String selected = (String) expListAdapter.getChild(groupPosition, childPosition);
                 Toast.makeText(getBaseContext(), selected, Toast.LENGTH_LONG).show();
 
-    			Intent description = new Intent(ExpandableListActivity.this,Activity_formation_detail.class);
+    			Intent description = new Intent(ExpandableListActivity.this,Activity_drawer.class);
     			startActivity(description);
  
                 return true;

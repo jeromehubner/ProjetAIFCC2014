@@ -1,11 +1,12 @@
 package projetaifcc2014.departement;
 
 import projetaifcc2014.expandable_list_formation.ExpandableListActivity;
+import projetaifcc2014.fragment_info_departement.FragmentActivityIMAD;
+import projetaifcc2014.fragment_info_departement.MyFragmentActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
@@ -20,7 +21,7 @@ import com.example.projetaifcc2014.R;
 
 public class Activity_department extends Activity {
 
-	private String departement;
+	private String departement;	
 	
 	private final String argTitrePageAccueil = "Titre";
 	private final String argContDescr = "Description";
@@ -31,8 +32,6 @@ public class Activity_department extends Activity {
 					contenuFinancement;
 	
 	private String urlAIFCC = "http://www.aifcc.com/";
-	private String urlimss = "http://www.imss-caen.com/";
-	private String urlIMAD = "http://www.imad-caen.com/";
 	
 	ImageView banniere_element1;
 	ImageView banniere_element2;
@@ -43,7 +42,6 @@ public class Activity_department extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
 		setContentView(R.layout.screen_department);
 		
 		// Le contenu suivant concerne le ViewFlipper
@@ -107,7 +105,8 @@ public class Activity_department extends Activity {
 //		NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
 //	    notificationManager.notify(R.string.notification, notification);
 	}
-
+	
+	
 
 	public void onClick(View v) {
 		Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -135,21 +134,6 @@ public class Activity_department extends Activity {
 			startActivity(intentAifcc_cnt);
 			break;
 
-		case R.id.imss:
-			// IMSS
-			departement = getString(R.string.imss);
-			Toast.makeText(this, R.string.imss, Toast.LENGTH_SHORT).show();
-			titrePageAccueil = departement;
-			contenuDescription += departement;
-			contenuFinancement += departement;
-			
-			// Redirection vers site imss
-			Uri uriimss = Uri.parse(urlimss);
-			Toast.makeText(this, "Redirection vers" + urlimss, Toast.LENGTH_LONG).show();
-			intent.setData(uriimss);
-			startActivity(intent);
-			break;
-
 		case R.id.cel:
 			// CEL
 			departement = getString(R.string.cel);
@@ -161,6 +145,17 @@ public class Activity_department extends Activity {
 			startActivity(intentCel);
 			break;
 
+		case R.id.imss:
+			// IMSS
+			departement = getString(R.string.imss);
+			Toast.makeText(this, R.string.imss, Toast.LENGTH_SHORT).show();
+			titrePageAccueil = departement;
+			contenuDescription += departement;
+			contenuFinancement += departement;
+			Intent intentImss = new Intent(this, MyFragmentActivity.class);
+			startActivity(intentImss);
+			break;
+			
 		case R.id.imad:
 			// IMAD
 			departement = getString(R.string.imad);
@@ -168,12 +163,8 @@ public class Activity_department extends Activity {
 			titrePageAccueil = departement;
 			contenuDescription += departement;
 			contenuFinancement += departement;
-			
-			// Redirection vers site IMAD
-			Uri uriAIMD = Uri.parse(urlIMAD);
-			Toast.makeText(this, "Redirection vers" + urlIMAD, Toast.LENGTH_LONG).show();
-			intent.setData(uriAIMD);
-			startActivity(intent);
+			Intent intentImad = new Intent(this, FragmentActivityIMAD.class);
+			startActivity(intentImad);
 			break;
 
 			// Bouton de banniere qui ouvre le site //
@@ -199,7 +190,6 @@ public class Activity_department extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		
 		contenuDescription = "Description de l'organisation ";
 		contenuFinancement = "Description du \nfinancement de l'organisation \n";
 		
