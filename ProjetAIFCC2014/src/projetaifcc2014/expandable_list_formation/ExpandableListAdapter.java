@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -48,7 +47,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter{
          
         TextView item = (TextView) convertView.findViewById(R.id.text_child);
          
-        ImageView delete = (ImageView) convertView.findViewById(R.id.icon);
         
          
         item.setText(formation);

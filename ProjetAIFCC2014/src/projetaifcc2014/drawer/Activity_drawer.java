@@ -2,15 +2,16 @@ package projetaifcc2014.drawer;
 
 import java.util.ArrayList;
 
+<<<<<<< HEAD
 import projetaifcc2014.formation_detail.DummySectionFragment;
 import com.example.projetaifcc2014.R;
+=======
+>>>>>>> branch 'master' of ssh://git@github.com/jeromehubner/ProjetAIFCC2014.git
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -23,36 +24,54 @@ import android.widget.ListView;
  */
 public class Activity_drawer extends FragmentActivity {
     private DrawerLayout monDrawerLayout;
-    private ListView maListeDrawer;
-    private ActionBarDrawerToggle mDrawerToggle;
-
+    protected ListView maListeDrawer;
+    protected ActionBarDrawerToggle mDrawerToggle;
+    protected int position ;
 
     // Titre du drawer
-    private CharSequence mDrawerTitle;
+    protected CharSequence mDrawerTitle;
 
     //utiliser pour stocker les titre du drawer
-    private CharSequence mTitle;
+    protected CharSequence mTitle;
 
     // Variables des items du drawer
-    private String[] navMenuTitles;
-    private TypedArray navMenuIcons;
+    protected String[] navMenuTitles;
+    protected TypedArray navMenuIcons;
+    protected TypedArray navMenuIconsFormation;
 
     // Adapter et definitions des items du drawer
-    private ArrayList<NavDrawerItem> navDrawerItems;
+    protected ArrayList<NavDrawerItem> navDrawerItems;
     private DrawerAdapter adapter;
-
+    
+    protected int centre ;
+    protected static final int AIFCC_ALT = 0;
+    protected static final int AIFCC_CNT = 1;
+    protected static final int CEL = 2;
+    protected static final int IMAD = 3;
+    protected static final int IMSS = 4;
+    
+    
+    
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 		setContentView(R.layout.drawer);
-
+		
         mTitle = mDrawerTitle = getTitle();
+        
+        
+       
 
         // Recupere les chaines de caractere des menus du drawer
         navMenuTitles = getResources().getStringArray(R.array.items);
 
         // Recupere les icones  des menus du drawer
         navMenuIcons = getResources().obtainTypedArray(R.array.icones_drawer);
+        
+        // Recupere les icones  des menus du drawer
+        navMenuIconsFormation = getResources().obtainTypedArray(R.array.icones_formation);
+        changeIcone(centre);
 
         monDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         maListeDrawer = (ListView) findViewById(R.id.list_menu);
@@ -61,7 +80,7 @@ public class Activity_drawer extends FragmentActivity {
 
         // Ajout des items a la liste
         // AIFCC
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIcons.getResourceId(0, -1)));
+        navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIconsFormation.getResourceId(centre, -1)));
         // Nos financements
         navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
         // Catalogues 2014
@@ -123,6 +142,7 @@ public class Activity_drawer extends FragmentActivity {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             // affiche la vue selectionnée lors du clicque sur un item
             displayView(position);
+            miseAJourItemSelectionne();
         }
     }
 
@@ -158,90 +178,24 @@ public class Activity_drawer extends FragmentActivity {
     /**
      * Affichage du fragment en fonction de l'item selectionné
      * */
-    private void displayView(int position) {
-        // mise à jour de la vue
-        switch (position) {
-            case 0:
-                showFragmentDescription();
-                break;
-            case 1:
-                showFragmentAutre();
-                break;
-            case 2:
-            	showFragmentAutre();
-                break;
-            case 3:
-            	showFragmentAutre();
-                break;
-            case 4:
-            	showFragmentAutre();
-                break;
-            case 5:
-            	showFragmentAutre();
-                break;
-            case 6:
-            	showFragmentAutre();
-                break;
-
-            default:
-                break;
-        }
-
-            // mise à jour de l'item selectionné et du titre lors de la fermeture du drawer
-            maListeDrawer.setItemChecked(position, true);
-            maListeDrawer.setSelection(position);
-            setTitle(navMenuTitles[position]);
-            monDrawerLayout.closeDrawer(maListeDrawer);
+    public void displayView(int position) {}
+    
+    public void changeIcone(int centre){
+    	this.centre = centre ;
     }
     
-    public void showFragmentDescription() {
-    	
-    	DummySectionFragment fragment ;
-    	// Débutez la transaction des fragments
-    	FragmentManager fManager = getSupportFragmentManager();
-    	FragmentTransaction fTransaction = fManager.beginTransaction();
-    	
-//    	fragment = (DummySectionFragment) fManager.findFragmentByTag(fragmentTag);
-    	
-    	fragment = new DummySectionFragment();
-    	
-    	
-    	
-    	
-    	// Définissez les animations entrantes et sortantes
-    	fTransaction.setCustomAnimations(R.anim.left_in,
-    	R.anim.left_out,
-    	R.anim.right_in,
-    	R.anim.right_out);
-    	
-    	fTransaction.replace(R.id.frame, fragment);
-    	
-    	// Faîtes le commit
-    	fTransaction.commit();
+    
+    
+    
+    public void miseAJourItemSelectionne(){
+    	// mise à jour de l'item selectionné et du titre lors de la fermeture du drawer
+        maListeDrawer.setItemChecked(position, true);
+        maListeDrawer.setSelection(position);
+        setTitle(navMenuTitles[position]);
+        monDrawerLayout.closeDrawer(maListeDrawer);
     }
     
-    public void showFragmentAutre() {
-    	PagesFragment fragment = new PagesFragment();
-    	
-    	
-    	// Débutez la transaction des fragments
-    	FragmentTransaction fTransaction = getSupportFragmentManager().beginTransaction();
-    	
-    	
-    	
-    	// Définissez les animations entrantes et sortantes
-    	fTransaction.setCustomAnimations(R.anim.left_in,
-    	R.anim.left_out,
-    	R.anim.right_in,
-    	R.anim.right_out);
-    	
-    	
-    	
-       	fTransaction.replace(R.id.frame, fragment);
-    	
-    	// Faîtes le commit
-    	fTransaction.commit();
-    }
+  
 
     @Override
     public void setTitle(CharSequence title) {
