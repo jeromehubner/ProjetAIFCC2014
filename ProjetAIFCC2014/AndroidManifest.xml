@@ -35,6 +35,18 @@
             android:label="@string/app_name" >
         </activity>
         <activity
+            android:name="projetaifcc2014.drawer.Activity_drawer_IMAD"
+            android:label="@string/imad_title" >
+        </activity>
+        <activity
+            android:name="projetaifcc2014.drawer.Activity_drawer_IMSS"
+            android:label="@string/imss_title" >
+        </activity>
+        <activity
+            android:name="projetaifcc2014.drawer.Activity_drawer_AIFCC"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
             android:name="projetaifcc2014.formations_list.Activity_expandableList"
             android:label="@string/app_name">
         </activity>

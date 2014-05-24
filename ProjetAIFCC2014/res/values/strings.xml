@@ -2,6 +2,8 @@
 <resources>
 
     <string name="app_name">AIFCC Formation</string>
+    <string name="imad_title">IMAD</string>
+    <string name="imss_title">IMSS</string>
     <string name="action_settings">Settings</string>
 
     <!-- Activités -->
@@ -15,7 +17,7 @@
     <string name="aifcc_cnt">AIFCC formation continue</string>
     <string name="imss">IMSS institut des métiers sanitaires et social</string>
     <string name="cel">CEL centre d\'étude des langues</string>
-    <string name="imad">imad institut des métiers de l\'architecture et du design</string>
+    <string name="imad">IMAD institut des métiers de l\'architecture et du design</string>
     
     <string name="plan_desc">Redirection Google Map</string>
     <string name="notification">Notification AIFCC</string>
@@ -50,29 +52,35 @@
 
     <!-- Texte items drawer -->
     <string-array name="items">
-        <item>AIFCC</item>
+        <item></item>
+        <item>Actu</item>
         <item>Nos financements</item>
-        <item>Catalogues 2014</item>
-        <item>Les taxes</item>
-        <item>Nous rejoindre</item>
-        <item>Portes ouvertes</item>
         <item>Contact</item>
+        <item>Nous rejoindre</item>
+        <item>Catalogues de formation</item>
+        <item>Espace privé</item>
     </string-array>
 
     <!-- Listes de icones du drawer -->
     <!-- Garder dans le meme sens que les texte des items -->
     <array name="icones_drawer">
-        <item>@drawable/ic_launcher</item>
+        <item></item>
         <item>@drawable/financement</item>
-        <item>@drawable/catalogue</item>
-        <item>@drawable/taxes</item>
-        <item>@drawable/nous_rejoindre</item>
-        <item>@drawable/portes_ouvertes</item>
         <item>@drawable/contacts</item>
+        <item>@drawable/nous_rejoindre</item>
+        <item>@drawable/catalogue</item>
+        <item>@drawable/portes_ouvertes</item>        
+        <item>@drawable/portes_ouvertes</item>
     </array>
     <string name="formationAIFCC">Formation CEL</string>
 
-    
+     <array name="icones_formation">
+        <item>@drawable/btn_aifcc_alt</item>
+        <item>@drawable/btn_aifcc_cnt</item>
+        <item>@drawable/btn_cel</item>
+        <item>@drawable/btn_imad</item>
+        <item>@drawable/btn_imss</item>
+    </array>
     
     
     <!-- Domaines de formation -->

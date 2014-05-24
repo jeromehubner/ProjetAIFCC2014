@@ -4,16 +4,12 @@ import java.util.List;
 import java.util.Map;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.projetaifcc2014.R;
@@ -52,7 +48,6 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter{
          
         TextView item = (TextView) convertView.findViewById(R.id.text_child);
          
-        ImageView delete = (ImageView) convertView.findViewById(R.id.icon);
         
          
         item.setText(formation);

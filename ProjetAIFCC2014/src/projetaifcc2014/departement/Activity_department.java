@@ -1,8 +1,8 @@
 package projetaifcc2014.departement;
 
+import projetaifcc2014.drawer.Activity_drawer_IMAD;
+import projetaifcc2014.drawer.Activity_drawer_IMSS;
 import projetaifcc2014.expandable_list_formation.ExpandableListActivity;
-import projetaifcc2014.fragment_info_departement.FragmentActivityIMAD;
-import projetaifcc2014.fragment_info_departement.MyFragmentActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -38,6 +38,8 @@ public class Activity_department extends Activity {
 	ImageView banniere_element3;
 	ViewFlipper vfBan;
 	ViewFlipper vfActu;
+	public static final long IMSS = 0 ;
+	public static final long IMAD = 1 ;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -152,7 +154,7 @@ public class Activity_department extends Activity {
 			titrePageAccueil = departement;
 			contenuDescription += departement;
 			contenuFinancement += departement;
-			Intent intentImss = new Intent(this, MyFragmentActivity.class);
+			Intent intentImss = new Intent(this, Activity_drawer_IMSS.class);
 			startActivity(intentImss);
 			break;
 			
@@ -163,7 +165,7 @@ public class Activity_department extends Activity {
 			titrePageAccueil = departement;
 			contenuDescription += departement;
 			contenuFinancement += departement;
-			Intent intentImad = new Intent(this, FragmentActivityIMAD.class);
+			Intent intentImad = new Intent(this, Activity_drawer_IMAD.class);
 			startActivity(intentImad);
 			break;
 
@@ -177,10 +179,6 @@ public class Activity_department extends Activity {
 			break;
 		}
 
-		
-//		intentAccueil.putExtra(argTitrePageAccueil, titrePageAccueil);
-//		intentAccueil.putExtra(argContDescr, contenuDescription);
-//		intentAccueil.putExtra(argContFin, contenuFinancement);
 		
 		
 	}
