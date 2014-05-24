@@ -1,12 +1,13 @@
 package projetaifcc2014.fragment_info_departement;
 
+
+import com.example.projetaifcc2014.R;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
-
-import com.example.projetaifcc2014.R;
 
 public class FragmentActivityIMAD extends FragmentActivity {
 

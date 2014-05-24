@@ -1,7 +1,6 @@
 package projetaifcc2014.formation_detail;
 
 import com.example.projetaifcc2014.R;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;

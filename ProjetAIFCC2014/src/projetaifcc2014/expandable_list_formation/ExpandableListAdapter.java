@@ -3,20 +3,16 @@ package projetaifcc2014.expandable_list_formation;
 import java.util.List;
 import java.util.Map;
 
+import com.example.projetaifcc2014.R;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.example.projetaifcc2014.R;
 
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter{

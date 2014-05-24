@@ -1,12 +1,12 @@
 package projetaifcc2014;
 
+import com.example.projetaifcc2014.R;
+
 import projetaifcc2014.departement.Activity_department;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
-
-import com.example.projetaifcc2014.R;
 
 public class MainActivity extends Activity {
 

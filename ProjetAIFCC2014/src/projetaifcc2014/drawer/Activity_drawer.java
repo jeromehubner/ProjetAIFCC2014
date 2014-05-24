@@ -2,8 +2,8 @@ package projetaifcc2014.drawer;
 
 import java.util.ArrayList;
 
-
 import projetaifcc2014.formation_detail.DummySectionFragment;
+import com.example.projetaifcc2014.R;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -17,8 +17,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
-import com.example.projetaifcc2014.R;
 
 /**
  * Created by Sebastien on 16/04/14.
@@ -130,7 +128,7 @@ public class Activity_drawer extends FragmentActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
 
@@ -140,7 +138,7 @@ public class Activity_drawer extends FragmentActivity {
             return true;
         }
         switch (item.getItemId()) {
-            case R.id.action_settings:
+            case R.id.menu_paramètres:
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -153,7 +151,7 @@ public class Activity_drawer extends FragmentActivity {
         @Override
         public boolean onPrepareOptionsMenu(Menu menu) {
             boolean drawerOpen = monDrawerLayout.isDrawerOpen(maListeDrawer);
-            menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
+            menu.findItem(R.id.menu_paramètres).setVisible(!drawerOpen);
             return super.onPrepareOptionsMenu(menu);
         }
 

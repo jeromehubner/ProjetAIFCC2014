@@ -2,6 +2,7 @@ package projetaifcc2014.formation_detail;
 
 
 import projetaifcc2014.drawer.Activity_drawer;
+import com.example.projetaifcc2014.R;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
@@ -12,8 +13,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
-
-import com.example.projetaifcc2014.R;
 
 @SuppressLint("NewApi")
 public class Activity_formation_detail extends Activity_drawer implements ActionBar.TabListener {
@@ -46,7 +45,7 @@ public class Activity_formation_detail extends Activity_drawer implements Action
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
 	}
 

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import projetaifcc2014.drawer.Activity_drawer;
-import projetaifcc2014.formation_detail.Activity_formation_detail;
+import com.example.projetaifcc2014.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,8 +16,6 @@ import android.view.View;
 import android.widget.ExpandableListView;
 import android.widget.ExpandableListView.OnChildClickListener;
 import android.widget.Toast;
-
-import com.example.projetaifcc2014.R;
 
 public class ExpandableListActivity  extends Activity{
 	 
@@ -128,7 +126,7 @@ public class ExpandableListActivity  extends Activity{
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.activity_main, menu);
         return true;
     }
 }

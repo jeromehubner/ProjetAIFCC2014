@@ -3,14 +3,13 @@ package projetaifcc2014.formation_detail;
 
 import java.lang.reflect.Field;
 
+import com.example.projetaifcc2014.R;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.projetaifcc2014.R;
 
 public class DummySectionFragment extends Fragment {
 

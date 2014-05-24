@@ -3,6 +3,7 @@ package projetaifcc2014.drawer;
 
 import java.util.ArrayList;
 
+import com.example.projetaifcc2014.R;
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,8 +12,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.example.projetaifcc2014.R;
 /**
  * Created by Sebastien on 16/04/14.
  */

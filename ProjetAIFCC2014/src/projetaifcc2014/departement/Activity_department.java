@@ -3,6 +3,7 @@ package projetaifcc2014.departement;
 import projetaifcc2014.expandable_list_formation.ExpandableListActivity;
 import projetaifcc2014.fragment_info_departement.FragmentActivityIMAD;
 import projetaifcc2014.fragment_info_departement.MyFragmentActivity;
+import com.example.projetaifcc2014.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -16,8 +17,6 @@ import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
-
-import com.example.projetaifcc2014.R;
 
 public class Activity_department extends Activity {
 
