@@ -3,12 +3,8 @@ package projetaifcc2014.departement;
 import projetaifcc2014.drawer.Activity_drawer_IMAD;
 import projetaifcc2014.drawer.Activity_drawer_IMSS;
 import projetaifcc2014.expandable_list_formation.ExpandableListActivity;
-<<<<<<< HEAD
 import projetaifcc2014.fragment_info_departement.FragmentActivityIMAD;
 import projetaifcc2014.fragment_info_departement.MyFragmentActivity;
-import com.example.projetaifcc2014.R;
-=======
->>>>>>> branch 'master' of ssh://git@github.com/jeromehubner/ProjetAIFCC2014.git
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;

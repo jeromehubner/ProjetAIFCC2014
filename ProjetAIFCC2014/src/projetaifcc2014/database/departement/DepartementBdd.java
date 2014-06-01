@@ -1,12 +1,11 @@
 package projetaifcc2014.database.departement;
  
-import projetaifcc2014.database.Database;
+import projetaifcc2014.database.Bdd;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
  
-public class DepartementBdd {
+public class DepartementBdd extends Bdd{
 
 	// Nom de la table
 	public static final String TABLE_DEPARTEMENT = "departement";
@@ -17,37 +16,13 @@ public class DepartementBdd {
 	public static final String DEP_LIBELLE = "libelle";
 	public static final int NUM_DEP_LIBELLE = 1;
 	
-	private SQLiteDatabase bdd;
-	private Database maBdd;
-	
 	public DepartementBdd(Context context){
-		maBdd = new Database(context, Database.DATABASE, null, Database.DATABASE_VERSION);
+		super(context);
 	}
 
 	/**
-	 * @brief ouvre la base de donn�es en mode �criture
-	 */
-	public void open(){
-		bdd = maBdd.getWritableDatabase();
-	}
-
-	/**
-	 * @brief ferme la base de donn�es
-	 */
-	public void close(){
-		bdd.close();
-	}
-	
-	/**
-	 * @return la base de donn�es SQLite
-	 */
-	public SQLiteDatabase getBDD(){
-		return bdd;
-	}
-	
-	/**
-	 * @brief ins�re un departement dans la base de donn�es
-	 * @param le departement � ins�rer
+	 * @brief insere un departement dans la base de donnees
+	 * @param le departement a inserer
 	 */
 	public long insertDepartement(Departement departement){
 		ContentValues values = new ContentValues();
@@ -57,8 +32,8 @@ public class DepartementBdd {
 	}
 
 	/**
-	 * @brief met � jour un departement dans la base de donn�es
-	 * @param le departement � mettre � jour
+	 * @brief met a jour un departement dans la base de donnees
+	 * @param le departement a mettre a jour
 	 */
 	public int updateDepartement(Departement departement){
 		ContentValues values = new ContentValues();
@@ -67,8 +42,8 @@ public class DepartementBdd {
 	}
 
 	/**
-	 * @brief supprime un departement dans la base de donn�es
-	 * @param le departement � supprimer
+	 * @brief supprime un departement dans la base de donnees
+	 * @param le departement a supprimer
 	 */
 	public int removeDepartement(Departement departement){
 		return bdd.delete(TABLE_DEPARTEMENT, DEP_ID + " = " + departement.getId(), null);

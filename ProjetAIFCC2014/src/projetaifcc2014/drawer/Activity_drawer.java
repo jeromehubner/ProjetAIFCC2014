@@ -2,11 +2,9 @@ package projetaifcc2014.drawer;
 
 import java.util.ArrayList;
 
-<<<<<<< HEAD
+
 import projetaifcc2014.formation_detail.DummySectionFragment;
 import com.example.projetaifcc2014.R;
-=======
->>>>>>> branch 'master' of ssh://git@github.com/jeromehubner/ProjetAIFCC2014.git
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;

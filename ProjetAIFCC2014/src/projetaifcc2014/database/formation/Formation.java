@@ -1,53 +1,65 @@
 package projetaifcc2014.database.formation;
 
+import projetaifcc2014.database.categorie.Categorie;
 import projetaifcc2014.database.departement.Departement;
 
 public class Formation {
 	private int id;
-	private String libelle;
 	private Departement departement;
+	private Categorie categorie;
+	private String diplome;
+	private String niveau;
+	private String metiers;
 	
-	public Formation() {}
-	public Formation(int id, String libelle, Departement departement) {
+	public Formation(){}
+	public Formation(int id, Departement departement, Categorie categorie, String diplome, String niveau, String metiers) {
 		this.id = id;
-		this.libelle = libelle;
 		this.departement = departement;
+		this.categorie = categorie;
+		this.diplome = diplome;
+		this.niveau = niveau;
+		this.metiers = metiers;
 	}
-
-	/**
-	 * @return l'identifiant de la formation
-	 */
+	
 	public int getId() {
 		return id;
 	}
-	/**
-	 * @param le nouvel identifiant de la formation
-	 */
 	public void setId(int id) {
 		this.id = id;
 	}
-	/**
-	 * @return le libelle de la formation
-	 */
-	public String getLibelle() {
-		return libelle;
-	}
-	/**
-	 * @param le nouveau libelle de la formation
-	 */
-	public void setLibelle(String libelle) {
-		this.libelle = libelle;
-	}
-	/**
-	 * @return le departement de la formation
-	 */
+	
 	public Departement getDepartement() {
 		return departement;
 	}
-	/**
-	 * @param le nouveau departement de la formation
-	 */
 	public void setDepartement(Departement departement) {
 		this.departement = departement;
+	}
+	
+	public Categorie getCategorie() {
+		return categorie;
+	}
+	public void setCategorie(Categorie categorie) {
+		this.categorie = categorie;
+	}
+	
+	public String getDiplome() {
+		return diplome;
+	}
+	public void setDiplome(String diplome) {
+		this.diplome = diplome;
+	}
+	
+	public String getNiveau() {
+		return niveau;
+	}
+	public void setNiveau(String niveau) {
+		this.niveau = niveau;
+	}
+	
+	public String getMetiers() {
+		return metiers;
+	}
+	public void setMetiers(String metiers) {
+		this.metiers = metiers;
 	}
 }

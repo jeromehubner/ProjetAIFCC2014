@@ -4,13 +4,9 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-<<<<<<< HEAD
 import projetaifcc2014.drawer.Activity_drawer;
 import com.example.projetaifcc2014.R;
-=======
 import projetaifcc2014.drawer.Activity_drawer_AIFCC;
->>>>>>> branch 'master' of ssh://git@github.com/jeromehubner/ProjetAIFCC2014.git
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

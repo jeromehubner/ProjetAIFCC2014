@@ -1,12 +1,11 @@
 package projetaifcc2014.database.contact;
  
-import projetaifcc2014.database.Database;
+import projetaifcc2014.database.Bdd;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
  
-public class ContactBdd {
+public class ContactBdd extends Bdd{
 
 	// Nom de la table
 	public static final String TABLE_CONTACT = "contact";
@@ -23,37 +22,13 @@ public class ContactBdd {
 	public static final String CONT_TEL = "nom";
 	public static final int NUM_CONT_TEL = 4;
 	
-	private SQLiteDatabase bdd;
-	private Database maBdd;
-	
 	public ContactBdd(Context context){
-		maBdd = new Database(context, Database.DATABASE, null, Database.DATABASE_VERSION);
-	}
-
-	/**
-	 * @brief ouvre la base de donn�es en mode �criture
-	 */
-	public void open(){
-		bdd = maBdd.getWritableDatabase();
-	}
-
-	/**
-	 * @brief ferme la base de donn�es
-	 */
-	public void close(){
-		bdd.close();
-	}
+		super(context);
+	}	
 	
 	/**
-	 * @return la base de donn�es SQLite
-	 */
-	public SQLiteDatabase getBDD(){
-		return bdd;
-	}
-	
-	/**
-	 * @brief ins�re un contact dans la base de donn�es
-	 * @param le contact � ins�rer
+	 * @brief insere un contact dans la base de donees
+	 * @param le contact a inserer
 	 */
 	public long insertContact(Contact contact){
 		ContentValues values = new ContentValues();
@@ -66,8 +41,8 @@ public class ContactBdd {
 	}
 
 	/**
-	 * @brief met � jour un contact dans la base de donn�es
-	 * @param le contact � mettre � jour
+	 * @brief met a jour un contact dans la base de donnees
+	 * @param le contact a mettre a jour
 	 */
 	public int updateContact(Contact contact){
 		ContentValues values = new ContentValues();
@@ -79,8 +54,8 @@ public class ContactBdd {
 	}
 
 	/**
-	 * @brief supprime un contact dans la base de donn�es
-	 * @param le contact � supprimer
+	 * @brief supprime un contact dans la base de donnees
+	 * @param le contact a supprimer
 	 */
 	public int removeContact(Contact contact){
 		return bdd.delete(TABLE_CONTACT, CONT_ID + " = " + contact.getId(), null);
