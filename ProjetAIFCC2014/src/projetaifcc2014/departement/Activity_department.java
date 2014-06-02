@@ -1,5 +1,7 @@
 package projetaifcc2014.departement;
 
+import com.example.projetaifcc2014.R;
+
 import projetaifcc2014.drawer.Activity_drawer_IMAD;
 import projetaifcc2014.drawer.Activity_drawer_IMSS;
 import projetaifcc2014.expandable_list_formation.ExpandableListActivity;
