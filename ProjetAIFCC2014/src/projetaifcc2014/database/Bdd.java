@@ -27,11 +27,4 @@ public class Bdd {
 	public void close(){
 		bdd.close();
 	}
-	
-	/**
-	 * @return la base de donnees SQLite
-	 */
-	public SQLiteDatabase getBDD(){
-		return bdd;
-	}
 }

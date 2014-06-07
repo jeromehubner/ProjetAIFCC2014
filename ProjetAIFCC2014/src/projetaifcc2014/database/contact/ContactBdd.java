@@ -19,7 +19,7 @@ public class ContactBdd extends Bdd{
 	public static final int NUM_CONT_PRENOM = 2;
 	public static final String CONT_MAIL = "mail";
 	public static final int NUM_CONT_MAIL = 3;
-	public static final String CONT_TEL = "nom";
+	public static final String CONT_TEL = "tel";
 	public static final int NUM_CONT_TEL = 4;
 	
 	public ContactBdd(Context context){

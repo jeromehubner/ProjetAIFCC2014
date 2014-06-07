@@ -3,7 +3,7 @@ package projetaifcc2014.database;
 import projetaifcc2014.database.categorie.CategorieBdd;
 import projetaifcc2014.database.contact.ContactBdd;
 import projetaifcc2014.database.departement.DepartementBdd;
-import projetaifcc2014.database.formation.FormationBdd;
+import projetaifcc2014.database.diplome.DiplomeBdd;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
@@ -21,6 +21,7 @@ public class Database extends SQLiteOpenHelper {
 	private static final String CREATE_TABLE_CATEGORIE = 
 		"CREATE TABLE " + CategorieBdd.TABLE_CATEGORIE + " ("
 			+ CategorieBdd.CAT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+			+ CategorieBdd.CAT_DEPARTEMENT + " INTEGER DEFAULT 0, "
 			+ CategorieBdd.CAT_LIBELLE + " TEXT NOT NULL);";
 	private static final String CREATE_TABLE_CONTACT = 
 		"CREATE TABLE " + ContactBdd.TABLE_CONTACT + " ("
@@ -33,14 +34,13 @@ public class Database extends SQLiteOpenHelper {
 		"CREATE TABLE " + DepartementBdd.TABLE_DEPARTEMENT + " ("
 			+ DepartementBdd.DEP_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
 			+ DepartementBdd.DEP_LIBELLE + " TEXT NOT NULL);";
-	private static final String CREATE_TABLE_FORMATION = 
-		"CREATE TABLE " + FormationBdd.TABLE_FORMATION + " ("
-			+ FormationBdd.FOR_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-			+ FormationBdd.FOR_CATEGORIE + " INTEGER DEFAULT 0, "
-			+ FormationBdd.FOR_DEPARTEMENT + " INTEGER DEFAULT 0, "
-			+ FormationBdd.FOR_DIPLOME + " TEXT NOT NULL, "
-			+ FormationBdd.FOR_NIVEAU + " TEXT NOT NULL, "
-			+ FormationBdd.FOR_METIERS + " TEXT NOT NULL);";
+	private static final String CREATE_TABLE_DIPLOME = 
+		"CREATE TABLE " + DiplomeBdd.TABLE_DIPLOME + " ("
+			+ DiplomeBdd.DIP_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+			+ DiplomeBdd.DIP_CATEGORIE + " INTEGER DEFAULT 0, "
+			+ DiplomeBdd.DIP_LIBELLE + " TEXT NOT NULL, "
+			+ DiplomeBdd.DIP_NIVEAU + " TEXT NOT NULL, "
+			+ DiplomeBdd.DIP_METIERS + " TEXT NOT NULL);";
 					
 	public Database(Context context, String name, CursorFactory factory, int version) {
 		super(context, name, factory, version);
@@ -51,7 +51,7 @@ public class Database extends SQLiteOpenHelper {
 		db.execSQL(CREATE_TABLE_CATEGORIE);
 		db.execSQL(CREATE_TABLE_CONTACT);
 		db.execSQL(CREATE_TABLE_DEPARTEMENT);
-		db.execSQL(CREATE_TABLE_FORMATION);
+		db.execSQL(CREATE_TABLE_DIPLOME);
 	}
 
 	@Override
@@ -59,7 +59,7 @@ public class Database extends SQLiteOpenHelper {
 		db.execSQL("DROP TABLE " + CategorieBdd.TABLE_CATEGORIE + ";");
 		db.execSQL("DROP TABLE " + DepartementBdd.TABLE_DEPARTEMENT + ";");
 		db.execSQL("DROP TABLE " + ContactBdd.TABLE_CONTACT + ";");
-		db.execSQL("DROP TABLE " + FormationBdd.TABLE_FORMATION + ";");
+		db.execSQL("DROP TABLE " + DiplomeBdd.TABLE_DIPLOME + ";");
 		onCreate(db);
 	}
 
