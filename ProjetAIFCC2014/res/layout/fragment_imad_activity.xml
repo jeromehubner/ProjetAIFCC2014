@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/fragment1"
-        android:name="projetaifcc2014.fragment_info_departement.fragment_imad"
+        android:name="projetaifcc2014.fragment_info_departement.Fragment_imad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

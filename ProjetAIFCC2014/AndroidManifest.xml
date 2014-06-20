@@ -31,16 +31,16 @@
             android:label="@string/accueilActivite" >
         </activity>
         <activity
-            android:name="projetaifcc2014.drawer.Activity_drawer"
+            android:name="projetaifcc2014.drawer.Activity_drawer_detail"
             android:label="@string/app_name" >
         </activity>
         <activity
             android:name="projetaifcc2014.drawer.Activity_drawer_IMAD"
-            android:label="@string/imad_title" >
+            android:label="@string/imad_dpt_title" >
         </activity>
         <activity
             android:name="projetaifcc2014.drawer.Activity_drawer_IMSS"
-            android:label="@string/imss_title" >
+            android:label="@string/imss_dpt_title" >
         </activity>
         <activity
             android:name="projetaifcc2014.drawer.Activity_drawer_AIFCC"
@@ -56,6 +56,22 @@
         </activity>
                 <activity
             android:name="projetaifcc2014.fragment_info_departement.MyFragmentActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="projetaifcc2014.drawer.Activity_drawer_list"
+            android:label="@string/alt_dpt_title" >
+        </activity>
+        <activity
+            android:name="projetaifcc2014.drawer.Activity_drawer_list_AIFCC_cnt"
+            android:label="@string/cont_dpt_title" >
+        </activity>
+        <activity
+            android:name="projetaifcc2014.drawer.Activity_drawer_list_CEL"
+            android:label="@string/cel_dpt_title" >
+        </activity>
+        <activity
+            android:name="projetaifcc2014.drawer.Activity_drawer_Departement"
             android:label="@string/app_name" >
         </activity>
         <activity android:name="projetaifcc2014.fragment_info_departement.FragmentActivityIMAD" >

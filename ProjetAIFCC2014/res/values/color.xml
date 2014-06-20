@@ -1,20 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="list_item_title">#fff</color>
     <color name="list_background">#303030</color>
     <color name="list_background_pressed">#626262</color>
     <color name="list_divider">#272727</color>
     <color name="counter_text_bg">#626262</color>
     <color name="counter_text_color">#c5c4c4</color>
-    
     <color name="blanc">#FFFFFF</color>
     <color name="rouge">#A5260A</color>
     <color name="rouge_fonce">#B9121B</color>
     <color name="rouge_pale">#B1221C</color>
     <color name="rouge_rose">#E70739</color>
-    <color name="bleu_ciel">#5EB6DD</color>
+    <color name="bleu_ciel">#495CFF</color>
     <color name="bleu_marine">#183152</color>
+    <color name="bleu_clair">#EDF7F2</color>
     <color name="orange">#FC7F3C</color>
     <color name="noir">#262029</color>
+
     
+    <!-- Couleur des departement -->
+    <color name="dpt_alternance">#A5260A</color>
+    <color name="dpt_cel">#5EB6DD</color>
+    <color name="dpt_continu">#FC7F3C</color>
+    
+    <array name="dpt_color">
+        <item>@color/dpt_alternance</item>
+        <item>@color/dpt_cel</item>
+        <item>@color/dpt_continu</item>
+    </array>
+
 </resources>

@@ -2,34 +2,48 @@
 <resources>
 
     <string name="app_name">AIFCC Formation</string>
+    <string name="url_AIFCC">http://www.aifcc.com/</string>
 
+    <!-- Texte du Menu -->
     <string name="menu_aide">Aide</string>
     <string name="menu_rafraichir">Rafraichir</string>
     <string name="menu_apropos">A Propos</string>
-    <string name="menu_paramètres">Paramètres</string>
-    <string name="menu_quitter">Quitter</string>   
+    <string name="menu_parametres">Paramètres</string>
+    <string name="menu_quitter">Quitter</string>
 
-    <string name="imad_title">IMAD</string>
-    <string name="imss_title">IMSS</string>
+    <!-- Titre des fragments -->
+    <string name="alt_dpt_title">Alternance</string>
+    <string name="cel_dpt_title">CEL</string>
+    <string name="cont_dpt_title">Continue</string>
+    <string name="imad_dpt_title">IMAD</string>
+    <string name="imss_dpt_title">IMSS</string>
     <string name="action_settings">Settings</string>
 
+    <!-- departements -->
+    <string name="aifcc_alt">AIFCC institut de l\'alternance</string>
+    <string name="cel">CEL centre d\'étude des langues</string>
+    <string name="aifcc_cnt">AIFCC formation continue</string>
+    <string name="imss">IMSS institut des métiers sanitaires et social</string>
+    <string name="imad">IMAD institut des métiers de l\'architecture et du design</string>
+
+    <!-- Id des départements de la table Département -->
+    <string name="alt_dpt_id">1</string>
+    <string name="cel_dpt_id">2</string>
+    <string name="con_dpt_id">3</string>
+
+    <!-- EXTRA passé/récupéré en arguments d'une activité à l'autre (correspond aux clés d'une HashMap) -->
+    <string name="extra_id_departement"></string>
+    <string name="extra_id_formation"></string>
+    <string name="extra_couleur_departement"></string>
 
     <!-- Activités -->
     <string name="mainActivity">AIFCC</string>
     <string name="departementActivite">Choix du departement</string>
     <string name="accueilActivite">Accueil</string>
     <string name="formationDetailActivite">Nom de la formation</string>
-    
-    <!-- departements -->
-    <string name="aifcc_alt">AIFCC institut de l\'alternance</string>
-    <string name="aifcc_cnt">AIFCC formation continue</string>
-    <string name="imss">IMSS institut des métiers sanitaires et social</string>
-    <string name="cel">CEL centre d\'étude des langues</string>
-    <string name="imad">IMAD institut des métiers de l\'architecture et du design</string>
-    
     <string name="plan_desc">Redirection Google Map</string>
     <string name="notification">Notification AIFCC</string>
-    
+
     <!-- Content Description -->
     <string name="aifcc_logo">Site AIFCC</string>
     <string name="banniereDescription">Bannière du site de lAIFCC fréquemment mise à jour</string>
@@ -42,182 +56,46 @@
     <string name="contactDesciption">Description de la partie Contact a placer ici</string>
     <string name="mapDescription">Plan de l\'AIFCC vue satellite</string>
     <string name="desc_list_item_icon">Item Icon</string>
-    
-    <!-- description des formations -->
-    <string name="ong_metier">Metiers visés</string>
-    <string name="ong_modalite">Modalités</string>
-    <string name="ong_programme">Programme</string>
-    <string name="ong_profil">Profil requis</string>
-    <string name="sep"> : </string>
-    
-    <!-- entetes -->
-    <string-array name="entetes">
-		<item>Contenu du fragment metier</item>
-		<item>Contenu du fragment modalites</item>
-		<item>Contenu du fragment programme</item>
-		<item>Contenu du fragment profil</item>
-	</string-array>
+
+    <!-- Titres des onglets détails des formations -->
+    <string-array name="titre_onglet_detail_formation">
+        <item>Métiers visés</item>
+        <item>Modalités</item>
+        <item>Programme</item>
+        <item>Contact</item>
+    </string-array>
 
     <!-- Texte items drawer -->
     <string-array name="items">
-        <item></item>
-        <item>Actu</item>
-        <item>Nos financements</item>
+        <item>Home</item>
+        <item>Financements</item>
+        <item>Nous Rejoindre</item>
         <item>Contact</item>
-        <item>Nous rejoindre</item>
-        <item>Catalogues de formation</item>
-        <item>Espace privé</item>
+        <item>Gallerie</item>
+        <item>Actu</item>
     </string-array>
 
     <!-- Listes de icones du drawer -->
     <!-- Garder dans le meme sens que les texte des items -->
     <array name="icones_drawer">
-        <item></item>
+        <item>@drawable/home</item>
         <item>@drawable/financement</item>
-        <item>@drawable/contacts</item>
         <item>@drawable/nous_rejoindre</item>
-        <item>@drawable/catalogue</item>
-        <item>@drawable/portes_ouvertes</item>        
-        <item>@drawable/portes_ouvertes</item>
+        <item>@drawable/contact</item>
+        <item>@drawable/gallerie</item>
+        <item>@drawable/actu</item>
     </array>
-    <string name="formationAIFCC">Formation CEL</string>
 
-     <array name="icones_formation">
-        <item>@drawable/btn_aifcc_alt</item>
-        <item>@drawable/btn_aifcc_cnt</item>
-        <item>@drawable/btn_cel</item>
-        <item>@drawable/btn_imad</item>
-        <item>@drawable/btn_imss</item>
-    </array>
-    
-    
-    <!-- Domaines de formation -->
-    <string-array name="liste_domaines">
-        <item>Commerce - Vente</item>
-        <item>Comptabilité - Gestion</item>
-        <item>Communication</item>
-        <item>Informatique</item>
-        <item>Tourisme</item>
-        <item>Secretariat - Organisation</item>
-        <item>Ressources humaines </item>
-    </string-array>
-    
-    <!-- Formation Commerce - Vente -->
-    <string-array name="commerce_vente">
-        <item>Responsable Manager de la Distribution</item>
-        <item>Responsable de développement commercial</item>
-		<item>BTS Management des Unités Commerciales (MUC)</item>
-		<item>Gestionnaire des Unités Commerciales</item>
-		<item>BTS Négociation et Relation Client (NRC)</item>
-		<item>Vendeur conseiller commercial</item>
-		<item>Conseiller relation client à distance</item>
-		<item>CAP Employé de commerce</item>
-    </string-array>
-    
-    <!-- Formation Compatibilité - Gestion -->
-    <string-array name="compta_gestion">
-        <item>Licence Gestion d\'Entreprise</item>
-        <item>BTS Comptabilité et Gestion des Organisations (CGO)</item>
-		<item>BTS Assistant de Gestion PME-PMI (BTS AG)</item>
-		<item>Gestionnaire de Paie, option RH</item>
-		<item>Comptable assistant</item>
-		<item>Secrétaire comptable</item>
-		<item>Conseiller relation client à distance</item>
-		<item>Formation individualisée comptabilité - paie</item>
-    </string-array>
-    
-    <!-- Formation Communication -->
-    <string-array name="communication">
-        <item>BTS Communication</item>
-    </string-array>
-    
-    <!-- Formation Informatique -->
-    <string-array name="informatique">
-        <item>Conception et développement de systèmes d\'information - Option mobile</item>
-        <item>BTS Services Informatiques aux Organisations, options Solutions d\'infrastructures, systèmes et réseaux et Solutions logicielles et applications métiers</item>
-    </string-array>
-    
-    <!-- Formation Tourisme -->
-    <string-array name="tourisme">
-        <item>BTS Tourisme</item>
-    </string-array>
-    
-    <!-- Formation Secretariat - organisation -->
-    <string-array name="secretariat_organisation">
-        <item>BTS Assistant de Manager (AM)</item>
-        <item>BTS Assistant de Gestion PME-PMI</item>
-        <item>Assistante de Direction Titre professionnel</item>
-        <item>Secrétaire assistant</item>
-    </string-array>
-    
-     <!-- Formation Ressources Humaines -->
-    <string-array name="ressources_humaines">
-        <item>Chargé des Ressources Humaines Titre Professionnel</item>
-        <item>Gestionnaire de Paie, option RH</item>
-    </string-array>
-    
-    
-    <!-- description des formations -->
-    <string name="nom_metier_1">Responsable commercial</string>
-    <string name="desc_metier_1">directeur commercial, chef des ventes, chef de Secteur, chef d’agence… il assume la responsabilité d’une équipe composée de vendeurs (commerciaux, technico-commerciaux, merchandiseurs, attachés commerciaux…) et de d’assistants (communication, gestion…). Il rend compte à la direction générale et participe à l\’élaboration de la stratégie commerciale de l’entreprise.</string>
-	
-    <string name="nom_metier_2">Chargé d\’affaires</string>
-    <string name="desc_metier_2">il gère un portefeuille commercial (secteur géographique, clientèle verticale, grands comptes..) avec une relative autonomie il est responsable des ventes et du développement du fonds de commerce qui lui est confié, de la fidélisation de sa clientèle et de l’atteinte des objectifs quantitatifs et qualitatifs.</string>
-    
-    <string name="nom_metier_3">Manager de clientèle</string>
-    <string name="desc_metier_3">il gère une clientèle verticale, correspondant à un segment de marché stratégique pour l’entreprise qui l’emploie, et produit le CA et la marge correspondants. Il en maîtrise toutes les composantes (avant-vente, vente et après vente), fait remonter les informations au service marketing, et propose des axes de développement.</string>
-
-    <string name="nom_metier_4">Développeur commercial</string>
-    <string name="desc_metier_4">il fait partie soit de l’équipe de vente (opérationnel), soit du service marketing (fonctionnel). Dans le premier cas il est en charge d’un segment de marché et doit donc en développer le CA (prospection+vente), dans le second, il propose des stratégies de développement adaptées.</string>
-    
-    <string name="nom_metier_5">Chef des ventes</string>
-    <string name="desc_metier_5">il dirige une équipe de vendeurs opérationnels, les encadre, les anime, fixe les objectifs, contrôle les résultats, met en place et participe aux actions (prospection, promotion…) rapporte à la direction commerciale et marketing, participe aux réunions, et généralement gère quelques grands comptes.</string>
-    
-    <string name="nom_metier_6">Responsable grands comptes</string>
-    <string name="desc_metier_6">il est responsable du développement (fidélisation, accroissement, diversification…) du chiffre d\'affaires réalisé avec des clients stratégiques, soit par leur taille (% du chiffre d\'affaires), ou par leur importance (pénétration de marché, compte leader, tête de réseau…). Ce type de poste est réservé aux commerciaux aguerris et dotés d\’une capacité de négociation en rapport avec la personnalité de ses interlocuteurs.</string>
-    
-    <!-- modalités des formations -->
-    <string name="modalite_1">OBJECTIFS DE LA FORMATION</string>
-    <string name="modalite_2">CONDITIONS D\’ACCÈS</string>
-    <string name="modalite_3">MODALITÉS DE FINANCEMENT</string>
-    <string name="modalite_4">VALIDATION DU DIPLÔME</string>
-    <string name="modalite_5">LIEU DE FORMATION</string>
-    <string name="modalite_6">POURSUITE D\’ÉTUDES</string>
-    
-    <string name="desc_modalite_1"> Dans le secteur de la distribution, acquérir les techniques pour animer son équipe, gérer son établissement, ses projets et y apporter un regard innovant.</string>
-    <string name="desc_modalite_2"> - Sur dossier et entretien\n- Être titulaire d\'un BAC+2 spécialisé et avoir une 1ère expérience (CCD, stage, alternance…) dans le domaine commerce et de la vente\n- Ou avoir le bac et 2 ans d\’expérience en commerce et distribution</string>
-    <string name="desc_modalite_3"> - Alternance\n- Congé individuel de formation (CIF)\n- Financement individuel\n- Autre : nous consulter</string>
-    <string name="desc_modalite_4"> Diplôme reconnu par l\'Etat, Bac+3, Validation « Responsable Manager de la Distribution »\nCette formation est dispensée dans le cadre du Réseau CCI Négoventis.</string>
-    <string name="desc_modalite_5"> Caen</string>
-    <string name="desc_modalite_6"> BAC+5 A L\'EM Normandie\nMaster Grande Ecole visé Bac+5, Grade de Master (Concours Passerelle 2)\nPossibilité d\'alternance, 12 spécialisations en Master 2, doubles-diplômes en France ou à l\'étranger</string>
-	
-    <!-- programme des formations -->
-    <string name="programme_1">DECLINER LA STRATEGIE COMMERCIALE DE SON POINT DE VENTE EN PLAN D’ACTIONS</string>
-    <string name="programme_2">MANAGER ET AFFIRMER SON LEADERSHIP AU QUOTIDIEN DANS LA DISTRIBUTION</string>
-    <string name="programme_3">DEVELOPPER / CONDUIRE DES PROJETS FAVORISANT LES PRATIQUES ET STRATEGIES INNOVANTES</string>
-    
-    <string name="desc_programme_1">- Réaliser un diagnostic externe en vue d\’optimiser la stratégie de son point de vente\n- Conduire un diagnostic interne et évaluer le potentiel commercial de son point de vente\n- A partir de la stratégie et des objectifs arrêtés par ou avec sa direction, élaborer un plan d\’actions commerciales</string>
-    <string name="desc_programme_2">- Animer son équipe au quotidien, dans le respect de la politique RH de l’entreprise et des obligations liées à la législation sociale\n- Constituer et/ou compléter son équipe\n- Suivre et évaluer les résultats commerciaux de son entité commerciale et mettre en place, le cas échéant, des actions correctives\n- Communiquer avec les différents interlocuteurs de son entité de travail dans le cadre de ses fonctions\n- Communiquer à l\’externe pour représenter son point de vente</string>
-    <string name="desc_programme_3">- Détecter et étudier les perspectives de solutions innovantes permettant de développer une stratégie de différenciation commerciale pour son point de vente\n- Traduire une idée commerciale novatrice en projet réalisable et rentable pour le point de vente\n- Constituer, animer un groupe projet multi acteurs\n- Suivre et coordonner la réalisation du projet commercial dans le respect des délais, du budget et des objectifs à atteindre</string>
-
-    <!-- profil requis des formations -->
-    <string name="profil_requis_1">Organisé, débrouillard, et efficace, vous aimez et savez trouver des solutions.</string>
-    <string name="profil_requis_2">Vous n\’aimez pas la routine. La compétition vous stimule, les difficultés vous dopent.</string>
-    <string name="profil_requis_3">Vous avez un sens commercial aiguisé, vous comprenez les situations, les gens, les enjeux, et la façon d’arriver à vos fins.</string>
-    <string name="profil_requis_4">Vous voulez faire un Bac+3 commercial, mais pas dans la vente pure. Vous voulez faire une formation qui vous ouvre plusieurs portes.</string>
-    <string name="profil_requis_5">Vous êtes sensible à la communication, à l’image, à la concurrence, aux idées neuves, au marché, et avez envie d’y jouer un rôle moteur.</string>
-    <string name="profil_requis_6">Vous aimez participer et gérer des projets dans leur ensemble.</string>
-    <string name="profil_requis_7">Vous aimez la dynamique de groupe, travailler en équipe.</string>
-    <string name="profil_requis_8">Vous êtes intéressé par un emploi à responsabilités et vous êtes attiré par le management.</string>
-    
-     <!-- Valeur pour les éléments du ViewFlipper banniere-->
+    <!-- Valeur pour les éléments du ViewFlipper banniere -->
     <string name="banniere_element1">Elément 1</string>
     <string name="banniere_element2">Elément 2</string>
     <string name="banniere_element3">Elément 3</string>
     <string name="desc_banelement1">Elément 1 non affiché</string>
     <string name="desc_banelement2">Elément 1 non affiché</string>
     <string name="desc_banelement3">Elément 1 non affiché</string>
-    
-    <!-- Valeur pour l'éléments par défaut du ViewFlipper actus-->
+
+    <!-- Valeur pour l'éléments par défaut du ViewFlipper actus -->
     <string name="actu_vide">Pas d\'actualité pour le moment</string>
+
+    <string name="titre_finacements">\t\tLES FINANCEMENTS ET \nDISPOSITIFS DE FORMATION</string>
 </resources>

@@ -1,10 +1,10 @@
 package projetaifcc2014;
 
-import com.example.projetaifcc2014.R;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import com.example.projetaifcc2014.R;
 
 public class Menu extends Activity {
 
@@ -31,7 +31,7 @@ public class Menu extends Activity {
 		case R.id.menu_apropos:
 			// Comportement du bouton "A Propos"
 			return true;
-		case R.id.menu_paramètres:
+		case R.id.menu_parametres:
 			// Comportement du bouton "Paramètres"
 			return true;
 		case R.id.menu_quitter:

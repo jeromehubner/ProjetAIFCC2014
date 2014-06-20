@@ -20,9 +20,9 @@
     
     
     <item
-        android:id="@+id/menu_paramètres"
+        android:id="@+id/menu_parametres"
         android:showAsAction="never"
-        android:title="@string/menu_paramètres"/>
+        android:title="@string/menu_parametres"/>
 
     <item
         android:id="@+id/menu_quitter"

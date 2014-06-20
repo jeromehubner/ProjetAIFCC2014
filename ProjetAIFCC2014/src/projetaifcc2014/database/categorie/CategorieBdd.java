@@ -1,16 +1,19 @@
 package projetaifcc2014.database.categorie;
- 
+
+import java.util.ArrayList;
+import java.util.List;
+
 import projetaifcc2014.database.Bdd;
 import projetaifcc2014.database.departement.DepartementBdd;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
- 
+
 public class CategorieBdd extends Bdd{
 
 	// Nom de la table
 	public static final String TABLE_CATEGORIE = "categorie";
-	
+
 	// Colonnes table : categorie
 	public static final String CAT_ID = "id";
 	public static final int NUM_CAT_ID = 0;
@@ -18,7 +21,7 @@ public class CategorieBdd extends Bdd{
 	public static final int NUM_CAT_DEPARTEMENT = 1;
 	public static final String CAT_LIBELLE = "libelle";
 	public static final int NUM_CAT_LIBELLE = 2;
-	
+
 	public CategorieBdd(Context context){
 		super(context);
 	}
@@ -68,9 +71,39 @@ public class CategorieBdd extends Bdd{
 		if (departementBdd != null){
 			departementBdd.open();
 			categorie.setDepartement(departementBdd.getDepartementById(c.getInt(NUM_CAT_DEPARTEMENT)));
+			departementBdd.close();
 		}
 		categorie.setLibelle(c.getString(NUM_CAT_LIBELLE));
 		c.close();
 		return categorie;
+	}
+
+
+	public List<Categorie> getListCategoriesByIdDepartement(int idDepartement) {
+		ArrayList<Categorie> allCategories = new ArrayList<Categorie>();
+
+		Cursor c = bdd.query( TABLE_CATEGORIE, new String[] {CAT_ID, CAT_DEPARTEMENT, CAT_LIBELLE}, CAT_DEPARTEMENT +" = " +idDepartement, null, null, null, null);
+		if (c.getCount() == 0) return null;
+
+		for(int i = 0; i < c.getCount(); i++){
+			c.moveToPosition(i);
+			
+			Categorie categorie = new Categorie();
+			categorie.setId(c.getInt(NUM_CAT_ID));
+
+			DepartementBdd departementBdd = new DepartementBdd(context);
+			if (departementBdd != null){
+				departementBdd.open();
+				categorie.setDepartement(departementBdd.getDepartementById(c.getInt(NUM_CAT_DEPARTEMENT)));
+				departementBdd.close();
+			}
+
+			categorie.setLibelle(c.getString(NUM_CAT_LIBELLE));
+
+			allCategories.add(categorie);
+		}		
+		c.close();
+
+		return allCategories;
 	}
 }

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 3.3.2deb1ubuntu1
+- http://www.phpmyadmin.net
+-
+- Serveur: localhost
+- Généré le : Ven 06 Juin 2014 à 16:26
+- Version du serveur: 5.1.73
+- Version de PHP: 5.3.2-1ubuntu4.22.1~gandi
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="aifcc" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="categorie">
+                CREATE TABLE `categorie` (
+                  `id_categorie` int(11) NOT NULL AUTO_INCREMENT,
+                  `niveau` int(11) NOT NULL,
+                  `accueil` enum('oui','non') CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+                  `actif` enum('en ligne','hors ligne') CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+                  `url` varchar(100) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+                  `nom` varchar(255) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+                  `description` longtext CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+                  `photo` varchar(100) CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+                  `title` longtext CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+                  `keywords` longtext CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+                  `metaDescription` longtext CHARACTER SET latin1 COLLATE latin1_general_ci NOT NULL,
+                  `nouveaute` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  `fichier` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+                  PRIMARY KEY (`id_categorie`)
+                ) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de données: 'aifcc'
+    -->
+    <database name="aifcc">
+        <!-- Table categorie -->
+        <table name="categorie">
+            <column name="id_categorie">1</column>
+            <column name="niveau">1</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">institut-de-l-alternance</column>
+            <column name="nom">Institut de l'alternance</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Institut de l'alternance</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">2</column>
+            <column name="niveau">1</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">centre-d-etudes-des-langues</column>
+            <column name="nom">Centre d'Etude des Langues</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Centre d'Etude des Langues</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">3</column>
+            <column name="niveau">1</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">formation-continue</column>
+            <column name="nom">Formation Continue</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Formation Continue</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">4</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">commerce-et-vente</column>
+            <column name="nom">Commerce - Vente</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Commerce - Vente</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">5</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">communication</column>
+            <column name="nom">Communication</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Communication</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">6</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">tourisme</column>
+            <column name="nom">Tourisme</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Tourisme</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">7</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">secretariat-assistant</column>
+            <column name="nom">Secretariat - organisation</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Secretariat - organisation</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">8</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">gestion-comptabilite</column>
+            <column name="nom">Comptabilite - Gestion</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Comptabilite - Gestion</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">9</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">informatique</column>
+            <column name="nom">Informatique</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Informatique</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">10</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">ressources-humaines</column>
+            <column name="nom">Ressources Humaines</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Ressources Humaines</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">11</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">generales</column>
+            <column name="nom">Générales</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Générales</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">12</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">professionnelles</column>
+            <column name="nom">Professionnelles</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Professionnelles</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">13</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">par-secteurs-d-activites</column>
+            <column name="nom">Par secteur d'activités</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Par secteur d'activités</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">14</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">a-distance</column>
+            <column name="nom">A distance</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">A distance</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">15</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">a-l-etranger</column>
+            <column name="nom">A l'étranger</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">A l'étranger</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">16</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">pour-les-jeunes---english-club</column>
+            <column name="nom">Pour les jeunes : English Club</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Pour les jeunes : English Club</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">17</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">preparations-aux-examens</column>
+            <column name="nom">Préparation aux examens</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Préparation aux examens</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">18</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">bureautique-informatique</column>
+            <column name="nom">Bureautique - Informatique</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Bureautique - Informatique</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier">bureautique_informatique.php</column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">19</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">management-communication</column>
+            <column name="nom">Management - Communication</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Management - Communication</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier">management_communication.php</column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">20</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">ressources-humaines</column>
+            <column name="nom">Ressources Humaines</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Ressources Humaines</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier">ressources_humaines.php</column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">21</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">developpement-personnel</column>
+            <column name="nom">Développement personnel - Efficacité professionnelle</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Développement personnel - Efficacité professionnelle</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier">developpement-personnel.php</column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">22</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">comptabilite-gestion-fiscalite</column>
+            <column name="nom">Comptabilité - Gestion - Fiscalité</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Comptabilité - Gestion - Fiscalité</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier">gestion_comptabilite.php</column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">23</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">accueil-commercial</column>
+            <column name="nom">Accueil - Commercial</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Accueil - Commercial</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier">accueil-commercial.php</column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">24</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">commerce-international</column>formationBdd.getListFormationsByIdCategorie(idCategorie)
+            <column name="nom">Commerce International</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Commerce International</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier">commerce-international.php</column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">25</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">logistique-securite</column>
+            <column name="nom">Sécurité</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Logistique - Sécurité</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier">logistique-securite.php</column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">26</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">langues</column>
+            <column name="nom">Langues</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title">Langues</column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier">formations.php</column>
+        </table>
+        <table name="categorie">
+            <column name="id_categorie">27</column>
+            <column name="niveau">2</column>
+            <column name="accueil">non</column>
+            <column name="actif">en ligne</column>
+            <column name="url">nos-formules</column>
+            <column name="nom">Nos formules</column>
+            <column name="description"></column>
+            <column name="photo"></column>
+            <column name="title"></column>
+            <column name="keywords"></column>
+            <column name="metaDescription"></column>
+            <column name="nouveaute"></column>
+            <column name="fichier"></column>
+        </table>
+    </database>
+</pma_xml_export>

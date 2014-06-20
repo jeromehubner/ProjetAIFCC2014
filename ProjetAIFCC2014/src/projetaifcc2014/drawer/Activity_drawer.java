@@ -2,14 +2,14 @@ package projetaifcc2014.drawer;
 
 import java.util.ArrayList;
 
-
-import projetaifcc2014.formation_detail.DummySectionFragment;
-import com.example.projetaifcc2014.R;
+import projetaifcc2014.drawerFragment.FinancementFragment;
+import projetaifcc2014.drawerFragment.FragmentContact;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,204 +17,306 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-/**
- * Created by Sebastien on 16/04/14.
- */
-public class Activity_drawer extends FragmentActivity {
-    private DrawerLayout monDrawerLayout;
-    protected ListView maListeDrawer;
-    protected ActionBarDrawerToggle mDrawerToggle;
-    protected int position ;
+import com.example.projetaifcc2014.R;
 
-    // Titre du drawer
-    protected CharSequence mDrawerTitle;
 
-    //utiliser pour stocker les titre du drawer
-    protected CharSequence mTitle;
+public abstract class Activity_drawer  extends FragmentActivity {
+	private DrawerLayout monDrawerLayout;
+	protected ListView maListeDrawer;
+	protected ActionBarDrawerToggle mDrawerToggle;
+	protected int position ;
 
-    // Variables des items du drawer
-    protected String[] navMenuTitles;
-    protected TypedArray navMenuIcons;
-    protected TypedArray navMenuIconsFormation;
+	// Cette variable est récupérée dans le détail fragment pour effectuer la requête en DB
+	private int idFormation;
 
-    // Adapter et definitions des items du drawer
-    protected ArrayList<NavDrawerItem> navDrawerItems;
-    private DrawerAdapter adapter;
-    
-    protected int centre ;
-    protected static final int AIFCC_ALT = 0;
-    protected static final int AIFCC_CNT = 1;
-    protected static final int CEL = 2;
-    protected static final int IMAD = 3;
-    protected static final int IMSS = 4;
-    
-    
-    
-    
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+	// Titre du drawer
+	protected CharSequence mDrawerTitle;
+
+	//utiliser pour stocker les titre du drawer
+	protected CharSequence mTitle;
+
+	// Variables des items du drawer
+	protected String[] navMenuTitles;
+	protected TypedArray navMenuIcons;
+	protected TypedArray navMenuIconsFormation;
+
+	// Adapter et definitions des items du drawer
+	protected ArrayList<NavDrawerItem> navDrawerItems;
+	private DrawerAdapter adapter;
+
+	protected int centre ;
+	protected static final int DEPARTEMENT = 0;
+	protected static final int AIFCC_ALT = 1;
+	protected static final int AIFCC_CNT = 2;
+	protected static final int CEL = 3;
+	protected static final int IMAD = 4;
+	protected static final int IMSS = 5;
+
+	
+	public abstract void showFragmentPrincipal();
+
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 		setContentView(R.layout.drawer);
-		
-        mTitle = mDrawerTitle = getTitle();
-        
-        
-       
 
-        // Recupere les chaines de caractere des menus du drawer
-        navMenuTitles = getResources().getStringArray(R.array.items);
-
-        // Recupere les icones  des menus du drawer
-        navMenuIcons = getResources().obtainTypedArray(R.array.icones_drawer);
-        
-        // Recupere les icones  des menus du drawer
-        navMenuIconsFormation = getResources().obtainTypedArray(R.array.icones_formation);
-        changeIcone(centre);
-
-        monDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        maListeDrawer = (ListView) findViewById(R.id.list_menu);
-
-        navDrawerItems = new ArrayList<NavDrawerItem>();
-
-        // Ajout des items a la liste
-        // AIFCC
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[0], navMenuIconsFormation.getResourceId(centre, -1)));
-        // Nos financements
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[1], navMenuIcons.getResourceId(1, -1)));
-        // Catalogues 2014
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[2], navMenuIcons.getResourceId(2, -1)));
-        // Les taxes
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[3], navMenuIcons.getResourceId(3, -1)));
-        // Nous rejoindre
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[4], navMenuIcons.getResourceId(4, -1)));
-        // Portes ouvertes
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[5], navMenuIcons.getResourceId(5, -1)));
-        // Contact
-        navDrawerItems.add(new NavDrawerItem(navMenuTitles[6], navMenuIcons.getResourceId(6, -1)));
+		mTitle = mDrawerTitle = getTitle();
 
 
-        navMenuIcons.recycle();
+		// Recupere les chaines de caractere des menus du drawer
+		navMenuTitles = getResources().getStringArray(R.array.items);
 
-        maListeDrawer.setOnItemClickListener(new SlideMenuClickListener());
+		// Recupere les icones  des menus du drawer
+		navMenuIcons = getResources().obtainTypedArray(R.array.icones_drawer);
 
-        // on defini l'adapter propre a notre drawer
-        adapter = new DrawerAdapter(getApplicationContext(),
-                navDrawerItems);
-        maListeDrawer.setAdapter(adapter);
 
-        // active l'icone de la action bar et active l'effet de glissement
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-//		getActionBar().setHomeButtonEnabled(true);
+		monDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+		maListeDrawer = (ListView) findViewById(R.id.list_menu);
 
-        mDrawerToggle = new ActionBarDrawerToggle(this, monDrawerLayout,
-                R.drawable.menu, //nav menu toggle icon
-                R.string.app_name, // texte affiché dans l'action bar lorsque le drawer est ouvert
-                R.string.app_name // texte affiché dans l'action bar lorsque le drawer est fermé
-        ) {
-            public void onDrawerClosed(View view) {
-                getActionBar().setTitle(mTitle);
-                // appel onPrepareOptionsMenu() pour montrer  l'icone de l'action bar
-                invalidateOptionsMenu();
-            }
+		navDrawerItems = new ArrayList<NavDrawerItem>();
 
-            public void onDrawerOpened(View drawerView) {
-                getActionBar().setTitle(mDrawerTitle);
-                // appel onPrepareOptionsMenu() pour cacher l'icone de l'action bar
-                invalidateOptionsMenu();
-            }
-        };
-        monDrawerLayout.setDrawerListener(mDrawerToggle);
+		// Ajout des items a la liste
+		// AIFCC
+		contruitListeDrawer(navMenuTitles,navMenuIcons);
 
-        if (savedInstanceState == null) {
-            // lors du premier appel on montre la premier vue
-            displayView(0);
-        }
+		navMenuIcons.recycle();
+
+		maListeDrawer.setOnItemClickListener(new SlideMenuClickListener());
+
+		// on defini l'adapter propre a notre drawer
+		adapter = new DrawerAdapter(getApplicationContext(),
+				navDrawerItems);
+		maListeDrawer.setAdapter(adapter);
+
+		// active l'icone de la action bar et active l'effet de glissement
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+		//		getActionBar().setHomeButtonEnabled(true);
+
+		mDrawerToggle = new ActionBarDrawerToggle(this, monDrawerLayout,
+				R.drawable.menu, //nav menu toggle icon
+				R.string.app_name, // texte affiché dans l'action bar lorsque le drawer est ouvert
+				R.string.app_name // texte affiché dans l'action bar lorsque le drawer est fermé
+				) {
+			public void onDrawerClosed(View view) {
+				getActionBar().setTitle(mTitle);
+				// appel onPrepareOptionsMenu() pour montrer  l'icone de l'action bar
+				invalidateOptionsMenu();
+			}
+
+			public void onDrawerOpened(View drawerView) {
+				getActionBar().setTitle(mDrawerTitle);
+				// appel onPrepareOptionsMenu() pour cacher l'icone de l'action bar
+				invalidateOptionsMenu();
+			}
+		};
+		monDrawerLayout.setDrawerListener(mDrawerToggle);
+
+		if (savedInstanceState == null) {
+			// lors du premier appel on montre la premier vue
+			displayView(0);
+		}
+	}
+
+
+	/**
+	 * Slide menu item click listener
+	 * */
+	private class SlideMenuClickListener implements ListView.OnItemClickListener {
+		@Override
+		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+			// affiche la vue selectionnée lors du clicque sur un item
+			displayView(position);
+			miseAJourItemSelectionne();
+		}
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.activity_main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		if (mDrawerToggle.onOptionsItemSelected(item)) {
+			return true;
+		}
+		switch (item.getItemId()) {
+		case R.id.menu_parametres:
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+
+	public void contruitListeDrawer(String[] navMenuTitles,TypedArray navMenuIcons)
+	{
+		for (int nombre = 0 ; nombre<navMenuTitles.length; nombre++) {
+
+			navDrawerItems.add(new NavDrawerItem(navMenuTitles[nombre], navMenuIcons.getResourceId(nombre, -1)));
+		}
+	}
+
+
+	/* *
+	 * appellé quand invalidateOptionsMenu() est déclenché
+	 */
+	@Override
+	public boolean onPrepareOptionsMenu(Menu menu) {
+		boolean drawerOpen = monDrawerLayout.isDrawerOpen(maListeDrawer);
+		menu.findItem(R.id.menu_parametres).setVisible(!drawerOpen);
+		return super.onPrepareOptionsMenu(menu);
+	}
+
+	/**
+	 * Affichage du fragment en fonction de l'item selectionné
+	 * */
+	public void displayView(int position) {
+		// On récupère l'id de la formation sélectionnée passée depuis la classe Fragment_list_formation
+		idFormation = getIntent().getIntExtra(getResources().getString(R.string.extra_id_formation), 0);
+
+		// mise à jour de la vue
+		switch (position) {
+		case 0:
+			showFragmentPrincipal();
+			break;
+		case 1:
+			showFragmentFinancement();
+			break;
+		case 2:
+			showFragmentAutre();
+			break;
+		case 3:
+			showFragmentContact();
+			break;
+		case 4:
+			showFragmentAutre();
+			break;
+		case 5:
+			showFragmentAutre();
+			break;
+		case 6:
+			showFragmentAutre();
+			break;
+
+		default:
+			break;
+		}
+	}
+
+
+	public void miseAJourItemSelectionne(){
+		// mise à jour de l'item selectionné et du titre lors de la fermeture du drawer
+		maListeDrawer.setItemChecked(position, true);
+		maListeDrawer.setSelection(position);
+		setTitle(navMenuTitles[position]);
+		monDrawerLayout.closeDrawer(maListeDrawer);
+	}
+
+
+
+	@Override
+	public void setTitle(CharSequence title) {
+		mTitle = title;
+		getActionBar().setTitle(mTitle);
+	}
+
+	/**
+	 * When using the ActionBarDrawerToggle, you must call it during
+	 * onPostCreate() and onConfigurationChanged()...
+	 */
+	@Override
+	protected void onPostCreate(Bundle savedInstanceState) {
+		super.onPostCreate(savedInstanceState);
+		mDrawerToggle.syncState();
+	}
+
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		mDrawerToggle.onConfigurationChanged(newConfig);
+	}
+	
+	/**
+	 * Item du drawer == 1, FINANCEMENT
+	 */
+	public void showFragmentFinancement() {
+    	FinancementFragment financementFragment= new FinancementFragment();
+    	
+    	
+    	// Débutez la transaction des fragments
+    	FragmentTransaction fTransaction = getSupportFragmentManager().beginTransaction();
+    	
+    	
+    	// Définissez les animations entrantes et sortantes
+    	fTransaction.setCustomAnimations(R.anim.left_in,
+    	R.anim.left_out);
+    	
+       	fTransaction.replace(R.id.frame, financementFragment);
+       	
+    	// Faîtes le commit
+    	fTransaction.commit();
+    }
+	
+	/**
+	 * Item du drawer == 2, NOUS REJOINDRE
+	 */
+	
+	/**
+	 * Item du drawer == 3, CONTACT
+	 */
+	public void showFragmentContact() {
+    	FragmentContact fragment = new FragmentContact();
+    	
+    	
+    	// Débutez la transaction des fragments
+    	FragmentTransaction fTransaction = getSupportFragmentManager().beginTransaction();
+    	
+    	
+    	// Définissez les animations entrantes et sortantes
+    	fTransaction.setCustomAnimations(R.anim.left_in,
+    	R.anim.left_out);
+    	
+       	fTransaction.replace(R.id.frame, fragment);
+       	
+       	
+    	// Faîtes le commit
+    	fTransaction.commit();
+	}
+	
+	/**
+	 * Item du drawer == 4, GALLERIE
+	 */
+	
+	/**
+	 * Item du drawer == 5, ACTU
+	 */
+	
+	
+    public void showFragmentAutre() {
+    	FinancementFragment fragment = new FinancementFragment();
+    	
+    	
+    	// Débutez la transaction des fragments
+    	FragmentTransaction fTransaction = getSupportFragmentManager().beginTransaction();
+    	
+    	
+    	
+    	// Définissez les animations entrantes et sortantes
+    	fTransaction.setCustomAnimations(R.anim.left_in,R.anim.left_out);
+    	
+    	
+    	
+       	fTransaction.replace(R.id.frame, fragment);
+    	
+    	// Faîtes le commit
+    	fTransaction.commit();
     }
 
 
-    /**
-     * Slide menu item click listener
-     * */
-    private class SlideMenuClickListener implements ListView.OnItemClickListener {
-        @Override
-        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            // affiche la vue selectionnée lors du clicque sur un item
-            displayView(position);
-            miseAJourItemSelectionne();
-        }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        if (mDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        switch (item.getItemId()) {
-            case R.id.menu_paramètres:
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
-
-     /* *
-     * appellé quand invalidateOptionsMenu() est déclenché
-     */
-        @Override
-        public boolean onPrepareOptionsMenu(Menu menu) {
-            boolean drawerOpen = monDrawerLayout.isDrawerOpen(maListeDrawer);
-            menu.findItem(R.id.menu_paramètres).setVisible(!drawerOpen);
-            return super.onPrepareOptionsMenu(menu);
-        }
-
-    /**
-     * Affichage du fragment en fonction de l'item selectionné
-     * */
-    public void displayView(int position) {}
-    
-    public void changeIcone(int centre){
-    	this.centre = centre ;
-    }
-    
-    
-    
-    
-    public void miseAJourItemSelectionne(){
-    	// mise à jour de l'item selectionné et du titre lors de la fermeture du drawer
-        maListeDrawer.setItemChecked(position, true);
-        maListeDrawer.setSelection(position);
-        setTitle(navMenuTitles[position]);
-        monDrawerLayout.closeDrawer(maListeDrawer);
-    }
-    
-  
-
-    @Override
-    public void setTitle(CharSequence title) {
-        mTitle = title;
-        getActionBar().setTitle(mTitle);
-    }
-
-    /**
-     * When using the ActionBarDrawerToggle, you must call it during
-     * onPostCreate() and onConfigurationChanged()...
-     */
-    @Override
-    protected void onPostCreate(Bundle savedInstanceState) {
-        super.onPostCreate(savedInstanceState);
-        mDrawerToggle.syncState();
-    }
-
-    @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        mDrawerToggle.onConfigurationChanged(newConfig);
-    }
+	public int getIdFormation() {
+		return idFormation;
+	}
 
 }

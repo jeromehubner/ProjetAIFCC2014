@@ -1,13 +1,12 @@
 package projetaifcc2014.formation_detail;
 
-import com.example.projetaifcc2014.R;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
+import com.example.projetaifcc2014.R;
 
 
 public class FragmentDetail4 extends Fragment{
@@ -18,5 +17,4 @@ public class FragmentDetail4 extends Fragment{
 		View view = inflater.inflate(R.layout.fragment_formation_detail_4, container, false);
 		return view;
 	}
-
 }

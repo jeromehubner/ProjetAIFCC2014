@@ -1,116 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
+    android:layout_height="match_parent" >
 
-	<RelativeLayout
-	    android:layout_width="match_parent"
-	    android:layout_height="wrap_content"
-	    android:paddingBottom="@dimen/activity_vertical_margin"
-	    android:paddingLeft="@dimen/activity_horizontal_margin"
-	    android:paddingRight="@dimen/activity_horizontal_margin" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+	    android:background="@color/blanc" >
 
-        <TextView
-            android:id="@+id/modalite_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-        	android:layout_marginTop="10dp"
-            android:text="@string/modalite_1"
-            android:textStyle="bold"
-            android:textColor="@color/rouge" />
-        <TextView
-            android:id="@+id/desc_modalite_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/modalite_1"
-            android:layout_marginLeft="20dp"
-            android:text="@string/desc_modalite_1" />
-        
-        <TextView
-            android:id="@+id/modalite_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-        	android:layout_below="@+id/desc_modalite_1"
-        	android:layout_marginTop="10dp"
-            android:text="@string/modalite_2"
-            android:textStyle="bold"
-            android:textColor="@color/rouge" />
-        <TextView
-            android:id="@+id/desc_modalite_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/modalite_2"
-            android:layout_marginLeft="20dp"
-            android:text="@string/desc_modalite_2" />
-        
-        <TextView
-            android:id="@+id/modalite_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-        	android:layout_below="@+id/desc_modalite_2"
-        	android:layout_marginTop="10dp"
-            android:text="@string/modalite_3"
-            android:textStyle="bold"
-            android:textColor="@color/rouge" />
-        <TextView
-            android:id="@+id/desc_modalite_3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/modalite_3"
-            android:layout_marginLeft="20dp"
-            android:text="@string/desc_modalite_3" />
-        
-        <TextView
-            android:id="@+id/modalite_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-        	android:layout_below="@+id/desc_modalite_3"
-        	android:layout_marginTop="10dp"
-            android:text="@string/modalite_4"
-            android:textStyle="bold"
-            android:textColor="@color/rouge" />
-        <TextView
-            android:id="@+id/desc_modalite_4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/modalite_4"
-            android:layout_marginLeft="20dp"
-            android:text="@string/desc_modalite_4" />
-        
-        <TextView
-            android:id="@+id/modalite_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-        	android:layout_below="@+id/desc_modalite_4"
-        	android:layout_marginTop="10dp"
-            android:text="@string/modalite_5"
-            android:textStyle="bold"
-            android:textColor="@color/rouge" />
-        <TextView
-            android:id="@+id/desc_modalite_5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/modalite_5"
-            android:layout_marginLeft="20dp"
-            android:text="@string/desc_modalite_5" />
-        
-        <TextView
-            android:id="@+id/modalite_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-        	android:layout_below="@+id/desc_modalite_5"
-        	android:layout_marginTop="10dp"
-            android:text="@string/modalite_6"
-            android:textStyle="bold"
-            android:textColor="@color/rouge" />
-        <TextView
-            android:id="@+id/desc_modalite_6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/modalite_6"
-            android:layout_marginLeft="20dp"
-            android:text="@string/desc_modalite_6" />
-        
+        <WebView
+            android:id="@+id/modalites"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </RelativeLayout>
 
 </ScrollView>

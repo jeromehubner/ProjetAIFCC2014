@@ -2,13 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+	android:background="@color/blanc" >
     
     
         <android.support.v4.view.ViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+	    android:background="@color/blanc" >
 
         <android.support.v4.view.PagerTabStrip
             android:id="@+id/pager_tab"
@@ -16,7 +18,7 @@
             android:layout_height="30dp"
             android:layout_gravity="top"
             android:drawingCacheQuality="high"
-            android:background="@color/blanc" >
+            android:background="@color/blanc">
 
         </android.support.v4.view.PagerTabStrip>
     </android.support.v4.view.ViewPager>

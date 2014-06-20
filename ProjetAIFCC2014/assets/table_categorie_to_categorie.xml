@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 3.3.2deb1ubuntu1
+- http://www.phpmyadmin.net
+-
+- Serveur: localhost
+- Généré le : Ven 06 Juin 2014 à 21:57
+- Version du serveur: 5.1.73
+- Version de PHP: 5.3.2-1ubuntu4.22.1~gandi
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="aifcc" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="categorieToScategorie">
+                CREATE TABLE `categorieToScategorie` (
+                  `cat_nivo1_id` int(11) NOT NULL,
+                  `cat_nivo2_id` int(11) NOT NULL,
+                  `position` int(11) NOT NULL,
+                  PRIMARY KEY (`cat_nivo1_id`,`cat_nivo2_id`)
+                ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Base de données: 'aifcc'
+    -->
+    <database name="aifcc">
+        <!-- Table categorieToScategorie -->
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">1</column>
+            <column name="cat_nivo2_id">4</column>
+            <column name="position">1</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">1</column>
+            <column name="cat_nivo2_id">5</column>
+            <column name="position">2</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">1</column>
+            <column name="cat_nivo2_id">6</column>
+            <column name="position">3</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">1</column>
+            <column name="cat_nivo2_id">7</column>
+            <column name="position">4</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">1</column>
+            <column name="cat_nivo2_id">8</column>
+            <column name="position">5</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">1</column>
+            <column name="cat_nivo2_id">9</column>
+            <column name="position">6</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">1</column>
+            <column name="cat_nivo2_id">10</column>
+            <column name="position">7</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">2</column>
+            <column name="cat_nivo2_id">11</column>
+            <column name="position">1</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">2</column>
+            <column name="cat_nivo2_id">12</column>
+            <column name="position">2</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">2</column>
+            <column name="cat_nivo2_id">13</column>
+            <column name="position">3</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">2</column>
+            <column name="cat_nivo2_id">14</column>
+            <column name="position">4</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">2</column>
+            <column name="cat_nivo2_id">15</column>
+            <column name="position">5</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">2</column>
+            <column name="cat_nivo2_id">16</column>
+            <column name="position">6</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">2</column>
+            <column name="cat_nivo2_id">17</column>
+            <column name="position">7</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">3</column>
+            <column name="cat_nivo2_id">18</column>
+            <column name="position">1</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">3</column>
+            <column name="cat_nivo2_id">19</column>
+            <column name="position">3</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">3</column>
+            <column name="cat_nivo2_id">20</column>
+            <column name="position">2</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">3</column>
+            <column name="cat_nivo2_id">21</column>
+            <column name="position">4</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">3</column>
+            <column name="cat_nivo2_id">22</column>
+            <column name="position">7</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">3</column>
+            <column name="cat_nivo2_id">23</column>
+            <column name="position">5</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">3</column>
+            <column name="cat_nivo2_id">24</column>
+            <column name="position">6</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">3</column>
+            <column name="cat_nivo2_id">25</column>
+            <column name="position">8</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">3</column>
+            <column name="cat_nivo2_id">26</column>
+            <column name="position">9</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">2</column>
+            <column name="cat_nivo2_id">27</column>
+            <column name="position">8</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">0</column>
+            <column name="cat_nivo2_id">1</column>
+            <column name="position">1</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">0</column>
+            <column name="cat_nivo2_id">2</column>
+            <column name="position">2</column>
+        </table>
+        <table name="categorieToScategorie">
+            <column name="cat_nivo1_id">0</column>
+            <column name="cat_nivo2_id">3</column>
+            <column name="position">3</column>
+        </table>
+    </database>
+</pma_xml_export>

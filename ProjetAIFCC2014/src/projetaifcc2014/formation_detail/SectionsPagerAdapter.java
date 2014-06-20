@@ -9,33 +9,31 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 	// Declare the number of ViewPager pages
+	private String titles[];
 	
-	private String titles[] = new String[] { "Métiers visées", "Modalités","Programme", "Profil requis"};
-	private int nombreTab = titles.length;
-
-	public SectionsPagerAdapter(FragmentManager fm) {
+	
+	public SectionsPagerAdapter(FragmentManager fm, String titles[]) {
 		super(fm);
+		this.titles = titles;
 	}
+	
 
 	@Override
 	public Fragment getItem(int position) {
+		
 		switch (position) {
-
 			// Open FragmentTab1.java
 		case 0:
 			FragmentDetail1 fragmenttab1 = new FragmentDetail1();
 			return fragmenttab1;
-
 			// Open FragmentTab2.java
 		case 1:
 			FragmentDetail2 fragmenttab2 = new FragmentDetail2();
 			return fragmenttab2;
-			
 			// Open FragmentTab2.java
 		case 2:
 			FragmentDetail3 fragmenttab3 = new FragmentDetail3();
 			return fragmenttab3;
-
 			// Open FragmentTab2.java
 		case 3:
 			FragmentDetail4 fragmenttab4 = new FragmentDetail4();
@@ -50,7 +48,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
 	@Override
 	public int getCount() {
-		return nombreTab;
+		return titles.length;
 	}
-
 }

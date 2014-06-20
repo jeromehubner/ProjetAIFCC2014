@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanc" 
+    android:orientation="vertical" >>
+
+    <ViewFlipper
+        android:id="@+id/ViewFlipperImages"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:autoStart="true"
+        android:background="@color/noir"
+        android:flipInterval="7500" >
+
+        <ImageView
+            android:id="@+id/banniere_element1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/aifcc_logo"
+            android:contentDescription="@string/desc_banelement1"
+            android:onClick="onClick"
+            android:text="@string/banniere_element1" />
+
+        <ImageView
+            android:id="@+id/banniere_element2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/banniere_1"
+            android:contentDescription="@string/desc_banelement2"
+            android:text="@string/banniere_element2" />
+
+        <ImageView
+            android:id="@+id/banniere_element3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/banniere_2"
+            android:contentDescription="@string/desc_banelement3"
+            android:text="@string/banniere_element3" />
+    </ViewFlipper>
+
+    <ViewFlipper
+        android:id="@+id/ViewFlipperActus"
+        android:layout_width="fill_parent"
+        android:layout_height="20dp"
+        android:layout_below="@+id/ViewFlipperImages"
+        android:autoStart="true"
+        android:background="@color/noir"
+        android:flipInterval="10000" >
+
+        <TextView
+            android:id="@+id/actu_vide"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/actu_vide"
+            android:textColor="@color/blanc" >
+        </TextView>
+    </ViewFlipper>
+
+    <Button
+        android:id="@+id/aifcc_alt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/cel"
+        android:background="@drawable/btn_aifcc_alt"
+        android:contentDescription="@string/aifcc_alt"
+        android:minHeight="50dip"
+        android:minWidth="90dip"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/imad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cel"
+        android:layout_alignBottom="@+id/cel"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_imad"
+        android:contentDescription="@string/imad"
+        android:minHeight="50dip"
+        android:minWidth="90dip"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/aifcc_cnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/aifcc_alt"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/imad"
+        android:background="@drawable/btn_aifcc_cnt"
+        android:contentDescription="@string/aifcc_cnt"
+        android:minHeight="50dip"
+        android:minWidth="90dip"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/imss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imad"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20sp"
+        android:layout_marginTop="15sp"
+        android:background="@drawable/btn_imss"
+        android:contentDescription="@string/imss"
+        android:minHeight="50dip"
+        android:minWidth="90dip"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/cel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ViewFlipperActus"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="15sp"
+        android:background="@drawable/btn_cel"
+        android:contentDescription="@string/cel"
+        android:onClick="onClick" />
+
+</RelativeLayout>

@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="858dp"
+        android:background="@color/bleu_clair"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:text="DEMANDES DE RENSEIGNEMENTS"
+            android:textColor="@color/bleu_marine"
+            android:textSize="@dimen/sizeTitre" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="44dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/text_nom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Votre Nom :"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/nom_contact"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/counter_text_color"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/text_prenom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Votre Prénom :"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/prenom_contact"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/counter_text_color"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/text_societe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Nom de votre Societé :"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/societe_contact"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/counter_text_color"
+                android:ems="10"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/text_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Votre status :"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/text_adresse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Adresse :"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/adresse_contact"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/counter_text_color"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/text_code_postale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Code Postale :"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cp_contact"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/counter_text_color"
+                android:ems="10"
+                android:inputType="textPostalAddress" />
+
+            <TextView
+                android:id="@+id/text_ville"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Votre Ville :"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/ville_contact"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/counter_text_color"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/text_telephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Numéro de téléphone :"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tel_contact"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/counter_text_color"
+                android:ems="10"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/text_fax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Numéro de fax :"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/fax_contact"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/counter_text_color"
+                android:ems="10"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/text_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Votre adresse mail :"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/mail_contact"
+                android:layout_width="279dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/counter_text_color"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/text_connaissance_centre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Comment avez vous eu connaissance de l\&apos;AIFCC ?"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/text_centre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Votre demande concerne quel centre ?"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_centre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/radio_caen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="Caen" />
+
+                <RadioButton
+                    android:id="@+id/radio_lisieux"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lisieux" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/text_liste_formation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Votre demande concerne quel type de formation ?"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkBox1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Les formations dans le cadre du plan de formation de l&apos;entreprise" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Les formations en alternance" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Les formations initiales" />
+
+            <CheckBox
+                android:id="@+id/checkBox4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Les formations dans le cadre d&apos;un CIF" />
+
+            <CheckBox
+                android:id="@+id/checkBox5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Les formations pour les demandeurs d&apos;emploi" />
+
+            <CheckBox
+                android:id="@+id/checkBox6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Les formations langues" />
+
+            <CheckBox
+                android:id="@+id/checkBox7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Les formations du domaine santé social" />
+
+            <TextView
+                android:id="@+id/text_demande"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Votre Demande :"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/counter_text_color"
+                android:ems="10"
+                android:inputType="textMultiLine" >
+
+                <requestFocus />
+            </EditText>
+
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/bleu_clair"
+                android:src="@drawable/mail" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
