@@ -1,6 +1,7 @@
 package projetaifcc2014.drawer;
 
 import projetaifcc2014.formation_detail.FragmentDescription;
+import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 
@@ -22,10 +23,16 @@ public class Activity_drawer_detail extends Activity_drawer {
 		//    	fragment = (DummySectionFragment) fManager.findFragmentByTag(fragmentTag);
 
 		FragmentDescription fragment = new FragmentDescription();
+		
+		// On passe l'id de la formation au fragment pour renseigner le titre dynamiquement
+		Bundle args = new Bundle();
+		args.putInt(getResources().getString(R.string.extra_id_formation), idFormation);
+		fragment.setArguments(args);
 
 		// Définissez les animations entrantes et sortantes
 		fTransaction.setCustomAnimations(R.anim.left_in,R.anim.left_out);
 
+		
 		fTransaction.replace(R.id.frame, fragment);
 
 		// Faîtes le commit

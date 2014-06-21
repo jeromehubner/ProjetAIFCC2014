@@ -1,26 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/actionBarTabStyle"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" 
-	android:background="@color/blanc" >
-    
-    
-        <android.support.v4.view.ViewPager
-        android:id="@+id/view_pager"
+    android:background="@color/blanc"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/titre_formation_choisie"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-	    android:background="@color/blanc" >
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/titre_formation_choisie_margin"
+        android:gravity="center_horizontal"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textStyle="bold|italic" />
 
-        <android.support.v4.view.PagerTabStrip
-            android:id="@+id/pager_tab"
-            android:layout_width="fill_parent"
-            android:layout_height="30dp"
-            android:layout_gravity="top"
-            android:drawingCacheQuality="high"
-            android:background="@color/blanc">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-        </android.support.v4.view.PagerTabStrip>
-    </android.support.v4.view.ViewPager>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blanc" >
 
-</RelativeLayout>
+            <android.support.v4.view.PagerTabStrip
+                android:id="@+id/pager_tab"
+                style="@style/actionBarTabStyle"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_gravity="top"
+                android:background="@color/blanc"
+                android:drawingCacheQuality="high" >
+
+            </android.support.v4.view.PagerTabStrip>
+        </android.support.v4.view.ViewPager>
+    </RelativeLayout>
+
+</LinearLayout>

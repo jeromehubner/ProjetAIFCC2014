@@ -20,14 +20,14 @@ import android.widget.ListView;
 import com.example.projetaifcc2014.R;
 
 
-public abstract class Activity_drawer  extends FragmentActivity {
+public abstract class Activity_drawer extends FragmentActivity {
 	private DrawerLayout monDrawerLayout;
 	protected ListView maListeDrawer;
 	protected ActionBarDrawerToggle mDrawerToggle;
 	protected int position ;
 
 	// Cette variable est récupérée dans le détail fragment pour effectuer la requête en DB
-	private int idFormation;
+	protected int idFormation;
 
 	// Titre du drawer
 	protected CharSequence mDrawerTitle;
