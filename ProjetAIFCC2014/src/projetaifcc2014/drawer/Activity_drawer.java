@@ -3,7 +3,11 @@ package projetaifcc2014.drawer;
 import java.util.ArrayList;
 
 import projetaifcc2014.drawerFragment.FinancementFragment;
+import projetaifcc2014.drawerFragment.FragmentAPropos;
+import projetaifcc2014.drawerFragment.FragmentAide;
 import projetaifcc2014.drawerFragment.FragmentContact;
+import projetaifcc2014.drawerFragment.FragmentParametre;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -255,6 +259,10 @@ public abstract class Activity_drawer extends FragmentActivity {
     	
        	fTransaction.replace(R.id.frame, financementFragment);
        	
+       	if(getSupportFragmentManager().getBackStackEntryCount() == 0){
+       		fTransaction.addToBackStack(null);
+       	}
+       	
     	// Faîtes le commit
     	fTransaction.commit();
     }
@@ -279,6 +287,10 @@ public abstract class Activity_drawer extends FragmentActivity {
     	R.anim.left_out);
     	
        	fTransaction.replace(R.id.frame, fragment);
+       	
+       	if(getSupportFragmentManager().getBackStackEntryCount() == 0){
+       		fTransaction.addToBackStack(null);
+       	}
        	
        	
     	// Faîtes le commit
@@ -306,7 +318,9 @@ public abstract class Activity_drawer extends FragmentActivity {
     	// Définissez les animations entrantes et sortantes
     	fTransaction.setCustomAnimations(R.anim.left_in,R.anim.left_out);
     	
-    	
+    	if(getSupportFragmentManager().getBackStackEntryCount() == 0){
+       		fTransaction.addToBackStack(null);
+       	}
     	
        	fTransaction.replace(R.id.frame, fragment);
     	
@@ -314,9 +328,101 @@ public abstract class Activity_drawer extends FragmentActivity {
     	fTransaction.commit();
     }
 
+    public void showFragmentAide() {
+    	FragmentAide fragment = new FragmentAide();
+    	
+    	
+    	// Débutez la transaction des fragments
+    	FragmentTransaction fTransaction = getSupportFragmentManager().beginTransaction();
+    	
+    	
+    	
+    	// Définissez les animations entrantes et sortantes
+    	fTransaction.setCustomAnimations(R.anim.left_in,R.anim.left_out);
+
+       	fTransaction.addToBackStack(null);
+
+    	
+       	fTransaction.replace(R.id.frame, fragment);
+    	
+    	// Faîtes le commit
+    	fTransaction.commit();
+    }
+    public void showFragmentAPropos() {
+    	FragmentAPropos fragment = new FragmentAPropos();
+    	
+    	
+    	// Débutez la transaction des fragments
+    	FragmentTransaction fTransaction = getSupportFragmentManager().beginTransaction();
+    	
+    	
+    	
+    	// Définissez les animations entrantes et sortantes
+    	fTransaction.setCustomAnimations(R.anim.left_in,R.anim.left_out);
+
+       	fTransaction.addToBackStack(null);
+
+    	
+       	fTransaction.replace(R.id.frame, fragment);
+    	
+    	// Faîtes le commit
+    	fTransaction.commit();
+    }
+    public void showFragmentParametre() {
+    	FragmentParametre fragment = new FragmentParametre();
+    	
+    	
+    	// Débutez la transaction des fragments
+    	FragmentTransaction fTransaction = getSupportFragmentManager().beginTransaction();
+    	
+    	
+    	
+    	// Définissez les animations entrantes et sortantes
+    	fTransaction.setCustomAnimations(R.anim.left_in,R.anim.left_out);
+
+       	fTransaction.addToBackStack(null);
+
+    	
+       	fTransaction.replace(R.id.frame, fragment);
+    	
+    	// Faîtes le commit
+    	fTransaction.commit();
+    }
 
 	public int getIdFormation() {
 		return idFormation;
 	}
+
+
+	/* (non-Javadoc)
+	 * @see android.support.v4.app.FragmentActivity#onMenuItemSelected(int, android.view.MenuItem)
+	 */
+	@Override
+	public boolean onMenuItemSelected(int featureId, MenuItem item) {
+		switch (item.getItemId()) {
+		case R.id.menu_aide:
+			showFragmentAide();
+			return true;
+		case R.id.menu_rafraichir:
+			// Comportement du bouton "Rafraichir"
+			return true;
+		case R.id.menu_apropos:
+			showFragmentAPropos();
+			// Comportement du bouton "A Propos"
+			return true;
+		case R.id.menu_parametres:
+			showFragmentParametre();
+			// Comportement du bouton "ParamÃ¨tres"
+			return true;
+		case R.id.menu_quitter:
+			// Comportement du bouton "Quitter"
+			System.exit(0);
+			return true;
+		default:
+			return super.onMenuItemSelected(featureId, item);
+		}
+	
+	}
+
 
 }

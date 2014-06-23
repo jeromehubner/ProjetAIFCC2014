@@ -90,7 +90,7 @@
                 android:textStyle="bold" />
 
             <Spinner
-                android:id="@+id/spinner1"
+                android:id="@+id/spinner_status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />
@@ -206,7 +206,7 @@
                 android:textStyle="bold" />
 
             <Spinner
-                android:id="@+id/spinner1"
+                android:id="@+id/spinner_existence"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center" />
@@ -299,7 +299,7 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/message"
+                android:id="@+id/message_contact"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -311,7 +311,7 @@
             </EditText>
 
             <ImageButton
-                android:id="@+id/imageButton1"
+                android:id="@+id/bouton_mail"
                 android:layout_width="95dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
