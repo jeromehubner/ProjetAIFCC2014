@@ -123,4 +123,9 @@
         <item>Radio</item>
         <item>Autre</item>
     </string-array>
+    
+        <!-- Page de contact -->
+    <string name="contact_sujet">Sujet</string>
+    <string name="contact_message">Message</string>
+    <string name="contact_envoyer">Envoyer</string>
 </resources>

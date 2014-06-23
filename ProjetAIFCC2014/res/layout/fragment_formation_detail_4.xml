@@ -10,6 +10,49 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin" 
 	    android:background="@color/blanc" >
+	    
+        <TextView
+            android:id="@+id/mail_sujet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/contact_sujet"
+            android:textColor="@color/rouge"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/mail_sujet_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mail_sujet"
+            android:layout_marginTop="10dp"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/mail_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mail_sujet_edit"
+            android:layout_marginTop="10dp"
+            android:text="@string/contact_message"
+            android:textColor="@color/rouge"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/mail_message_edit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mail_message"
+            android:layout_marginTop="100dp"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btn_envoi"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mail_message_edit"
+            android:layout_marginTop="10dp"
+            android:text="@string/contact_envoyer" />
         
     </RelativeLayout>
 
