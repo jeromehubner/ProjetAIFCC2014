@@ -96,9 +96,8 @@
 
     <!-- Valeur pour l'éléments par défaut du ViewFlipper actus -->
     <string name="actu_vide">Pas d\'actualité pour le moment</string>
-
     <string name="titre_finacements">\t\tLES FINANCEMENTS ET \nDISPOSITIFS DE FORMATION</string>
-       
+
     <!-- Texte spinner status -->
     <string-array name="spinner_status">
         <item></item>
@@ -108,9 +107,7 @@
         <item>Etudiant</item>
         <item>Autre</item>
     </string-array>
-        
-        
-  
+
     <!-- Texte items drawer -->
     <string-array name="spinner_existence">
         <item></item>
@@ -123,4 +120,50 @@
         <item>Radio</item>
         <item>Autre</item>
     </string-array>
+
+    <string name="titre_fragment_go_caen">AIFCC Caen</string>
+    <string name="titre_fragment_go_lisieux">AIFCC Lisieux</string>
+    <string name="adresse_caen">Aifcc Caen\n
+								7 rue du Professeur Joseph Rousselot\n
+								B.P. 65036\n
+								14077 CAEN Cedex 5\n
+								Email : aifcc@aifcc.com\n
+								Tel : 02.31.44.32.11\n
+								Fax : 02.31.94.52.51\n</string>
+    <string name="adresse_lisieux">Aifcc Lisieux\n
+									100 avenue Guillaume le Conquérant\n
+									BP 87195\n
+									14107 Lisieux Cedex\n
+									Tel 02.31.61.19.55\n
+									Fax 02 31 61 95 96\n</string>
+    <string name="venant_de_paris">VENANT DE PARIS</string>
+    <string name="venant_de_cherbourg">VENANT DE CHERBOURG</string>
+    <string name="venant_de_caen">VENANT DE CAEN</string>
+    <string name="venant_de_a13">VENANT DE L\'A13</string>
+    <string name="parcours_paris_caen">        Sur le périphérique, prendre la sortie CHU - Douvres-La-Délivrande\n
+    	Au premier feu, prendre à droite \(= prendre la bretelle\)\n
+    	Vous arrivez à un rond point : prendre à gauche\n
+    	Puis au premier feu, prendre à gauche : vous arrivez en face de l\'AIFCC\n</string>
+    <string name="parcours_cherbourg_caen">    Sur le périphérique, prendre la sortie CHU - Douvres-La-Délivrande\n
+    Au rond point prendre à gauche, direction Douvres-la-Délivrande\n
+    Au premier feu, prendre à droite \(= prendre la bretelle\)\n
+    Vous arrivez à un rond point : prendre à gauche\n
+    Puis au premier feu, prendre à gauche : vous arrivez en face de l\'AIFCC\n
+	BUS ligne 13 et 14 -TRAM ligne A - Station Claude Bloch\n</string>
+    <string name="parcours_paris_lisieux">    En entrant dans Lisieux sur la RN13, passer le centre commercial Leclerc qui se trouve sur votre gauche.\n
+    Au rond point, prendre la direction Hauteville - Chambre de Commerce et d\'Industrie.\n
+    Prendre la deuxième à gauche.\n
+    Les locaux de l\'AIFCC se trouvent à 100m sur votre gauche, à côté de la Chambre de Commerce et d\'Industrie.\n</string>
+    <string name="parcours_caen_lisieux">    Avant Lisieux, prendre la rocade en direction d\'Evreux.\n
+    A la fin de la rocade, au rond point, prendre la direction Hauteville - Chambre de Commerce et d\'Industrie à gauche.\n
+    Prendre la deuxième à gauche.\n
+    Les locaux de l\'AIFCC se trouvent à 100m sur votre gauche, à côté de la Chambre de Commerce et d\'Industrie.\n</string>
+    <string name="parcours_a13">    Prenez la sortie direction Lisieux.\n
+    En arrivant à Lisieux, au rond point, prendre la direction Caen - Alençon - Evreux à gauche.\n
+    Au rond point suivant, continuer tout droit, direction Caen - Alençon - Evreux.\n
+    Au troisième rond point, prendre à droite, direction Hauteville - Chambre de Commerce et d\'Industrie.\n
+    Prendre la deuxième à gauche.\n
+    Les locaux de l\'AIFCC se trouvent à 100m sur votre gauche, à côté de la Chambre de Commerce et d\'Industrie.\n</string>
+<string name="goolge_map">Lancer Google Map</string>
+
 </resources>
