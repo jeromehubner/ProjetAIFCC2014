@@ -69,11 +69,12 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/button_caen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/linearLayout1"
-            android:layout_centerHorizontal="true"
+            android:layout_alignLeft="@+id/titre_fragment_go_caen"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/adresse_fragment_go_caen"
             android:background="@color/rouge_fonce"
             android:text="@string/goolge_map"
             android:textColor="@color/blanc" />

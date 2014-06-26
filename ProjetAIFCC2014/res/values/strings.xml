@@ -165,10 +165,14 @@
     Prendre la deuxième à gauche.\n
     Les locaux de l\'AIFCC se trouvent à 100m sur votre gauche, à côté de la Chambre de Commerce et d\'Industrie.\n</string>
     <string name="goolge_map">Lancer Google Map</string>
-
+    <string name="goolge_map_key">AIzaSyC0GbBEso8IUbN86YjJHRR0eLoSV2YiqBQ</string>
+    
+    
     <!-- Page de contact -->
     <string name="contact_sujet">Sujet</string>
     <string name="contact_message">Message</string>
     <string name="contact_envoyer">Envoyer</string>
 
+   
+    
 </resources>

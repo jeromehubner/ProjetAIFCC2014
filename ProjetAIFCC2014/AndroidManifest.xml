@@ -8,11 +8,30 @@
         android:minSdkVersion="17"
         android:targetSdkVersion="18" />
 
+    <!-- Permissions -->
+    <uses-permission android:name="projetaifcc2014.MapActivityAIFCC.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme" 
+        >
+      <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/goolge_map_key"
+             />
+        <meta-data android:name="com.google.android.gms.version" android:value="4452000" />
         <activity
             android:name="projetaifcc2014.MainActivity"
             android:label="@string/mainActivity" >
@@ -25,6 +44,10 @@
         <activity
             android:name="projetaifcc2014.departement.Activity_department"
             android:label="@string/departementActivite" >
+        </activity>
+        <activity
+            android:name="projetaifcc2014.map.MapActivityAIFCC"
+            android:label="@string/app_name" >
         </activity>
         <activity
             android:name="projetaifcc2014.formation_detail.Activity_formation_detail"
@@ -48,13 +71,13 @@
         </activity>
         <activity
             android:name="projetaifcc2014.formations_list.Activity_expandableList"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
         </activity>
         <activity
             android:name="projetaifcc2014.expandable_list_formation.ExpandableListActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name" >
         </activity>
-                <activity
+        <activity
             android:name="projetaifcc2014.fragment_info_departement.MyFragmentActivity"
             android:label="@string/app_name" >
         </activity>
@@ -76,6 +99,8 @@
         </activity>
         <activity android:name="projetaifcc2014.fragment_info_departement.FragmentActivityIMAD" >
         </activity>
+
+
     </application>
 
 </manifest>

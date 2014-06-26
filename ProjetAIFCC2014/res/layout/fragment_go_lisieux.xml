@@ -86,7 +86,7 @@
             android:text="@string/adresse_lisieux" />
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/button_lisieux"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/titre_fragment_go_lisieux"
