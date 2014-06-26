@@ -3,10 +3,7 @@ package projetaifcc2014.database.formation;
 import java.util.ArrayList;
 
 import projetaifcc2014.database.Bdd;
-import projetaifcc2014.database.categorie.Categorie;
 import projetaifcc2014.database.categorie.CategorieBdd;
-import projetaifcc2014.database.departement.Departement;
-import projetaifcc2014.database.departement.DepartementBdd;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;

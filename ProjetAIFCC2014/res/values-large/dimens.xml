@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">20dp</dimen>
+    <dimen name="activity_vertical_margin">20dp</dimen>
+    <dimen name="titre_formation_choisie_margin">10dp</dimen>
+    <dimen name="sizeTitre">20dp</dimen>
+
+    <dimen name="bandeau_actualite_hauteur">200dp</dimen>
+    <dimen name="btn_departement_largeur">130dp</dimen>
+    <dimen name="btn_departement_hauteur">100dp</dimen>
+    <dimen name="btn_departement_marge">30dp</dimen>
+    
+</resources>

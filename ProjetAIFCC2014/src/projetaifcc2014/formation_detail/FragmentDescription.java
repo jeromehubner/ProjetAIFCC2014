@@ -30,7 +30,7 @@ public class FragmentDescription extends Fragment {
 			Bundle savedInstanceState) {
 
 		View rootView = inflater.inflate(
-				R.layout.fragment_page_viewer_formation, container, false);
+				R.layout.fragment_page_viewer, container, false);
 
 		ViewPager mViewPager = (ViewPager) rootView
 				.findViewById(R.id.view_pager);

@@ -42,7 +42,6 @@ public class MainActivity extends Activity {
 				}
 			}
 		};
-		splashTread.start();
 
 		new Thread() {
 			@Override
@@ -90,17 +89,19 @@ public class MainActivity extends Activity {
 			}
 		}.start();
 
-		SharedPreferences prefs = PreferenceManager
-				.getDefaultSharedPreferences(this);
-		if (!prefs.getBoolean("firstTime", false)) {
+		
+		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+		if (prefs.getBoolean("chargerBdd", true)) {
+			splashTread.start();
+	
 			SharedPreferences.Editor editor = prefs.edit();
-			editor.putBoolean("firstTime", true);
+			editor.putBoolean("chargerBdd", false);
 			editor.commit();
 			new InitDatabase(mainActivity, splashTread, progressBar).execute();
 		} else {
-			synchronized (splashTread) {
-				splashTread.notifyAll();
-			}
+			finish();
+			Intent i = new Intent(getBaseContext(), Activity_drawer_Departement.class);
+			startActivity(i);
 		}
 	}
 }

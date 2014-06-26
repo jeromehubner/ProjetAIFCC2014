@@ -6,7 +6,6 @@ import projetaifcc2014.database.handler.TableFormationHandler;
 import projetaifcc2014.database.handler.TableFormationToCategorieHandler;
 import android.app.Activity;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.widget.ProgressBar;
 
 public class InitDatabase extends AsyncTask<Void, Void, Void>{

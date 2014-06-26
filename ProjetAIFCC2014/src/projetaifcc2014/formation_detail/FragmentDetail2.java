@@ -4,7 +4,6 @@ import projetaifcc2014.database.formation.Formation;
 import projetaifcc2014.database.formation.FormationBdd;
 import projetaifcc2014.drawer.Activity_drawer;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +11,7 @@ import android.webkit.WebView;
 
 import com.example.projetaifcc2014.R;
 
-public class FragmentDetail2 extends Fragment implements InterfaceFragmentDetail{
-
-	private int idFormation;
-	private String contentModalités;
-	private final String contentEmpty = "Pas d'informations disponibles pour le moment...";
-	private String couleurDepartement;
+public class FragmentDetail2 extends FragmentDetail{
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -99,19 +93,5 @@ public class FragmentDetail2 extends Fragment implements InterfaceFragmentDetail
 			temp = contentEmpty;
 
 		return temp;
-	}
-
-	@Override
-	public String getHTMLCouleurDepartement(Formation formation)
-	{
-		int indexArrayColor = formation.getCategorie().getDepartement().getId() -1;
-
-		// On récupère le tableau des couleurs de départements renseignés dans le fichier color.xml
-		int[] colorArray = getResources().getIntArray(R.array.dpt_color);
-
-
-		String couleurTemp = Integer.toHexString(colorArray[indexArrayColor]);
-
-		return couleurTemp.replace("ff", "#");
 	}
 }

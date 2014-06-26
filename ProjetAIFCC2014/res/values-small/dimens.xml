@@ -6,4 +6,9 @@
     <dimen name="titre_formation_choisie_margin">10dp</dimen>
     <dimen name="sizeTitre">20dp</dimen>
 
+    <dimen name="bandeau_actualite_hauteur">100dp</dimen>
+    <dimen name="btn_departement_largeur">70dp</dimen>
+    <dimen name="btn_departement_hauteur">50dp</dimen>
+    <dimen name="btn_departement_marge">10dp</dimen>
+    
 </resources>
