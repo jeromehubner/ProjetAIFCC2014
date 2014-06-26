@@ -7,18 +7,15 @@ import com.example.projetaifcc2014.R;
 
 public class Activity_drawer_list extends Activity_drawer{
 
-
 	@Override
 	public void showFragmentPrincipal(){
 		Fragment_list_formation fragment = new Fragment_list_formation();
-
 
 		// Débutez la transaction des fragments
 		FragmentTransaction fTransaction = getSupportFragmentManager().beginTransaction();
 
 		// Définissez les animations entrantes et sortantes
 		fTransaction.setCustomAnimations(R.anim.left_in,R.anim.left_out);
-
 
 		fTransaction.replace(R.id.frame, fragment);
 

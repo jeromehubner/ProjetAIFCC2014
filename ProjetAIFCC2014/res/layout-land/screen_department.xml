@@ -2,13 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blanc" 
-    android:orientation="vertical" >>
+    android:background="@color/blanc" >
 
     <ViewFlipper
         android:id="@+id/ViewFlipperImages"
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
+        android:layout_height="@dimen/bandeau_actualite_hauteur"
         android:autoStart="true"
         android:background="@color/noir"
         android:flipInterval="7500" >
@@ -42,7 +41,7 @@
     <ViewFlipper
         android:id="@+id/ViewFlipperActus"
         android:layout_width="fill_parent"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/ViewFlipperImages"
         android:autoStart="true"
         android:background="@color/noir"
@@ -58,69 +57,43 @@
         </TextView>
     </ViewFlipper>
 
-    <Button
-        android:id="@+id/aifcc_alt"
+    <LinearLayout 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@+id/cel"
-        android:background="@drawable/btn_aifcc_alt"
-        android:contentDescription="@string/aifcc_alt"
-        android:minHeight="50dip"
-        android:minWidth="90dip"
-        android:onClick="onClick" />
-
-    <Button
-        android:id="@+id/imad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/cel"
-        android:layout_alignBottom="@+id/cel"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/btn_imad"
-        android:contentDescription="@string/imad"
-        android:minHeight="50dip"
-        android:minWidth="90dip"
-        android:onClick="onClick" />
-
-    <Button
-        android:id="@+id/aifcc_cnt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/aifcc_alt"
-        android:layout_marginLeft="30dp"
-        android:layout_toRightOf="@+id/imad"
-        android:background="@drawable/btn_aifcc_cnt"
-        android:contentDescription="@string/aifcc_cnt"
-        android:minHeight="50dip"
-        android:minWidth="90dip"
-        android:onClick="onClick" />
-
-    <Button
-        android:id="@+id/imss"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/imad"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="20sp"
-        android:layout_marginTop="15sp"
-        android:background="@drawable/btn_imss"
-        android:contentDescription="@string/imss"
-        android:minHeight="50dip"
-        android:minWidth="90dip"
-        android:onClick="onClick" />
-
-    <Button
-        android:id="@+id/cel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
         android:layout_below="@+id/ViewFlipperActus"
-        android:layout_marginLeft="20sp"
-        android:layout_marginTop="15sp"
-        android:background="@drawable/btn_cel"
-        android:contentDescription="@string/cel"
-        android:onClick="onClick" />
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/aifcc_alt"
+            style="@style/btn_departement"
+            android:background="@drawable/btn_aifcc_alt"
+            android:contentDescription="@string/aifcc_alt" />
+
+        <Button
+            android:id="@+id/imad"
+            style="@style/btn_departement_1"
+            android:background="@drawable/btn_imad"
+            android:contentDescription="@string/imad" />
+
+        <Button
+            android:id="@+id/cel"
+            style="@style/btn_departement_1"
+            android:background="@drawable/btn_cel"
+            android:contentDescription="@string/cel" />
+
+        <Button
+            android:id="@+id/imss"
+            style="@style/btn_departement_1"
+            android:background="@drawable/btn_imss"
+            android:contentDescription="@string/imss" />
+
+        <Button
+            android:id="@+id/aifcc_cnt"
+            style="@style/btn_departement_1"
+            android:background="@drawable/btn_aifcc_cnt"
+            android:contentDescription="@string/aifcc_cnt" />
+    </LinearLayout>
 
 </RelativeLayout>
