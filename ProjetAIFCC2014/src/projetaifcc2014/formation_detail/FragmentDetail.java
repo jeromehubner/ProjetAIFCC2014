@@ -13,7 +13,7 @@ import android.webkit.WebView;
 import com.example.projetaifcc2014.R;
 
 
-public class FragmentDetail extends Fragment implements InterfaceFragmentDetail{
+public class FragmentDetail extends Fragment {
 
 	protected int idFormation;
 	protected String emailFormation;
@@ -57,7 +57,6 @@ public class FragmentDetail extends Fragment implements InterfaceFragmentDetail{
 		return view;
 	}
 	
-	@Override
 	public String htmlContentInit(Formation formation)
 	{
 		String tagDebut = "<font color="+couleurDepartement+">", tagFin = "</font>";
@@ -74,8 +73,6 @@ public class FragmentDetail extends Fragment implements InterfaceFragmentDetail{
 			return tagDebut+temp+tagFin;
 	}
 
-
-	@Override
 	public String getHTMLCouleurDepartement(Formation formation)
 	{
 		int indexArrayColor = formation.getCategorie().getDepartement().getId() -1;
