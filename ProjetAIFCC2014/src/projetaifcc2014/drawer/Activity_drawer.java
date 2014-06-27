@@ -8,6 +8,7 @@ import projetaifcc2014.drawerFragment.FragmentAide;
 import projetaifcc2014.drawerFragment.FragmentContact;
 import projetaifcc2014.drawerFragment.FragmentParametre;
 import projetaifcc2014.drawerFragment.rejoindre.FragmentPageViewer;
+import projetaifcc2014.gallerie.Fragment_Gallery;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -196,7 +197,7 @@ public abstract class Activity_drawer extends FragmentActivity {
 			showFragmentContact();
 			break;
 		case 4:
-			showFragmentAutre();
+			showFragmentGallerie();
 			break;
 		case 5:
 			showFragmentAutre();
@@ -323,6 +324,27 @@ public abstract class Activity_drawer extends FragmentActivity {
 	/**
 	 * Item du drawer == 4, GALLERIE
 	 */
+    public void showFragmentGallerie() {
+    	Fragment_Gallery fragment = new Fragment_Gallery();
+    	
+    	
+    	// Débutez la transaction des fragments
+    	FragmentTransaction fTransaction = getSupportFragmentManager().beginTransaction();
+    	
+    	
+    	
+    	// Définissez les animations entrantes et sortantes
+    	fTransaction.setCustomAnimations(R.anim.left_in,R.anim.left_out);
+    	
+    	if(getSupportFragmentManager().getBackStackEntryCount() == 0){
+       		fTransaction.addToBackStack(null);
+       	}
+    	
+       	fTransaction.replace(R.id.frame, fragment);
+    	
+    	// Faîtes le commit
+    	fTransaction.commit();
+    }
 	
 	/**
 	 * Item du drawer == 5, ACTU
