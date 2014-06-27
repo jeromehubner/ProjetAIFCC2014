@@ -6,9 +6,14 @@
     <dimen name="titre_formation_choisie_margin">10dp</dimen>
     <dimen name="sizeTitre">20dp</dimen>
 
+    <dimen name="bandeau_actualite_hauteur_portrait">180dp</dimen>
+    <dimen name="btn_departement_hauteur_portrait">92dp</dimen>
+    <dimen name="btn_departement_marge_portrait">20dp</dimen>
+    
     <dimen name="bandeau_actualite_hauteur">200dp</dimen>
-    <dimen name="btn_departement_largeur">130dp</dimen>
-    <dimen name="btn_departement_hauteur">100dp</dimen>
-    <dimen name="btn_departement_marge">30dp</dimen>
+    <dimen name="btn_departement_marge_sup">40dp</dimen>
+    <dimen name="btn_departement_largeur">140dp</dimen>
+    <dimen name="btn_departement_hauteur">110dp</dimen>
+    <dimen name="btn_departement_marge">20dp</dimen>
     
 </resources>

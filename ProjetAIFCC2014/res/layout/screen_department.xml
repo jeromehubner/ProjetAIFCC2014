@@ -1,132 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blanc" >
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+    <ViewFlipper
+        android:id="@+id/ViewFlipperImages"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bandeau_actualite_hauteur_portrait"
+        android:autoStart="true"
+        android:background="@color/noir"
+        android:flipInterval="7500" >
 
-        <ViewFlipper
-            android:id="@+id/ViewFlipperImages"
+        <ImageView
+            android:id="@+id/banniere_element1"
             android:layout_width="fill_parent"
-            android:layout_height="100dp"
-            android:autoStart="true"
-            android:background="@color/noir"
-            android:flipInterval="7500" >
+            android:layout_height="fill_parent"
+            android:background="@drawable/aifcc_logo"
+            android:contentDescription="@string/desc_banelement1"
+            android:onClick="onClick"
+            android:text="@string/banniere_element1" />
 
-            <ImageView
-                android:id="@+id/banniere_element1"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="@drawable/aifcc_logo"
-                android:contentDescription="@string/desc_banelement1"
-                android:onClick="onClick"
-                android:text="@string/banniere_element1" />
-
-            <ImageView
-                android:id="@+id/banniere_element2"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="@drawable/banniere_1"
-                android:contentDescription="@string/desc_banelement2"
-                android:text="@string/banniere_element2" />
-
-            <ImageView
-                android:id="@+id/banniere_element3"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="@drawable/banniere_2"
-                android:contentDescription="@string/desc_banelement3"
-                android:text="@string/banniere_element3" />
-        </ViewFlipper>
-
-        <ViewFlipper
-            android:id="@+id/ViewFlipperActus"
+        <ImageView
+            android:id="@+id/banniere_element2"
             android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:layout_below="@+id/ViewFlipperImages"
-            android:autoStart="true"
-            android:background="@color/noir"
-            android:flipInterval="10000" >
+            android:layout_height="fill_parent"
+            android:background="@drawable/banniere_1"
+            android:contentDescription="@string/desc_banelement2"
+            android:text="@string/banniere_element2" />
 
-            <TextView
-                android:id="@+id/actu_vide"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:gravity="center"
-                android:text="@string/actu_vide"
-                android:textColor="@color/blanc" >
-            </TextView>
-        </ViewFlipper>
+        <ImageView
+            android:id="@+id/banniere_element3"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/banniere_2"
+            android:contentDescription="@string/desc_banelement3"
+            android:text="@string/banniere_element3" />
+    </ViewFlipper>
 
-        <Button
-            android:id="@+id/imss"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/aifcc_cnt"
-            android:layout_below="@+id/aifcc_cnt"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/btn_imss"
-            android:contentDescription="@string/imss"
-            android:minHeight="90dip"
-            android:minWidth="140dip"
-            android:onClick="onClick" />
+    <ViewFlipper
+        android:id="@+id/ViewFlipperActus"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ViewFlipperImages"
+        android:autoStart="true"
+        android:background="@color/noir"
+        android:flipInterval="10000" >
+
+        <TextView
+            android:id="@+id/actu_vide"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/actu_vide"
+            android:textColor="@color/blanc" >
+        </TextView>
+    </ViewFlipper>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ViewFlipperActus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical" >
 
         <Button
             android:id="@+id/aifcc_alt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ViewFlipperActus"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="16dp"
-            android:background="@drawable/btn_aifcc_alt"
-            android:contentDescription="@string/aifcc_alt"
-            android:minHeight="90dip"
-            android:minWidth="140dip"
-            android:onClick="onClick" />
-
-        <Button
-            android:id="@+id/cel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/aifcc_cnt"
-            android:layout_alignBottom="@+id/aifcc_cnt"
-            android:layout_marginLeft="32dp"
-            android:layout_toRightOf="@+id/aifcc_cnt"
-            android:background="@drawable/btn_cel"
-            android:contentDescription="@string/cel"
-            android:minHeight="90dip"
-            android:minWidth="140dip"
-            android:onClick="onClick" />
-
-        <Button
-            android:id="@+id/aifcc_cnt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/aifcc_alt"
-            android:layout_marginLeft="22dp"
-            android:layout_marginTop="18dp"
-            android:background="@drawable/btn_aifcc_cnt"
-            android:contentDescription="@string/aifcc_cnt"
-            android:minHeight="90dip"
-            android:minWidth="140dip"
-            android:onClick="onClick" />
+            style="@style/btn_departement_portrait"
+            android:background="@drawable/aifcc"
+            android:contentDescription="@string/aifcc_alt" />
 
         <Button
             android:id="@+id/imad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/cel"
-            android:layout_alignParentBottom="true"
-            android:background="@drawable/btn_imad"
-            android:contentDescription="@string/imad"
-            android:minHeight="90dip"
-            android:minWidth="140dip"
-            android:onClick="onClick" />
+            style="@style/btn_departement_portrait"
+            android:background="@drawable/imad"
+            android:contentDescription="@string/imad" />
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/cel"
+            style="@style/btn_departement_portrait"
+            android:background="@drawable/cel"
+            android:contentDescription="@string/cel" />
 
-</ScrollView>
+        <Button
+            android:id="@+id/imss"
+            style="@style/btn_departement_portrait"
+            android:background="@drawable/imss"
+            android:contentDescription="@string/imss" />
+
+        <Button
+            android:id="@+id/aifcc_cnt"
+            style="@style/btn_departement_portrait"
+            android:background="@drawable/aifcc2"
+            android:contentDescription="@string/aifcc_cnt" />
+    </LinearLayout>
+
+</RelativeLayout>
