@@ -1,6 +1,5 @@
 package projetaifcc2014.drawerFragment.rejoindre;
 
-import projetaifcc2014.drawer.Activity_drawer_list;
 import projetaifcc2014.map.MapActivityAIFCC;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,19 +13,20 @@ import android.widget.Button;
 import com.example.projetaifcc2014.R;
 
 public class FragmentCaen extends Fragment {
-    @Override
+	
+	String centre = "Caen";
+    
+	@Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-    	// Le drawer n'est utilisable que pour le screen_formation_detail
+    	
         View rootView = inflater.inflate(R.layout.fragment_go_caen, container, false);
        
 
         return rootView;
     }
 
-	/* (non-Javadoc)
-	 * @see android.support.v4.app.Fragment#onViewCreated(android.view.View, android.os.Bundle)
-	 */
+
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -40,6 +40,7 @@ public class FragmentCaen extends Fragment {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent ouvreMap = new Intent(v.getContext(), MapActivityAIFCC.class);
+				ouvreMap.putExtra("Centre", centre);
 				startActivity(ouvreMap);
 			}
 		});

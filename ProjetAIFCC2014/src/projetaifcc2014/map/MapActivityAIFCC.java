@@ -13,6 +13,7 @@ import java.util.List;
 import org.json.JSONObject;
 
 import android.graphics.Color;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -23,7 +24,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.projetaifcc2014.R;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks;
+import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener;
 import com.google.android.gms.location.LocationClient;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -32,56 +38,120 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.PolylineOptions;
 
 
-public class MapActivityAIFCC extends FragmentActivity {
-
-	/* (non-Javadoc)
-	 * @see android.support.v4.app.FragmentActivity#onResume()
-	 */
-	@Override
-	protected void onResume() {
-		// TODO Auto-generated method stub
-		super.onResume();
-	}
+public class MapActivityAIFCC extends FragmentActivity implements ConnectionCallbacks, OnConnectionFailedListener, LocationListener{
 
 
 	GoogleMap map;
 	ArrayList<LatLng> pointsParcour;
+	LatLng aifccCaen,aifccLisieux, centre;
 	TextView textDistance;
 	Location myLocation ;
 	LocationClient locationClient ;
+	LocationRequest locationRequest;
+	String leCentre ;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.screen_google_map);
 		
+		if (getIntent().getExtras() != null)
+	    {
+	        leCentre = getIntent().getExtras().getString("Centre");
+	    }
+
+
+		
 		textDistance = (TextView) findViewById(R.id.tv_distance_time);
 		
 		
-		//Position de l'AIFCC de caen
-		LatLng aifccCaen = new LatLng(49.2074469, -0.3605196999999407);
+
+
 		
 		// initialisation des points  
-		pointsParcour = new ArrayList<LatLng>();		
-		pointsParcour.add(aifccCaen);
+		pointsParcour = new ArrayList<LatLng>();	
 		
 		// Recupere la map
 		map = ((MapFragment) getFragmentManager().findFragmentById(R.id.map)).getMap();
 		
 		// Active ma position
 		map.setMyLocationEnabled(true);		
-		myLocation = map.getMyLocation();
 
 		
 		
+		locationClient = new LocationClient(this,  this,  this);
+		locationRequest = LocationRequest.create();
+		locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 
 		
-		double latitude = 49.27643699999999;
-		double longitude = -0.7031399999999621;		
-		LatLng positionPerso = new LatLng(latitude, longitude);
+	}
+	
+
+	/* (non-Javadoc)
+	 * @see com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener#onConnectionFailed(com.google.android.gms.common.ConnectionResult)
+	 */
+	@Override
+	public void onConnectionFailed(ConnectionResult result) {
+		Toast.makeText(this, "Connection Failed", Toast.LENGTH_LONG).show();		
+	}
+
+
+	/* (non-Javadoc)
+	 * @see com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks#onConnected(android.os.Bundle)
+	 */
+	@Override
+	public void onConnected(Bundle connectionHint) {
+
+		Toast.makeText(this, "Connected", Toast.LENGTH_LONG).show();
+
+		locationClient.requestLocationUpdates(locationRequest, this);
+	}
+
+	
+
+	/* (non-Javadoc)
+	 * @see android.support.v4.app.FragmentActivity#onResume()
+	 */
+	@Override
+	protected void onResume() {
+		super.onResume();
+		locationClient.connect();
+	}
+
+
+	/* (non-Javadoc)
+	 * @see com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks#onDisconnected()
+	 */
+	@Override
+	public void onDisconnected() {
+		Toast.makeText(this, "Déconnecté", Toast.LENGTH_LONG).show();		
+	}
+	
+	@Override
+	public void onLocationChanged(Location location) {
+		
+		
+		map.clear();
+		pointsParcour.clear();
+		
+		LatLng positionPerso = new LatLng(location.getLatitude(), location.getLongitude());
+		
+		//Position de l'AIFCC de caen et lisieux 
+		aifccCaen = new LatLng(49.2074469, -0.3605196999999407);
+		aifccLisieux = new LatLng(49.1439718, 0.26044950000004974);
+		
+		
+		if (leCentre.equals("Caen")){
+			centre = aifccCaen;
+		}
+		else if (leCentre.equals("Lisieux")){
+			centre = aifccLisieux;
+		}
+		
+		
 		pointsParcour.add(positionPerso);
+		pointsParcour.add(centre);
 		
-
 		
 			for (LatLng point : pointsParcour) {
 				// Creating MarkerOptions
@@ -102,17 +172,17 @@ public class MapActivityAIFCC extends FragmentActivity {
 			// Récuper URL de Google Directions API
 			String url = getDirectionsUrl(origin, dest);				
 					
+			
 			DownloadTask downloadTask = new DownloadTask();
 					
 			// Télechargement des données JSON Google Directions API
 			downloadTask.execute(url);
 		
+		
+		
+		
+		
 	}
-	
-	
-
-
-
 
 
 	private String getDirectionsUrl(LatLng origin,LatLng dest){
@@ -299,5 +369,8 @@ public class MapActivityAIFCC extends FragmentActivity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.activity_main, menu);
 		return true;
-	}	
+	}
+
+
+		
 }
