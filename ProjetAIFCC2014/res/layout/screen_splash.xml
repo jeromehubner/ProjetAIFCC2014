@@ -5,23 +5,32 @@
     android:background="@drawable/splash" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="Version 1.0" />
+        android:text="@string/version" />
+
+    <TextView
+        android:id="@+id/chargement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="105dp"
+        android:text="@string/chargement" />
 
     <ProgressBar
         android:id="@+id/progressBar1"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/textView1"
+        android:layout_above="@+id/chargement"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="147dp"
+        android:layout_marginBottom="13dp"
         android:indeterminate="false"
         android:max="100"
-        android:minWidth="150dp"/>
+        android:minWidth="150dp" />
 
 </RelativeLayout>

@@ -402,9 +402,6 @@ public abstract class Activity_drawer extends FragmentActivity {
 			FragmentAide fragment = new FragmentAide() ;
 			showFragmentMenu(fragment);
 			return true;
-		case R.id.menu_rafraichir:
-			// Comportement du bouton "Rafraichir"
-			return true;
 		case R.id.menu_apropos:
 			FragmentAPropos fragmentAPropos = new FragmentAPropos();
 			showFragmentMenu(fragmentAPropos);

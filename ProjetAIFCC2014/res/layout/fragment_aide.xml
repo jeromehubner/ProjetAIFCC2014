@@ -3,6 +3,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blanc" >
-    
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp"
+        android:text="AIDE"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:gravity="left"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="53dp"
+        android:text="La page de chargement n'apparaitra qu'une seule fois. Elle permet de charger la base de données. Cela peut prendre environ une minute" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="33dp"
+        android:text="Page de Chargement : "
+        android:textColor="@color/rouge_fonce" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="24dp"
+        android:text="Page d'accueil :"
+        android:textColor="@color/rouge_fonce" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView4"
+        android:gravity="left"
+        android:text="Appelée aussi page des départements. Elle permet de choisir la formation voulue. Cinq choix sont possibles. Une fois la formation choisie, vous retrouvez son contenu à l'intérieur " />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView5"
+        android:layout_marginTop="24dp"
+        android:text="Le Drawer :"
+        android:textColor="@color/rouge_fonce" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView6"
+        android:text="Il est accessible depuis un glissement du doigt de la gauche vers la droite de l'écran. Dans ce drawer vous retrouverez différentes catégories comme les contacts afin de s'adresser aux responsable des formations. " />
 
 </RelativeLayout>

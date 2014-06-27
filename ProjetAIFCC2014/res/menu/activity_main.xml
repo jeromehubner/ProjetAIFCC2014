@@ -4,14 +4,7 @@
         android:id="@+id/menu_aide"
         android:icon="@drawable/ic_action_aide"
         android:showAsAction="ifRoom"
-        android:title="@string/menu_aide"/>
-    
-    <item
-        android:id="@+id/menu_rafraichir"
-        android:icon="@drawable/ic_action_rafraichir"
-        android:showAsAction="ifRoom"
-        android:title="@string/menu_rafraichir"/>
-    
+        android:title="@string/menu_aide"/>    
     
     <item
         android:id="@+id/menu_apropos"

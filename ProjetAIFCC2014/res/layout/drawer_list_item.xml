@@ -29,7 +29,8 @@
         android:textAlignment="center"
         android:textAppearance="@color/blanc"
         android:textColor="@color/list_item_title"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_centerVertical="true" />
 
     <!-- Compteur qui servira plus tard -->
 
