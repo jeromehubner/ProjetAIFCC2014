@@ -39,6 +39,7 @@ public class FragmentCaen extends Fragment {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
+				
 				Intent ouvreMap = new Intent(v.getContext(), MapActivityAIFCC.class);
 				ouvreMap.putExtra("Centre", centre);
 				startActivity(ouvreMap);

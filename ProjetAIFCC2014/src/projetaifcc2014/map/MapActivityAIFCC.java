@@ -12,9 +12,11 @@ import java.util.List;
 
 import org.json.JSONObject;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
-import android.location.Geocoder;
 import android.location.Location;
+import android.location.LocationManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -30,6 +32,7 @@ import com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailed
 import com.google.android.gms.location.LocationClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
@@ -49,11 +52,29 @@ public class MapActivityAIFCC extends FragmentActivity implements ConnectionCall
 	LocationClient locationClient ;
 	LocationRequest locationRequest;
 	String leCentre ;
+	LocationManager locManager;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		/** Récupère le locationManager qui gère la localisation */
+		locManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+		/** Test si le gps est activé ou non */
+		if (!locManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+		    /** on lance notre activity (qui est une dialog) */
+		    Intent localIntent = new Intent(this, PermissionGps.class);
+		    localIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+		    startActivity(localIntent);
+		}
+		
+		
 		setContentView(R.layout.screen_google_map);
+		
+
+		
+		
+		
 		
 		if (getIntent().getExtras() != null)
 	    {
@@ -92,7 +113,7 @@ public class MapActivityAIFCC extends FragmentActivity implements ConnectionCall
 	 */
 	@Override
 	public void onConnectionFailed(ConnectionResult result) {
-		Toast.makeText(this, "Connection Failed", Toast.LENGTH_LONG).show();		
+		Toast.makeText(this, "Connection impossible", Toast.LENGTH_LONG).show();		
 	}
 
 
@@ -101,8 +122,6 @@ public class MapActivityAIFCC extends FragmentActivity implements ConnectionCall
 	 */
 	@Override
 	public void onConnected(Bundle connectionHint) {
-
-		Toast.makeText(this, "Connected", Toast.LENGTH_LONG).show();
 
 		locationClient.requestLocationUpdates(locationRequest, this);
 	}
@@ -129,8 +148,7 @@ public class MapActivityAIFCC extends FragmentActivity implements ConnectionCall
 	
 	@Override
 	public void onLocationChanged(Location location) {
-		
-		
+
 		map.clear();
 		pointsParcour.clear();
 		
@@ -154,7 +172,6 @@ public class MapActivityAIFCC extends FragmentActivity implements ConnectionCall
 		
 		
 			for (LatLng point : pointsParcour) {
-				// Creating MarkerOptions
 				MarkerOptions options = new MarkerOptions();
 				
 				// affecte les  positions au marker
@@ -178,9 +195,7 @@ public class MapActivityAIFCC extends FragmentActivity implements ConnectionCall
 			// Télechargement des données JSON Google Directions API
 			downloadTask.execute(url);
 		
-		
-		
-		
+			map.animateCamera(CameraUpdateFactory.newLatLngZoom(positionPerso, 18.0f));
 		
 	}
 
@@ -362,6 +377,11 @@ public class MapActivityAIFCC extends FragmentActivity implements ConnectionCall
 			map.addPolyline(lineOptions);							
 		}			
     }   
+    
+    
+    
+    
+    
     
     
 	@Override
