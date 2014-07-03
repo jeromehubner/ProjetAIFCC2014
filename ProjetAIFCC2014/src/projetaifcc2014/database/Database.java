@@ -1,7 +1,6 @@
 package projetaifcc2014.database;
 
 import projetaifcc2014.database.categorie.CategorieBdd;
-import projetaifcc2014.database.contact.ContactBdd;
 import projetaifcc2014.database.departement.DepartementBdd;
 import projetaifcc2014.database.formation.FormationBdd;
 import projetaifcc2014.database.temp.CategorieToCategorie.CategorieToCategorieBdd;
@@ -25,14 +24,6 @@ public class Database extends SQLiteOpenHelper {
 					+ CategorieBdd.CAT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
 					+ CategorieBdd.CAT_DEPARTEMENT + " INTEGER DEFAULT 0, "
 					+ CategorieBdd.CAT_LIBELLE + " TEXT);";
-
-	private static final String CREATE_TABLE_CONTACT = 
-			"CREATE TABLE " + ContactBdd.TABLE_CONTACT + " ("
-					+ ContactBdd.CONT_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-					+ ContactBdd.CONT_NOM + " TEXT, "
-					+ ContactBdd.CONT_PRENOM + " TEXT, "
-					+ ContactBdd.CONT_MAIL + " TEXT, "
-					+ ContactBdd.CONT_TEL + " TEXT);";
 
 	private static final String CREATE_TABLE_DEPARTEMENT = 
 			"CREATE TABLE " + DepartementBdd.TABLE_DEPARTEMENT + " ("
@@ -79,7 +70,6 @@ public class Database extends SQLiteOpenHelper {
 		db.execSQL(CREATE_TABLE_CATEGORIE);
 		db.execSQL(CREATE_TABLE_FORMATION_TO_CATEGORIE);
 		db.execSQL(CREATE_TABLE_FORMATION);
-		db.execSQL(CREATE_TABLE_CONTACT);
 		db.execSQL(CREATE_TABLE_DEPARTEMENT);
 	}
 
@@ -90,7 +80,6 @@ public class Database extends SQLiteOpenHelper {
 		db.execSQL("DROP TABLE " + FormationToCategorieBdd.TABLE_FORMATION_TO_CATEGORIE + ";");
 		db.execSQL("DROP TABLE " + FormationBdd.TABLE_FORMATION + ";");		
 		db.execSQL("DROP TABLE " + DepartementBdd.TABLE_DEPARTEMENT + ";");
-		db.execSQL("DROP TABLE " + ContactBdd.TABLE_CONTACT + ";");
 		onCreate(db);
 	}
 }

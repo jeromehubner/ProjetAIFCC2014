@@ -2,12 +2,13 @@ package projetaifcc2014;
 
 import projetaifcc2014.database.InitDatabase;
 import projetaifcc2014.drawer.Activity_drawer_Departement;
+import projetaifcc2014.gallerie.RessourceURL;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import com.example.projetaifcc2014.R;
@@ -16,6 +17,8 @@ public class MainActivity extends Activity {
 	private Thread splashTread;
 	private Activity mainActivity;
 	private ProgressBar progressBar;
+
+	public static ImageView[] imgs = new ImageView[3];
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -35,33 +38,25 @@ public class MainActivity extends Activity {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				} finally {
-					finish();
-					Intent i = new Intent(getBaseContext(),
-							Activity_drawer_Departement.class);
-					startActivity(i);
+					lancerActiviteDrawerDepartement();
 				}
-			}
-		};
-
-		new Thread() {
-			@Override
-			public void run() {
+				
 				int facteur = 4; // facteur utilisé pour le calcul du temps dans
-									// les méthodes Thread.sleep(time);
+				// les méthodes Thread.sleep(time);
 				int vitesseBalayage = 25; // Coefficient inverse de la vitesse
 				int nbSecondesBalayage = 60; // Durée de vie du thread en
-												// secondes
+				// secondes
 				if (progressBar.getProgress() <= 99) {
 					for (int i = 0; i < (nbSecondesBalayage * facteur); i++) {
 
 						progressBar.setSecondaryProgress(progressBar
 								.getSecondaryProgress() + 2);
 
-						Log.v("mytag",
-								"SecondaryProgressBar : "
-										+ progressBar.getSecondaryProgress());
-						Log.v("mytag",
-								"progressBar : " + progressBar.getProgress());
+						//	Log.v("mytag",
+						//			"SecondaryProgressBar : "
+						//					+ progressBar.getSecondaryProgress());
+						//	Log.v("mytag",
+						//			"progressBar : " + progressBar.getProgress());
 
 						for (int j = 0; j < progressBar.getSecondaryProgress(); j++) {
 
@@ -85,23 +80,26 @@ public class MainActivity extends Activity {
 						}
 					}
 				}
-				Log.v("mytag", "Fermeture du thread");
 			}
-		}.start();
-
+		};
 		
 		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
 		if (prefs.getBoolean("chargerBdd", true)) {
 			splashTread.start();
-	
+
 			SharedPreferences.Editor editor = prefs.edit();
 			editor.putBoolean("chargerBdd", false);
 			editor.commit();
 			new InitDatabase(mainActivity, splashTread, progressBar).execute();
 		} else {
-			finish();
-			Intent i = new Intent(getBaseContext(), Activity_drawer_Departement.class);
-			startActivity(i);
+			lancerActiviteDrawerDepartement();
 		}
+	}
+	
+	public void lancerActiviteDrawerDepartement(){
+		new RessourceURL(mainActivity, imgs).execute();
+		Intent i = new Intent(getBaseContext(), Activity_drawer_Departement.class);
+		startActivity(i);
+		finish();
 	}
 }

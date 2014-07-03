@@ -5,8 +5,10 @@ import projetaifcc2014.database.departement.DepartementBdd;
 import projetaifcc2014.departement.Fragment_departement;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.projetaifcc2014.R;
@@ -19,9 +21,9 @@ public class Activity_drawer_Departement extends Activity_drawer{
 	public Activity_drawer_Departement() {
 		departementBdd = new DepartementBdd(this);
 	}
-
+	
 	@Override
-	public void showFragmentPrincipal(){
+	public void showFragmentPrincipal() {
 		Fragment_departement fragment = new Fragment_departement();
 
 		// Débutez la transaction des fragments
@@ -106,11 +108,5 @@ public class Activity_drawer_Departement extends Activity_drawer{
 			startActivity(intent);
 			break;
 		}
-	}
-
-
-	@Override
-	protected void onResume() {
-		super.onResume();
 	}
 }

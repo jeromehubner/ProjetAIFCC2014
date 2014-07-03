@@ -7,7 +7,7 @@
     <ViewFlipper
         android:id="@+id/ViewFlipperImages"
         android:layout_width="fill_parent"
-        android:layout_height="@dimen/bandeau_actualite_hauteur"
+        android:layout_height="@dimen/bandeau_actualite_hauteur_portrait"
         android:autoStart="true"
         android:background="@color/noir"
         android:flipInterval="7500" >

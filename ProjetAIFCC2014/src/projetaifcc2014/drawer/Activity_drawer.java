@@ -197,7 +197,7 @@ public abstract class Activity_drawer extends FragmentActivity {
 			showFragmentContact();
 			break;
 		case 4:
-			showFragmentGallerie();
+			ShowFragmentGallery();
 			break;
 		case 5:
 			showFragmentAutre();
@@ -324,28 +324,24 @@ public abstract class Activity_drawer extends FragmentActivity {
 	/**
 	 * Item du drawer == 4, GALLERIE
 	 */
-    public void showFragmentGallerie() {
-    	Fragment_Gallery fragment = new Fragment_Gallery();
-    	
-    	
-    	// Débutez la transaction des fragments
+	
+	public void ShowFragmentGallery()
+	{
+		Fragment_Gallery fragment = new Fragment_Gallery();	
+		
+		// Débutez la transaction des fragments
     	FragmentTransaction fTransaction = getSupportFragmentManager().beginTransaction();
     	
-    	
-    	
-    	// Définissez les animations entrantes et sortantes
-    	fTransaction.setCustomAnimations(R.anim.left_in,R.anim.left_out);
-    	
-    	if(getSupportFragmentManager().getBackStackEntryCount() == 0){
+       	fTransaction.replace(R.id.frame, fragment);
+       	
+       	if(getSupportFragmentManager().getBackStackEntryCount() == 0)
+       	{
        		fTransaction.addToBackStack(null);
        	}
-    	
-       	fTransaction.replace(R.id.frame, fragment);
-    	
+       	
     	// Faîtes le commit
     	fTransaction.commit();
-    }
-	
+	}
 	/**
 	 * Item du drawer == 5, ACTU
 	 */

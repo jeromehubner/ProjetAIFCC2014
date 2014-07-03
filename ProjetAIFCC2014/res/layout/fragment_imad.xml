@@ -12,28 +12,40 @@
             android:id="@+id/Title_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20px"
             android:text="L ECOLE"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#FFFC00" />
+            android:textColor="#D7D724" />
 
         <TextView
             android:id="@+id/Content_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="L&apos;IMAD est un Institut de formation spécialisé dans les métiers de l&apos;Architecture, de l&apos;Aménagement de l&apos;Espace et du Design. 
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:text="	L&apos;IMAD est un Institut de formation spécialisé dans les métiers de l&apos;Architecture, de l&apos;Aménagement de l&apos;Espace et du Design. 
  Ses formations s&apos;adressent à tous ceux qui souhaitent se préparer aux concours d&apos;entrée des Écoles Nationales Supérieures d&apos;Architecture, de Design et d&apos;Art. L&apos;IMAD prépare également à 3 BTS BTS (en statut étudiant ou en alternance) et propose des formations courtes pour salariés.\n" />
 
         <TextView
             android:id="@+id/Content_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="En prépa, les élèves mûrissent leur choix d’orientation et confirment leur projet d’études. Ils développent leur potentiel créatif et leur capacité d’analyse, et acquièrent les fondamentaux indispensables à la poursuite de leurs études. Ils sont suivis individuellement par les formateurs qui les aident à constituer leur dossier personnel de candidature (lettre de motivation, book, préparation aux entretiens...) pour être admis aux épreuves de recrutement des écoles.\n" />
+            android:layout_gravity="center"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:text="	En prépa, les élèves mûrissent leur choix d’orientation et confirment leur projet d’études. Ils développent leur potentiel créatif et leur capacité d’analyse, et acquièrent les fondamentaux indispensables à la poursuite de leurs études. Ils sont suivis individuellement par les formateurs qui les aident à constituer leur dossier personnel de candidature (lettre de motivation, book, préparation aux entretiens...) pour être admis aux épreuves de recrutement des écoles.\n" />
 
         <TextView
             android:id="@+id/Content_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="En BTS, outre la préparation à l’examen, les élèves acquièrent les compétences requises pour s’insérer sur le marché du travail et faire carrière dans les métiers de leur choix. Ils peuvent également poursuivre leur cursus et s’enrichissent par ailleurs d’une une réelle expérience professionnelle, soit en tant que salarié dans le cadre d’un contrat de professionnalisation, soit en tant que stagiaire dans le cadre de la formation initiale. Ils sont orientés dans leurs recherches et bénéficient du réseau d’entreprises partenaires de l’Institut." />
+            android:layout_marginBottom="20px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:text="	En BTS, outre la préparation à l’examen, les élèves acquièrent les compétences requises pour s’insérer sur le marché du travail et faire carrière dans les métiers de leur choix. Ils peuvent également poursuivre leur cursus et s’enrichissent par ailleurs d’une une réelle expérience professionnelle, soit en tant que salarié dans le cadre d’un contrat de professionnalisation, soit en tant que stagiaire dans le cadre de la formation initiale. Ils sont orientés dans leurs recherches et bénéficient du réseau d’entreprises partenaires de l’Institut." />
 
         <Button
             android:id="@+id/button1"
