@@ -1,73 +1,145 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blanc" >
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp"
-        android:text="AIDE"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-		android:gravity="left"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="53dp"
-        android:text="La page de chargement n'apparaitra qu'une seule fois. Elle permet de charger la base de données. Cela peut prendre environ une minute" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/imageView1" >
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="33dp"
-        android:text="Page de Chargement : "
-        android:textColor="@color/rouge_fonce" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="24dp"
-        android:text="Page d'accueil :"
-        android:textColor="@color/rouge_fonce" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="41dp"
+                android:layout_weight="0.10"
+                android:gravity="center"
+                android:text="AIDE"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView4"
-        android:gravity="left"
-        android:text="Appelée aussi page des départements. Elle permet de choisir la formation voulue. Cinq choix sont possibles. Une fois la formation choisie, vous retrouvez son contenu à l'intérieur " />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="33dp"
+                android:text="Page de Chargement : "
+                android:textColor="@color/rouge_fonce" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView5"
-        android:layout_marginTop="24dp"
-        android:text="Le Drawer :"
-        android:textColor="@color/rouge_fonce" />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.10"
+                android:text="La page de chargement n'apparaitra qu'une seule fois. Elle permet de charger la base de données. Cela peut prendre environ une minute." />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView6"
-        android:text="Il est accessible depuis un glissement du doigt de la gauche vers la droite de l'écran. Dans ce drawer vous retrouverez différentes catégories comme les contacts afin de s'adresser aux responsable des formations. " />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView2"
+                android:layout_marginTop="24dp"
+                android:text="Page d&apos;accueil :"
+                android:textColor="@color/rouge_fonce" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView4"
+                android:gravity="left"
+                android:text="Appelée aussi page des départements. Elle permet de choisir la formation voulue. Cinq choix sont possibles. Une fois la formation choisie, vous retrouvez son contenu à l&apos;intérieur. " />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView5"
+                android:layout_marginTop="24dp"
+                android:text="Le Drawer :"
+                android:textColor="@color/rouge_fonce" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView6"
+                android:text="Il est accessible depuis un glissement du doigt de la gauche vers la droite de l&apos;écran. Dans ce drawer vous retrouverez différentes catégories comme les contacts afin de s&apos;adresser aux responsable des formations. " />
+            
+            
+             <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView7"
+                android:layout_marginTop="24dp"
+                android:text="Le Contenu des formations :"
+                android:textColor="@color/rouge_fonce" />
+            
+              <TextView
+                android:id="@+id/textView9" 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView8"
+                android:text="Une fois la formations choisie, vous retrouverez le contenu de la formation : les métiers visés, les modalités, le programme de la formation et le contact afin d'envoyé un mail au responsable de la formation. Pour retoourner sur le menu des formations, il suffira de deployer le drawer et de cliquer sur le bouton 'HOME'." />
+            
+             <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView9"
+                android:layout_marginTop="24dp"
+                android:text="Nous rejoindre"
+                android:textColor="@color/rouge_fonce" />
+            
+              <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView10"
+                android:text="Grâce à la catégorie nous rejoindre, vous pouvez retrouvez très facilement son adresse grâce au bouton 'lancer Google Maps'. Il vous redirigera vers la bonne adresse. Attention de bien activer le GPS. " />
+            
+              <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView11"
+                android:layout_marginTop="24dp"
+                android:text="Les Paramètres"
+                android:textColor="@color/rouge_fonce" />
+              
+               <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textView12"
+                android:text="Afin de gérer votre application, aller dans paramètre pour activer le Wifi, le GPS mais encore activer les mises à jour automatique." />
+         
+              
+              
+        </LinearLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
