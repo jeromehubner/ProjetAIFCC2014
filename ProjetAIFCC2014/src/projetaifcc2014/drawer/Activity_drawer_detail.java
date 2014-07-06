@@ -1,6 +1,7 @@
 package projetaifcc2014.drawer;
 
 import projetaifcc2014.formation_detail.FragmentDescription;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -16,6 +17,8 @@ public class Activity_drawer_detail extends Activity_drawer {
 	@Override
 	public void showFragmentPrincipal() {
 
+		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		
 		// Débutez la transaction des fragments
 		FragmentManager fManager = getSupportFragmentManager();
 		FragmentTransaction fTransaction = fManager.beginTransaction();
