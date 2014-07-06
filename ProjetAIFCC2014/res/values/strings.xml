@@ -56,6 +56,7 @@
     <string name="contactDesciption">Description de la partie Contact a placer ici</string>
     <string name="mapDescription">Plan de l\'AIFCC vue satellite</string>
     <string name="desc_list_item_icon">Item Icon</string>
+    <string name="gallery">Gallerie</string>
 
     <!-- Titres des onglets détails des formations -->
     <string-array name="titre_onglet_detail_formation">
