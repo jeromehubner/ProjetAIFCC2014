@@ -5,10 +5,8 @@ import projetaifcc2014.database.departement.DepartementBdd;
 import projetaifcc2014.departement.Fragment_departement;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.projetaifcc2014.R;

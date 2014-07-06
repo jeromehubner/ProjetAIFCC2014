@@ -9,6 +9,7 @@ import projetaifcc2014.drawerFragment.FragmentContact;
 import projetaifcc2014.drawerFragment.FragmentParametre;
 import projetaifcc2014.drawerFragment.rejoindre.FragmentPageViewer;
 import projetaifcc2014.gallerie.Fragment_Gallery;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -120,7 +121,7 @@ public abstract class Activity_drawer extends FragmentActivity {
 
 		if (savedInstanceState == null) {
 			// lors du premier appel on montre la premier vue
-			displayView(0);
+			displayView(-1);
 		}
 	}
 
@@ -185,7 +186,7 @@ public abstract class Activity_drawer extends FragmentActivity {
 		// mise à jour de la vue
 		switch (position) {
 		case 0:
-			showFragmentPrincipal();
+			showFragmentHome();
 			break;
 		case 1:
 			showFragmentFinancement();
@@ -207,6 +208,7 @@ public abstract class Activity_drawer extends FragmentActivity {
 			break;
 
 		default:
+			showFragmentPrincipal();
 			break;
 		}
 	}
@@ -242,6 +244,17 @@ public abstract class Activity_drawer extends FragmentActivity {
 	public void onConfigurationChanged(Configuration newConfig) {
 		super.onConfigurationChanged(newConfig);
 		mDrawerToggle.onConfigurationChanged(newConfig);
+	}
+	
+	/**
+	 * Item du drawer == 0, HOME
+	 */
+	public void showFragmentHome()
+	{
+    	Intent i = new Intent(getBaseContext(), Activity_drawer_Departement.class);
+		i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(i);
+		finish();
 	}
 	
 	/**
