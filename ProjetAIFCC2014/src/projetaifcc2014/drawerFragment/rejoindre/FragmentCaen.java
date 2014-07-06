@@ -29,7 +29,6 @@ public class FragmentCaen extends Fragment {
 
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onViewCreated(view, savedInstanceState);
 		
 		 Button map = (Button) view.findViewById(R.id.button_caen);
@@ -38,7 +37,6 @@ public class FragmentCaen extends Fragment {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				
 				Intent ouvreMap = new Intent(v.getContext(), MapActivityAIFCC.class);
 				ouvreMap.putExtra("Centre", centre);

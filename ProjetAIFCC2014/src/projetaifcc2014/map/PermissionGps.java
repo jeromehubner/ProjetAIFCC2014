@@ -52,7 +52,6 @@ public class PermissionGps extends FragmentActivity {
 	@Override
 	public void startActivityForResult(Intent intent, int requestCode,
 			Bundle options) {
-		// TODO Auto-generated method stub
 		super.startActivityForResult(intent, requestCode, options);
 	}
     

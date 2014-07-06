@@ -67,7 +67,6 @@ public class MainActivity extends Activity {
 								// La vitesse de parcours de la progressBar
 								Thread.sleep(vitesseBalayage);
 							} catch (InterruptedException e) {
-								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
 						}
@@ -77,7 +76,6 @@ public class MainActivity extends Activity {
 							// chargement
 							Thread.sleep(1000 / facteur);
 						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
 							e.printStackTrace();
 						}
 					}

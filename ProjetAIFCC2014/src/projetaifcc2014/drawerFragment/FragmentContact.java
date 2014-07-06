@@ -86,7 +86,6 @@ public class FragmentContact extends Fragment {
     
 	@Override
 	public void onViewCreated(View view, Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onViewCreated(view, savedInstanceState);
 		
         spinnerStatus.setOnItemSelectedListener(new OnItemSelectedListener() {
@@ -121,8 +120,7 @@ public class FragmentContact extends Fragment {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				String[] TO = {"a.avignon806@laposte.net"};
+				String[] TO = {"institut.alternance@aifcc.com"};
 				nom = txtNom.getText().toString();
 				prenom = txtPrenom.getText().toString();
 				societe = txtSociete.getText().toString();

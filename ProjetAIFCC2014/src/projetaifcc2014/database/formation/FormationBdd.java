@@ -14,7 +14,6 @@ public class FormationBdd extends Bdd{
 	public static final String TABLE_FORMATION = "formation";
 
 	// Colonnes table : departement
-	//TODO : mettre les même nom que la table de la base sur PHPMYADMIN
 	public static final String FOR_ID = "id";
 	public static final int NUM_FOR_ID = 0;
 	public static final String FOR_CATEGORIE = "categorie";

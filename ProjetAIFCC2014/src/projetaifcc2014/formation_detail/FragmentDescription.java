@@ -79,7 +79,6 @@ public class FragmentDescription extends Fragment {
 		}
 	}
 	
-	// TODO : deplacer cette méthode en utilisant l'heritage
 	public String getHTMLCouleurDepartement(Formation formation)
 	{
 		int indexArrayColor = formation.getCategorie().getDepartement().getId() -1;
