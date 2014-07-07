@@ -7,7 +7,7 @@
     <dimen name="sizeTitre">20dp</dimen>
 
     <dimen name="bandeau_actualite_hauteur_portrait">80dp</dimen>
-    <dimen name="btn_departement_hauteur_portrait">60dp</dimen>
+    <dimen name="btn_departement_hauteur_portrait">50dp</dimen>
     <dimen name="btn_departement_marge_portrait">20dp</dimen>
     
     <dimen name="bandeau_actualite_hauteur">140dp</dimen>
