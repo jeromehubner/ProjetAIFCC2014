@@ -7,6 +7,7 @@ import projetaifcc2014.drawerFragment.FragmentAPropos;
 import projetaifcc2014.drawerFragment.FragmentAide;
 import projetaifcc2014.drawerFragment.FragmentContact;
 import projetaifcc2014.drawerFragment.FragmentParametre;
+import projetaifcc2014.drawerFragment.Fragment_en_Chantier;
 import projetaifcc2014.drawerFragment.rejoindre.FragmentPageViewer;
 import projetaifcc2014.gallerie.Fragment_Gallery;
 import android.content.Intent;
@@ -201,11 +202,9 @@ public abstract class Activity_drawer extends FragmentActivity {
 			ShowFragmentGallery();
 			break;
 		case 5:
-//			showFragmentAutre();
+			showFragmentActu();
 			break;
-		case 6:
-//			showFragmentAutre();
-			break;
+
 
 		default:
 			showFragmentPrincipal();
@@ -360,8 +359,8 @@ public abstract class Activity_drawer extends FragmentActivity {
 	 */
 	
 	
-    public void showFragmentAutre() {
-    	FinancementFragment fragment = new FinancementFragment();
+    public void showFragmentActu() {
+    	Fragment_en_Chantier fragment = new Fragment_en_Chantier();
     	
     	
     	// Débutez la transaction des fragments

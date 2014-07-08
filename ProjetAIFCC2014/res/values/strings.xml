@@ -178,5 +178,6 @@
     <string name="version">Version 1.1</string>
     <string name="chargement">Chargement de la base . . .</string>
    
+    <string name="en_chantier">En cours de développement</string>
     
 </resources>
