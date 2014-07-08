@@ -2,6 +2,7 @@ package projetaifcc2014.departement;
 
 import projetaifcc2014.MainActivity;
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.DisplayMetrics;
@@ -75,15 +76,32 @@ public class Fragment_departement extends Fragment {
 	}
 
 
-//	@Override
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//	@Override
 //	public void onResume() {
 //		super.onResume();
 //		fillViewFlipper();
 //	}
-
-//	public void fillViewFlipper(){
+//
+//	public void fillViewFlipper(View view){
 //		imgs = MainActivity.imgs;
-//		vfBan = (ViewFlipper) vueCourante.findViewById(R.id.ViewFlipperImages);
+//		vfBan = (ViewFlipper) view.findViewById(R.id.ViewFlipperImages);
 //		if(imgs != null){
 //			DisplayMetrics metrics = new DisplayMetrics();
 //			getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
@@ -95,7 +113,7 @@ public class Fragment_departement extends Fragment {
 //					vfBan.removeViews(1, vfBan.getChildCount());
 //				}
 //				if(imgs[i-1] != null && nbImage[i-1] != i){
-//					imgs[i-1].setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+//					imgs[i-1].setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
 //					vfBan.addView(imgs[i-1]);
 //					nbImage[i-1] = i;
 //				}
@@ -105,5 +123,7 @@ public class Fragment_departement extends Fragment {
 //			vfBan.startFlipping();
 //		}
 //	}
+//
+//
 
 }

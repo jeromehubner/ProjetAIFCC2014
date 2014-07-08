@@ -13,12 +13,12 @@ import android.support.v4.app.FragmentActivity;
  * 
  */
 public class PermissionGps extends FragmentActivity {
-    private void createGpsDisabledAlert() {
+    private void createGpsDisabledAlert(String message) {
         AlertDialog.Builder localBuilder = new AlertDialog.Builder(this);
         localBuilder
             .setMessage("Le GPS est inactif, voulez-vous l'activer ?")
             .setCancelable(false)
-            .setPositiveButton("Activer GPS ",
+            .setPositiveButton(message,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface paramDialogInterface, int paramInt) {
                         PermissionGps.this.showGpsOptions();
@@ -43,7 +43,13 @@ public class PermissionGps extends FragmentActivity {
 
     protected void onCreate(Bundle paramBundle) {
         super.onCreate(paramBundle);
-        createGpsDisabledAlert();
+        String message = null ;
+        
+        if (getIntent().getBooleanExtra("GPS", true) == true) {
+                message = "Désactiver le GPS" ;
+            }
+        else message = "Activer GPS ";
+        createGpsDisabledAlert(message);
     }
 
 	/* (non-Javadoc)

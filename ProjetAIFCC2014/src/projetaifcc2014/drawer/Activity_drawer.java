@@ -201,10 +201,10 @@ public abstract class Activity_drawer extends FragmentActivity {
 			ShowFragmentGallery();
 			break;
 		case 5:
-			showFragmentAutre();
+//			showFragmentAutre();
 			break;
 		case 6:
-			showFragmentAutre();
+//			showFragmentAutre();
 			break;
 
 		default:
@@ -389,7 +389,9 @@ public abstract class Activity_drawer extends FragmentActivity {
     	
     	// Définissez les animations entrantes et sortantes
     	fTransaction.setCustomAnimations(R.anim.left_in,R.anim.left_out);
-       	fTransaction.addToBackStack(null);
+    	if(getSupportFragmentManager().getBackStackEntryCount() == 0){
+       		fTransaction.addToBackStack(null);
+       	}
 
        	fTransaction.replace(R.id.frame, fragment);
     	// Faîtes le commit

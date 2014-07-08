@@ -89,12 +89,13 @@
             android:id="@+id/button_lisieux"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/titre_fragment_go_lisieux"
-            android:layout_alignParentBottom="true"
-            android:layout_alignRight="@+id/adresse_fragment_go_lisieux"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_centerHorizontal="true"
             android:background="@color/rouge_fonce"
+            android:gravity="center"
             android:text="@string/goolge_map"
             android:textColor="@color/blanc" />
+
     </RelativeLayout>
 
 </ScrollView>

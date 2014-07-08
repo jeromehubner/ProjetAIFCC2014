@@ -1,53 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollParametre"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blanc" >
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+        android:background="@color/blanc" >
 
-    <CheckBox
-        android:id="@+id/checkBox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="123dp"
-        android:text="Activer les notifications" />
+    <RelativeLayout
+        android:id="@+id/fenetreParametre"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/blanc" >
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/checkBox1"
-        android:layout_below="@+id/checkBox1"
-        android:layout_marginTop="38dp"
-        android:text="Activer la Wifi" />
+        <CheckBox
+            android:id="@+id/checkBoxNotifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="123dp"
+            android:gravity="center"
+            android:text="Notifications" />
 
-    <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/checkBox2"
-        android:layout_below="@+id/checkBox2"
-        android:layout_marginTop="44dp"
-        android:text="Activer la géolocalisation" />
+        <CheckBox
+            android:id="@+id/checkBoxWifi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/checkBoxNotifications"
+            android:layout_below="@+id/checkBoxNotifications"
+            android:layout_marginTop="38dp"
+            android:gravity="center"
+            android:onClick="wifi"
+            android:text="Wifi" />
 
-    <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/checkBox3"
-        android:layout_alignRight="@+id/checkBox3"
-        android:layout_below="@+id/checkBox3"
-        android:layout_marginTop="52dp"
-        android:text="Mise à jour automatique" />
+        <CheckBox
+            android:id="@+id/checkBoxGps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/checkBoxWifi"
+            android:layout_below="@+id/checkBoxWifi"
+            android:layout_marginTop="44dp"
+            android:gravity="center"
+            android:text="Géolocalisation" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
-        android:text="PARAMETRES" />
+        <CheckBox
+            android:id="@+id/checkBoxMaj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/checkBoxGps"
+            android:layout_alignRight="@+id/checkBoxGps"
+            android:layout_below="@+id/checkBoxGps"
+            android:layout_marginTop="52dp"
+            android:gravity="center"
+            android:text="Mise à jour automatique" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/titre_parametre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="34dp"
+            android:gravity="center"
+            android:text="PARAMETRES"
+            android:textColor="@color/rouge_fonce"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+</ScrollView>
