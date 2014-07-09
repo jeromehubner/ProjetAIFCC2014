@@ -135,7 +135,7 @@ public abstract class Activity_drawer extends FragmentActivity {
 		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 			// affiche la vue selectionnée lors du clicque sur un item
 			displayView(position);
-			miseAJourItemSelectionne();
+			miseAJourItemSelectionne(position);
 		}
 	}
 
@@ -213,7 +213,7 @@ public abstract class Activity_drawer extends FragmentActivity {
 	}
 
 
-	public void miseAJourItemSelectionne(){
+	public void miseAJourItemSelectionne(int position){
 		// mise à jour de l'item selectionné et du titre lors de la fermeture du drawer
 		maListeDrawer.setItemChecked(position, true);
 		maListeDrawer.setSelection(position);
